@@ -1,0 +1,7 @@
+.bowerrc
+.idea/
+vendor/
+web/css
+web/vendor
+
+

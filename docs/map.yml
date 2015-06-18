@@ -1,0 +1,47 @@
+top-menu:
+  -
+    name: Api
+    location: api/api.md
+    route: public/api
+
+side-menu:
+  -
+    name: Public Api
+    method: get
+    location: api/api.md
+    route: public/api
+
+  -
+    name: API Rate Limit
+    location: api/api-rate-limiting.md
+    route: api/rate-limiting
+
+  -
+    name: Response Headers
+    location: api/response-headers.md
+    route: api/response-headers
+
+  -
+    name: Authentication
+    location: api/authentication.md
+    route: api/authentication
+
+  -
+    name: Explore API
+    location: api/api-explore.md
+    route: api/api
+
+  -
+    name: Accounts
+    location: api/accounts.md
+    route: api/accounts
+
+  -
+    name: Me
+    location: api/me.md
+    route: api/me
+
+  -
+    name: Dashboard List
+    location: api/dashboard-list.md
+    route: api/dashboard-list
