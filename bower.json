@@ -4,9 +4,6 @@
   "authors": [
     "Boris Vujicic <boris.vujicic@boutsourcing.com>"
   ],
-  "moduleType": [
-    "globals"
-  ],
   "license": "MIT",
   "ignore": [
     "**/.*",

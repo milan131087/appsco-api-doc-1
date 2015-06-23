@@ -1,10 +1,10 @@
-# Return Dashboards
+# Post Dashboard
 
-Returns list of all available dashboards.
+
 
 ## Resource URL
 
-___https://appsco.com/api/v2/dashboard___
+___https://appsco.com/api/v2/dashboard/id___
 
 ## Resource Information
 
@@ -14,6 +14,7 @@ ___https://appsco.com/api/v2/dashboard___
 |Requires Authentication        |Yes            |
 |Rate Limited?                  |Yes            |
 |Requests / 15 minute window    |15             |
+
 
 
 ## Parameters
@@ -27,7 +28,7 @@ ___https://appsco.com/api/v2/dashboard___
 ## Request
 
 ```.bash
-GET https://appsco.com/api/v2/dashboard
+POST https://appsco.com/api/v2/dashboard
 ```
 
 ## Response
@@ -43,25 +44,15 @@ X-RateLimit-Remaining: 14
 X-RateLimit-Reset: 1433771022
 
 {
-    "dashboards": [
-        "https://appsco.com/api/v2/dashboard/7",
-        "https://appsco.com/api/v2/dashboard/8",
-        "https://appsco.com/api/v2/dashboard/9",
-        "https://appsco.com/api/v2/dashboard/10",
-        "https://appsco.com/api/v2/dashboard/11",
-        "https://appsco.com/api/v2/dashboard/12"
-    ],
-    "extended": "https://appsco.com/api/v2/dashboards/id",
+    "response": {
+        "status": 200,
+        "message": "Account successfully posted",
+        "self": "https://appsco.com/api/v2/dashboard?page=3"
+    },
     "meta": {
-        "first": "https://appsco.com/api/v2/dashboards?page=1",
-        "last": "https://appsco.com/api/v2/dashboards?page=6",
-        "next": "https://appsco.com/api/v2/dashboards?page=3",
-        "page": 2,
-        "pages": 6,
-        "per_page": 6,
-        "prev": "https://appsco.com/api/v2/dashboards?page=1",
-        "total": 34
+        "icons_url": "https://appsco.com/api/v2/dashboard?page=3"
     }
+
 }
 
 ```

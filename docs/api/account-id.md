@@ -1,10 +1,10 @@
-# Return Own Profile (Me)
+# Return All IDs for Account
 
-Returns appsco account of currently logged in user
+Returns all available appsco public account's ID
 
 ## Resource URL
 
-___https://appsco.com/api/v2/me___
+___https://appsco.com/api/v2/accounts/id___
 
 ## Resource Information
 
@@ -15,17 +15,17 @@ ___https://appsco.com/api/v2/me___
 |Rate Limited?                  |Yes            |
 |Requests / 15 minute window    |15             |
 
-## OPTIONS https://appsco.com/api/v2/me
+## OPTIONS https://appsco.com/api/v2/accounts/id
 
 ```.http
 HTTP/1.1 200 OK
-Allow: OPTIONS, GET, PUT
+Allow: OPTIONS, GET
 ```
 
 ## Request
 
 ```.bash
-GET https://appsco.com/api/v2/me
+GET https://appsco.com/api/v2/accounts/id
 ```
 
 ## Response
@@ -33,6 +33,7 @@ GET https://appsco.com/api/v2/me
 ```.http
 HTTP/1.1 200 OK
 Content-type: application/json
+Location: "https://appsco.com/api/v2/accounts/id"
 ETag: ""
 Cache-Control: max-age-86400
 X-RateLimit-Limit: 15
@@ -40,19 +41,21 @@ X-RateLimit-Remaining: 14
 X-RateLimit-Reset: 1433771022
 
 {
-    "account": {
-        "id": 1,
-        "first_name": "Foo",
-        "last_name": "Bar",
-        "email": "foo@bar.com",
-        "phone": "+11111111111111",
-        "locale": "nn",
-        "timezone": "Europe/Wonderland",
-        "gender": "m",
-        "country": "NO",
-        "picture": "https://appsco.com/public/pic/3",
-        "self": "https://appsco.com/api/v2/me"
-    }
+    "accounts":
+        {
+            "id": 1,
+            "first_name": "Foo",
+            "last_name": "Bar",
+            "email": "foo@bar.com",
+            "phone": "+11111111111111",
+            "locale": "nn",
+            "timezone": "Europe/Wonderland",
+            "gender": "m",
+            "country": "NO",
+            "picture": "https://appsco.com/public/pic/3",
+            "self": "https://appsco.com/api/v2/accounts/id"
+        }
+
 }
 
 ```

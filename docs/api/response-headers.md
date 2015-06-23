@@ -4,7 +4,7 @@ Response type will be JSON.
 Response should be returned depending on what client requests.  
 Request for type should be sent with header Content-Type/Accept header.
 
-## Unauthorized Request
+## 401 Unauthorized Request
 
 ```.http
 HTTP/1.1 401 UNAUTHORIZED
@@ -18,7 +18,18 @@ Content-type: application/json
     "status": 401
 }
 ```
-## Method Not Allowed
+
+## OPTIONS Header
+
+Each API route can be explored with OPTIONS header.
+Available request types will be returned in the Allow header.
+
+```.http
+HTTP/1.1 200 OK
+Allow: OPTIONS, POST, GET, DELETE
+```
+
+## 405 Method Not Allowed
   
 ```.http
 HTTP/1.1 405 METHOD NOT ALLOWED
@@ -30,12 +41,17 @@ Content-type: application/json
     "status": 405
 }
 ```
-## OPTIONS Header
-  
-Each API route can be explored with OPTIONS header.  
-Available request types will be returned in the Allow header.
+
+## 409 Conflict
 
 ```.http
-HTTP/1.1 200 OK
-Allow: OPTIONS, POST, GET, DELETE
+HTTP/1.1 409 CONFLICT
+Content-type: application/json
+
+{
+    "error": "conflict",
+    "message": "Resource is not available",
+    "status": 409
+}
 ```
+

@@ -1,6 +1,6 @@
-# Accounts
+# Return Accounts
 
-Returns appsco public accounts
+Returns all available accounts.
 
 ## Resource URL
 
@@ -14,6 +14,7 @@ ___https://appsco.com/api/v2/accounts___
 |Requires Authentication        |Yes            |
 |Rate Limited?                  |Yes            |
 |Requests / 15 minute window    |15             |
+
 
 ## OPTIONS https://appsco.com/api/v2/accounts
 
@@ -29,6 +30,14 @@ Allow: OPTIONS, GET
 |filter                         |Use to filter out searches             |
 |page                           |Page number                            |
 |expand                         |Show resource link or entire resource  |
+
+
+## Request
+
+```.bash
+GET https://appsco.com/api/v2/accounts
+```
+
 
 ## Response
 
@@ -65,44 +74,9 @@ X-RateLimit-Reset: 1433771022
 
 ```
 
-## Response
+## Error Response
 
-```.http
-HTTP/1.1 200 OK
-Content-type: application/json
-Location: "https://appsco.com/api/v2/accounts?page=2&term=term&expand=1"
-ETag: ""
-Cache-Control: max-age-86400
-X-RateLimit-Limit: 15
-X-RateLimit-Remaining: 14
-X-RateLimit-Reset: 1433771022
-
-{
-    "accounts": [
-        {
-            "id": 1,
-            "first_name": "Foo",
-            "last_name": "Bar",
-            "email": "foo@bar.com",
-            "phone": "+11111111111111",
-            "locale": "nn",
-            "timezone": "Europe/Wonderland",
-            "gender": "m",
-            "country": "NO",
-            "picture": "https://appsco.com/public/pic/3",
-            "self": "https://appsco.com/api/v2/accounts/1"
-        }
-    ],
-    "meta": {
-        "first": "https://appsco.com/api/v2/accounts?page=1&term=term&expand=1",
-        "last": "https://appsco.com/api/v2/accounts?page=6&term=term&expand=1",
-        "next": "https://appsco.com/api/v2/accounts?page=2&term=term&expand=1",
-        "page": 1,
-        "pages": 6,
-        "per_page": 1,
-        "prev": null,
-        "total": 6,
-    }
-}
-
-```
+|HEADER                         |Message                        |Status         |
+|-------------------------------|-------------------------------|---------------|
+|405 METHOD NOT ALLOWED         |Method Not allowed             |405            |
+|409 CONFLICT                   |resource does not exist        |409            |

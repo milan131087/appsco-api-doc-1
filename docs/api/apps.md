@@ -1,10 +1,10 @@
-# Return Dashboards
+# Return list of all available APPS
 
-Returns list of all available dashboards.
+Returns list of all available applications
 
 ## Resource URL
 
-___https://appsco.com/api/v2/dashboard___
+___https://appsco.com/api/v2/apps___
 
 ## Resource Information
 
@@ -16,10 +16,18 @@ ___https://appsco.com/api/v2/dashboard___
 |Requests / 15 minute window    |15             |
 
 
+## OPTIONS https://appsco.com/api/v2/apps
+
+```.http
+HTTP/1.1 200 OK
+Allow: OPTIONS, GET
+```
+
 ## Parameters
 
 |                               |                                       |
 |-------------------------------|:-------------------------------------:|
+|filter                         |Use to filter out searches             |
 |page                           |Page number                            |
 |expand                         |Show resource link or entire resource  |
 
@@ -27,7 +35,7 @@ ___https://appsco.com/api/v2/dashboard___
 ## Request
 
 ```.bash
-GET https://appsco.com/api/v2/dashboard
+GET https://appsco.com/api/v2/apps
 ```
 
 ## Response
@@ -35,7 +43,7 @@ GET https://appsco.com/api/v2/dashboard
 ```.http
 HTTP/1.1 200 OK
 Content-type: application/json
-Location: https://appsco.com/api/v2/dashboard?page=3
+Location: "https://appsco.com/api/v2/apps?page=2&term=term"
 ETag: ""
 Cache-Control: max-age-86400
 X-RateLimit-Limit: 15
@@ -43,28 +51,28 @@ X-RateLimit-Remaining: 14
 X-RateLimit-Reset: 1433771022
 
 {
-    "dashboards": [
-        "https://appsco.com/api/v2/dashboard/7",
-        "https://appsco.com/api/v2/dashboard/8",
-        "https://appsco.com/api/v2/dashboard/9",
-        "https://appsco.com/api/v2/dashboard/10",
-        "https://appsco.com/api/v2/dashboard/11",
-        "https://appsco.com/api/v2/dashboard/12"
+    "accounts": [
+        "https://appsco.com/api/v2/apps/1",
+        "https://appsco.com/api/v2/apps/2",
+        "https://appsco.com/api/v2/apps/3",
+        "https://appsco.com/api/v2/apps/4",
+        "https://appsco.com/api/v2/apps/5",
+        "https://appsco.com/api/v2/apps/6"
     ],
-    "extended": "https://appsco.com/api/v2/dashboards/id",
     "meta": {
-        "first": "https://appsco.com/api/v2/dashboards?page=1",
-        "last": "https://appsco.com/api/v2/dashboards?page=6",
-        "next": "https://appsco.com/api/v2/dashboards?page=3",
-        "page": 2,
+        "first": "https://appsco.com/api/v2/apps?page=1&term=term",
+        "last": "https://appsco.com/api/v2/apps?page=6&term=term",
+        "next": "https://appsco.com/api/v2/apps?page=2&term=term",
+        "page": 1,
         "pages": 6,
         "per_page": 6,
-        "prev": "https://appsco.com/api/v2/dashboards?page=1",
-        "total": 34
+        "prev": null,
+        "total": 34,
     }
 }
 
 ```
+
 ## Error Response
 
 |HEADER                         |Message                        |Status         |

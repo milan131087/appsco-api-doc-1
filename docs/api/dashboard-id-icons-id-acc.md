@@ -1,10 +1,10 @@
-# Return Dashboards
+# Dashboard ID/ICONS/ID/ACCOUNTS/GET
 
-Returns list of all available dashboards.
+Return of all available accounts on dashboard for the current user
 
 ## Resource URL
 
-___https://appsco.com/api/v2/dashboard___
+___https://appsco.com/api/v2/dashboards/id/icons/id/accounts___
 
 ## Resource Information
 
@@ -18,24 +18,25 @@ ___https://appsco.com/api/v2/dashboard___
 
 ## Parameters
 
+
 |                               |                                       |
 |-------------------------------|:-------------------------------------:|
 |page                           |Page number                            |
 |expand                         |Show resource link or entire resource  |
 
 
-## Request
+## GET Request
 
 ```.bash
-GET https://appsco.com/api/v2/dashboard
+GET https://appsco.com/api/v2/dashboard/id/icon/id/account
 ```
 
-## Response
+## GET Response
 
 ```.http
 HTTP/1.1 200 OK
 Content-type: application/json
-Location: https://appsco.com/api/v2/dashboard?page=3
+Location: https://appsco.com/api/v2/dashboard/id/icon/id/account
 ETag: ""
 Cache-Control: max-age-86400
 X-RateLimit-Limit: 15
@@ -44,22 +45,21 @@ X-RateLimit-Reset: 1433771022
 
 {
     "dashboards": [
-        "https://appsco.com/api/v2/dashboard/7",
-        "https://appsco.com/api/v2/dashboard/8",
-        "https://appsco.com/api/v2/dashboard/9",
-        "https://appsco.com/api/v2/dashboard/10",
-        "https://appsco.com/api/v2/dashboard/11",
-        "https://appsco.com/api/v2/dashboard/12"
+        "https://appsco.com/api/v2/dashboard/id/icon/7",
+        "https://appsco.com/api/v2/dashboard/id/icon/8",
+        "https://appsco.com/api/v2/dashboard/id/icon/9",
+        "https://appsco.com/api/v2/dashboard/id/icon/10",
+        "https://appsco.com/api/v2/dashboard/id/icon/11",
+        "https://appsco.com/api/v2/dashboard/id/icon/12"
     ],
-    "extended": "https://appsco.com/api/v2/dashboards/id",
     "meta": {
-        "first": "https://appsco.com/api/v2/dashboards?page=1",
-        "last": "https://appsco.com/api/v2/dashboards?page=6",
-        "next": "https://appsco.com/api/v2/dashboards?page=3",
+        "first": "https://appsco.com/api/v2/dashboard/id/icon/id?page=1",
+        "last": "https://appsco.com/api/v2/dashboard/id/icon/id?page=6",
+        "next": "https://appsco.com/api/v2/dashboard/id/icon/id?page=3",
         "page": 2,
         "pages": 6,
         "per_page": 6,
-        "prev": "https://appsco.com/api/v2/dashboards?page=1",
+        "prev": "https://appsco.com/api/v2/dashboard/id/icon/id?page=1",
         "total": 34
     }
 }

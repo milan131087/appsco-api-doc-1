@@ -7,7 +7,6 @@ top-menu:
 side-menu:
   -
     name: Public Api
-    method: get
     location: api/api.md
     route: public/api
 
@@ -30,18 +29,111 @@ side-menu:
     name: Explore API
     location: api/api-explore.md
     route: api/api
+  -
+    name: Aplications
+    method: get
+    location: api/apps.md
+    route: api/apps
+
+  -
+    name: Applications/<id>
+    method: get
+    location: api/apps-id.md
+    route: api/apps/id
 
   -
     name: Accounts
+    method: get
     location: api/accounts.md
     route: api/accounts
 
   -
+    name: Accounts/<id>
+    method: get
+    location: api/account-id.md
+    route: api/accounts/id
+
+  -
     name: Me
+    method: get
     location: api/me.md
     route: api/me
 
   -
-    name: Dashboard List
+    name: Me
+    method: put
+    location: api/me-put.md
+    route: api/me/update
+
+  -
+    name: Dashboard
+    method: get
     location: api/dashboard-list.md
-    route: api/dashboard-list
+    route: api/dashboard-list/get
+
+  -
+    name: Dashboard
+    method: post
+    location: api/dashboard-post.md
+    route: api/dashboard/post
+
+  -
+    name: Dashboard/<id>
+    method: get
+    location: api/dashboard-id.md
+    route: api/dashboard/id
+
+  -
+    name: Dashboard/<id>/icons
+    method: get
+    location: api/dashboard-id-icons.md
+    route: api/dashboard/id/icons
+
+  -
+    name: Dashboard/<id>/icons/<id>
+    method: get
+    location: api/dashboard-id-icons-id.md
+    route: api/dashboard/id/icons/id/get
+
+  -
+    name: Dashboard/<id>/icons/<id>
+    method: patch
+    location: api/dashboard-id-icons-id-patch.md
+    route: api/dashboard/id/icons/id/patch
+
+  -
+    name: Dashboard/<id>/icons/<id>
+    method: delete
+    location: api/dashboard-id-icons-id-del.md
+    route: api/dashboard/id/icons/id/delete
+
+  -
+    name: Dashboard/<id>/icons/<id>/
+    method: post
+    location: api/dashboard-id-icons-id-post.md
+    route: api/p
+
+  -
+    name: Dashboard/<id>/icons/<id>/accounts
+    method: get
+    location: api/dashboard-id-icons-id-acc.md
+    route: api/get-all-available-accounts
+
+  -
+    name: Dashboard/<id>/icons/<id>/accounts
+    method: post
+    location: api/dashboard-id-icons-id-acc-post.md
+    route: api/post-shared-icons-account
+
+  -
+    name: Dashboard/<id>/icons/<id>/accounts/<id>
+    method: get
+    location: api/dashboard-id-icons-id-acc-id-get.md
+    route: api/get-shared-icon-account
+
+  -
+    name: Dashboard/<id>/icons/<id>/accounts/<id>
+    method: delete
+    location: api/dashboard-id-icons-id-acc-id-del.md
+    route: api/remove-shared-icon-account
+

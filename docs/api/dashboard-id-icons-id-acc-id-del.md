@@ -1,10 +1,10 @@
-# Return Own Profile (Me)
+# Remove Account From current Icon
 
-Returns appsco account of currently logged in user
+Remove account to which current icon is shared
 
 ## Resource URL
 
-___https://appsco.com/api/v2/me___
+___https://appsco.com/api/v2/dashboards/id/icons/id/accounts/id___
 
 ## Resource Information
 
@@ -15,47 +15,39 @@ ___https://appsco.com/api/v2/me___
 |Rate Limited?                  |Yes            |
 |Requests / 15 minute window    |15             |
 
-## OPTIONS https://appsco.com/api/v2/me
 
-```.http
-HTTP/1.1 200 OK
-Allow: OPTIONS, GET, PUT
-```
 
 ## Request
 
 ```.bash
-GET https://appsco.com/api/v2/me
+DELETE https://appsco.com/api/v2/dashboards/id/icons/id/accounts/id
 ```
 
-## Response
+## Success Response
 
 ```.http
 HTTP/1.1 200 OK
 Content-type: application/json
+Location: https://appsco.com/api/v2/dashboards/id/icons/id
 ETag: ""
 Cache-Control: max-age-86400
-X-RateLimit-Limit: 15
-X-RateLimit-Remaining: 14
+X-RateLimit-Limit: 1
+X-RateLimit-Remaining: 0
 X-RateLimit-Reset: 1433771022
 
 {
-    "account": {
-        "id": 1,
-        "first_name": "Foo",
-        "last_name": "Bar",
-        "email": "foo@bar.com",
-        "phone": "+11111111111111",
-        "locale": "nn",
-        "timezone": "Europe/Wonderland",
-        "gender": "m",
-        "country": "NO",
-        "picture": "https://appsco.com/public/pic/3",
-        "self": "https://appsco.com/api/v2/me"
+    "response": {
+        "status": 200,
+        "message": "Account successfully removed",
+        "self": "https://appsco.com/api/v2/dashboards/id/icons/id"
+    },
+    "meta": {
+        "icons_url": "https://appsco.com/api/v2/dashboards/id/icons/id"
     }
 }
 
 ```
+
 ## Error Response
 
 |HEADER                         |Message                        |Status         |

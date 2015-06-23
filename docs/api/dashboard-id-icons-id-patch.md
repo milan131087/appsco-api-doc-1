@@ -1,10 +1,10 @@
-# Return Own Profile (Me)
+# Update Icon's Details
 
-Returns appsco account of currently logged in user
+Update icon's details of one available icon on dashboard for the current user.
 
 ## Resource URL
 
-___https://appsco.com/api/v2/me___
+___https://appsco.com/api/v2/dashboard/id/icon/id___
 
 ## Resource Information
 
@@ -15,17 +15,11 @@ ___https://appsco.com/api/v2/me___
 |Rate Limited?                  |Yes            |
 |Requests / 15 minute window    |15             |
 
-## OPTIONS https://appsco.com/api/v2/me
-
-```.http
-HTTP/1.1 200 OK
-Allow: OPTIONS, GET, PUT
-```
 
 ## Request
 
 ```.bash
-GET https://appsco.com/api/v2/me
+PATCH https://appsco.com/api/v2/dashboard/id/icon/id
 ```
 
 ## Response
@@ -33,25 +27,21 @@ GET https://appsco.com/api/v2/me
 ```.http
 HTTP/1.1 200 OK
 Content-type: application/json
+Location: https://appsco.com/api/v2/dashboard/id/icon/8
 ETag: ""
 Cache-Control: max-age-86400
-X-RateLimit-Limit: 15
-X-RateLimit-Remaining: 14
+X-RateLimit-Limit: 1
+X-RateLimit-Remaining: 0
 X-RateLimit-Reset: 1433771022
 
 {
-    "account": {
-        "id": 1,
-        "first_name": "Foo",
-        "last_name": "Bar",
-        "email": "foo@bar.com",
-        "phone": "+11111111111111",
-        "locale": "nn",
-        "timezone": "Europe/Wonderland",
-        "gender": "m",
-        "country": "NO",
-        "picture": "https://appsco.com/public/pic/3",
-        "self": "https://appsco.com/api/v2/me"
+    "response": {
+        "status": 200,
+        "message": "Account successfully update",
+        "self": "https://appsco.com/api/v2/dashboard/id/icon/8"
+    },
+    "meta": {
+        "icons_url": "https://appsco.com/api/v2/dashboard/id/icon/8"
     }
 }
 

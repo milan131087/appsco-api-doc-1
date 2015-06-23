@@ -1,10 +1,10 @@
-# Return Dashboards
+# Return Dashboard's IDs Details
 
-Returns list of all available dashboards.
+Returns ID's details of the current user
 
 ## Resource URL
 
-___https://appsco.com/api/v2/dashboard___
+___https://appsco.com/api/v2/dashboard/id___
 
 ## Resource Information
 
@@ -16,7 +16,16 @@ ___https://appsco.com/api/v2/dashboard___
 |Requests / 15 minute window    |15             |
 
 
+## OPTIONS https://appsco.com/api/v2/dashboard/id
+
+```.http
+HTTP/1.1 200 OK
+Allow: OPTIONS, GET
+```
+
+
 ## Parameters
+
 
 |                               |                                       |
 |-------------------------------|:-------------------------------------:|
@@ -27,7 +36,7 @@ ___https://appsco.com/api/v2/dashboard___
 ## Request
 
 ```.bash
-GET https://appsco.com/api/v2/dashboard
+GET https://appsco.com/api/v2/dashboard/id
 ```
 
 ## Response
@@ -35,7 +44,7 @@ GET https://appsco.com/api/v2/dashboard
 ```.http
 HTTP/1.1 200 OK
 Content-type: application/json
-Location: https://appsco.com/api/v2/dashboard?page=3
+Location: https://appsco.com/api/v2/dashboard/id
 ETag: ""
 Cache-Control: max-age-86400
 X-RateLimit-Limit: 15
@@ -43,24 +52,18 @@ X-RateLimit-Remaining: 14
 X-RateLimit-Reset: 1433771022
 
 {
-    "dashboards": [
-        "https://appsco.com/api/v2/dashboard/7",
-        "https://appsco.com/api/v2/dashboard/8",
-        "https://appsco.com/api/v2/dashboard/9",
-        "https://appsco.com/api/v2/dashboard/10",
-        "https://appsco.com/api/v2/dashboard/11",
-        "https://appsco.com/api/v2/dashboard/12"
-    ],
-    "extended": "https://appsco.com/api/v2/dashboards/id",
-    "meta": {
-        "first": "https://appsco.com/api/v2/dashboards?page=1",
-        "last": "https://appsco.com/api/v2/dashboards?page=6",
-        "next": "https://appsco.com/api/v2/dashboards?page=3",
-        "page": 2,
-        "pages": 6,
-        "per_page": 6,
-        "prev": "https://appsco.com/api/v2/dashboards?page=1",
-        "total": 34
+    "dashboards": {
+        "id": 83,
+        "role_id": 105,
+        "alias": "83",
+        "title": "john.doe@boutsourcing.com",
+        "roles": [
+          "OWNER",
+          "SHARED"
+        ],
+        "default_dashboard": false,
+        "url": "https:\\/\\/appsco.com\\/83\\/",
+        "logo_url": "https:\\/\\/appsco.com\\/bundles\\/appscodashboardapproot\\/img\\/dashboard-logo.png"
     }
 }
 
