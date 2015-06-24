@@ -30,6 +30,11 @@
 @color-alt-2: rgb(105, 105, 105);
 @color-alt-3: rgba(0,0,0,1);
 
+@green: #4DAB58;
+@blue: #36F;
+@red: #C30;
+@orange: #CC9900;
+
 // Font-family
 
 @font-family-primary: 'Open sans', Arial, sans-serif;
@@ -66,7 +71,7 @@
 
 body {
     font: @font-weight-primary @font-size-primary/@line-height-primary @font-family-primary;
-    background: linear-gradient(90deg, @pri_color 0%, @pri_color 33.333333%, @alt1_color 33.333333%);
+    background: linear-gradient(90deg, @pri_color 0%, @pri_color 41.333333%, @alt1_color 41.333333%);
     margin-bottom: @margin-alt-3;
 }
 header{
@@ -186,4 +191,20 @@ table tbody tr:last-child td {
     margin-top: 10px;
     margin-bottom: 20px;
     margin-left: 50px;
+}
+
+.get {
+    background-color: @green;
+}
+
+.post {
+    background-color: @orange;
+}
+
+.delete {
+    background-color: @red;
+}
+
+.put {
+    background-color: @blue;
 }

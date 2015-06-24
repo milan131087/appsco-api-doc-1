@@ -1,6 +1,7 @@
-# Authentication
+# Request token
 
-To authenticate user should provide username and password
+To use the system user should obtain token.
+Token can be obtained using get request with authentication headers.
 
 ## Resource URL
 
@@ -15,16 +16,14 @@ ___https://appsco.com/api/v2/request-token___
 |Rate Limited?                  |Yes            |
 |Requests / 15 minute window    |15             |
 
-## OPTIONS https://appsco.com/api/v2/request-token
+## Request
 
 ```.http
-HTTP/1.1 200 OK
-Allow: OPTIONS, GET
+GET https://appsco.com/api/v2/request-token HTTP/1.1
+Authorization: Basic 5187236vjh8123
 ```
 
-## Request/Response
-
-GET https://appsco.com/api/v2/request-token -H “Authentication: Basic 5187236vjh8123”
+## Response
 
 ```.http
 HTTP/1.1 200 OK

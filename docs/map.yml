@@ -22,8 +22,15 @@ side-menu:
 
   -
     name: Authentication
-    location: api/authentication.md
+    method: options
+    location: api/authentication/authentication.md
     route: api/authentication
+
+  -
+    name: Request Token
+    method: get
+    location: api/authentication/request-token.md
+    route: api/request-token
 
   -
     name: Explore API
