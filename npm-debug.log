@@ -1,0 +1,102 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install', 'highlight.js' ]
+2 info using npm@1.3.10
+3 info using node@v0.10.25
+4 verbose cache add [ 'highlight.js', null ]
+5 verbose cache add name=undefined spec="highlight.js" args=["highlight.js",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'highlight.js',
+6 verbose parsed url   path: 'highlight.js',
+6 verbose parsed url   href: 'highlight.js' }
+7 silly lockFile 8e9d1893-highlight-js highlight.js
+8 verbose lock highlight.js /home/dzo/.npm/8e9d1893-highlight-js.lock
+9 silly lockFile 8e9d1893-highlight-js highlight.js
+10 silly lockFile 8e9d1893-highlight-js highlight.js
+11 verbose addNamed [ 'highlight.js', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile c09e1dd8-highlight-js highlight.js@
+14 verbose lock highlight.js@ /home/dzo/.npm/c09e1dd8-highlight-js.lock
+15 silly addNameRange { name: 'highlight.js', range: '*', hasData: false }
+16 verbose url raw highlight.js
+17 verbose url resolving [ 'https://registry.npmjs.org/', './highlight.js' ]
+18 verbose url resolved https://registry.npmjs.org/highlight.js
+19 info trying registry request attempt 1 at 12:09:47
+20 http GET https://registry.npmjs.org/highlight.js
+21 http 200 https://registry.npmjs.org/highlight.js
+22 silly registry.get cb [ 200,
+22 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+22 silly registry.get     etag: '"8VMF6791WFM4ZUK7HKZW8OUU6"',
+22 silly registry.get     'content-type': 'application/json',
+22 silly registry.get     'cache-control': 'max-age=60',
+22 silly registry.get     'content-length': '109197',
+22 silly registry.get     'accept-ranges': 'bytes',
+22 silly registry.get     date: 'Fri, 05 Jun 2015 10:09:48 GMT',
+22 silly registry.get     via: '1.1 varnish',
+22 silly registry.get     age: '0',
+22 silly registry.get     connection: 'keep-alive',
+22 silly registry.get     'x-served-by': 'cache-lhr6334-LHR',
+22 silly registry.get     'x-cache': 'HIT',
+22 silly registry.get     'x-cache-hits': '1',
+22 silly registry.get     'x-timer': 'S1433498987.524639,VS0,VE630',
+22 silly registry.get     vary: 'Accept' } ]
+23 silly addNameRange number 2 { name: 'highlight.js', range: '*', hasData: true }
+24 silly addNameRange versions [ 'highlight.js',
+24 silly addNameRange   [ '1.0.0',
+24 silly addNameRange     '1.0.1',
+24 silly addNameRange     '1.0.2',
+24 silly addNameRange     '1.0.3',
+24 silly addNameRange     '1.0.4',
+24 silly addNameRange     '1.1.0',
+24 silly addNameRange     '1.1.1',
+24 silly addNameRange     '1.2.0',
+24 silly addNameRange     '7.0.1',
+24 silly addNameRange     '7.1.0',
+24 silly addNameRange     '7.2.0',
+24 silly addNameRange     '7.3.0',
+24 silly addNameRange     '7.4.0',
+24 silly addNameRange     '7.5.0',
+24 silly addNameRange     '8.0.0',
+24 silly addNameRange     '8.1.0',
+24 silly addNameRange     '8.2.0',
+24 silly addNameRange     '8.3.0',
+24 silly addNameRange     '8.4.0',
+24 silly addNameRange     '8.5.0',
+24 silly addNameRange     '8.6.0' ] ]
+25 verbose addNamed [ 'highlight.js', '8.6.0' ]
+26 verbose addNamed [ '8.6.0', '8.6.0' ]
+27 silly lockFile ef41e7de-highlight-js-8-6-0 highlight.js@8.6.0
+28 verbose lock highlight.js@8.6.0 /home/dzo/.npm/ef41e7de-highlight-js-8-6-0.lock
+29 silly lockFile 31e8efad-hlight-js-highlight-js-8-6-0-tgz https://registry.npmjs.org/highlight.js/-/highlight.js-8.6.0.tgz
+30 verbose lock https://registry.npmjs.org/highlight.js/-/highlight.js-8.6.0.tgz /home/dzo/.npm/31e8efad-hlight-js-highlight-js-8-6-0-tgz.lock
+31 verbose addRemoteTarball [ 'https://registry.npmjs.org/highlight.js/-/highlight.js-8.6.0.tgz',
+31 verbose addRemoteTarball   'e3d7669547041fd6d471eb387aaeca7bd37a8c51' ]
+32 silly lockFile 31e8efad-hlight-js-highlight-js-8-6-0-tgz https://registry.npmjs.org/highlight.js/-/highlight.js-8.6.0.tgz
+33 silly lockFile 31e8efad-hlight-js-highlight-js-8-6-0-tgz https://registry.npmjs.org/highlight.js/-/highlight.js-8.6.0.tgz
+34 silly lockFile ef41e7de-highlight-js-8-6-0 highlight.js@8.6.0
+35 silly lockFile ef41e7de-highlight-js-8-6-0 highlight.js@8.6.0
+36 silly lockFile c09e1dd8-highlight-js highlight.js@
+37 silly lockFile c09e1dd8-highlight-js highlight.js@
+38 error Error: EACCES, mkdir '/home/dzo/tmp/npm-24576-LAAsbB_q'
+38 error  { [Error: EACCES, mkdir '/home/dzo/tmp/npm-24576-LAAsbB_q']
+38 error   errno: 3,
+38 error   code: 'EACCES',
+38 error   path: '/home/dzo/tmp/npm-24576-LAAsbB_q' }
+39 error Please try running this command again as root/Administrator.
+40 error System Linux 3.13.0-53-generic
+41 error command "/usr/bin/nodejs" "/usr/bin/npm" "install" "highlight.js"
+42 error cwd /srv/vhosts/docs
+43 error node -v v0.10.25
+44 error npm -v 1.3.10
+45 error path /home/dzo/tmp/npm-24576-LAAsbB_q
+46 error code EACCES
+47 error errno 3
+48 error stack Error: EACCES, mkdir '/home/dzo/tmp/npm-24576-LAAsbB_q'
+49 verbose exit [ 3, true ]
