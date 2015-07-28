@@ -4,7 +4,7 @@
 
 ## Resource URL
 
-___https://appsco.com/api/v2/dashboards/id___
+___https://appsco.com/api/v2/dashboards/id__
 
 ## Resource Information
 
@@ -14,6 +14,14 @@ ___https://appsco.com/api/v2/dashboards/id___
 |Requires Authentication        |Yes            |
 |Rate Limited?                  |Yes            |
 |Requests / 15 minute window    |15             |
+
+
+## Parameters
+
+|                               |                                                |
+|-------------------------------|:----------------------------------------------:|
+|title                          |Dashboard title (notBlank & limit-max 255 chars)|
+
 
 
 ## Request
@@ -38,7 +46,7 @@ X-RateLimit-Reset: 1433771022
     "response": {
         "status": 200,
         "message": "Account successfully posted",
-        "self": "https://appsco.com/api/v2/dashboards/8
+        "self": "https://appsco.com/api/v2/dashboards/8"
     }
 }
 
@@ -48,3 +56,4 @@ X-RateLimit-Reset: 1433771022
 |HEADER                         |Message                        |Status         |
 |-------------------------------|-------------------------------|---------------|
 |401 UNAUTHORIZED               |Unauthorized Request           |401            |
+|422 Unprocessable Entity       |Unprocessable Entity           |422            |
