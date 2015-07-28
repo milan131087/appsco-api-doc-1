@@ -3,5 +3,6 @@
 vendor/
 web/css
 web/vendor
+bower_components/
 
 

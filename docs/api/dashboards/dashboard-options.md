@@ -1,10 +1,10 @@
-# Request Token
+# Options Dashboard's ID
 
-To authenticate user should request token in order to get username and password.
+Options ID's details of the current user
 
 ## Resource URL
 
-___https://appsco.com/api/v2/request-token___
+___https://appsco.com/api/v2/dashboards/id___
 
 ## Resource Information
 
@@ -17,24 +17,18 @@ ___https://appsco.com/api/v2/request-token___
 
 
 ## Request
-
 ```.http
-GET https://appsco.com/api/v2/request-token HTTP/1.1
-Authorization: Basic 5187236vjh8123
+OPTIONS https://appsco.com/api/v2/dashboards/83 HTTP/1.1
 ```
+
 
 ## Response
 
 ```.http
 HTTP/1.1 200 OK
-Content-type: application/json
-Location: https://appsco.com/api/v2
-{
-    "token": "token-hash",
-    "ttl": ""
-}
-
+Allow: OPTIONS, GET
 ```
+
 ## Error Response
 
 |HEADER                         |Message                        |Status         |

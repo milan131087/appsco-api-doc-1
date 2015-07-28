@@ -1,10 +1,10 @@
-# Request Token
+# Post Dashboard
 
-To authenticate user should request token in order to get username and password.
+
 
 ## Resource URL
 
-___https://appsco.com/api/v2/request-token___
+___https://appsco.com/api/v2/dashboards/id___
 
 ## Resource Information
 
@@ -19,8 +19,7 @@ ___https://appsco.com/api/v2/request-token___
 ## Request
 
 ```.http
-GET https://appsco.com/api/v2/request-token HTTP/1.1
-Authorization: Basic 5187236vjh8123
+POST https://appsco.com/api/v2/dashboards/8
 ```
 
 ## Response
@@ -28,10 +27,19 @@ Authorization: Basic 5187236vjh8123
 ```.http
 HTTP/1.1 200 OK
 Content-type: application/json
-Location: https://appsco.com/api/v2
+Location: https://appsco.com/api/v2/dashboards/8
+ETag: ""
+Cache-Control: max-age-86400
+X-RateLimit-Limit: 15
+X-RateLimit-Remaining: 14
+X-RateLimit-Reset: 1433771022
+
 {
-    "token": "token-hash",
-    "ttl": ""
+    "response": {
+        "status": 200,
+        "message": "Account successfully posted",
+        "self": "https://appsco.com/api/v2/dashboards/8
+    }
 }
 
 ```

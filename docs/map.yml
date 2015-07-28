@@ -23,124 +23,149 @@ side-menu:
   -
     name: Authentication
     method: options
+    location: api/authentication/authentication-options.md
+    route: api/authentication/options
+
+  -
+    name: Authentication
+    method: get
     location: api/authentication/authentication.md
     route: api/authentication
 
   -
-    name: Request Token
-    method: get
-    location: api/authentication/request-token.md
-    route: api/request-token
+    name: Explore API
+    method: options
+    location: api/explore_api/api-explore.md
+    route: api/api/options
 
   -
     name: Explore API
-    location: api/api-explore.md
-    route: api/api
+    method: get
+    location: api/explore_api/api-explore-get.md
+    route: api/api/get
+
+  -
+    name: Aplications
+    method: options
+    location: api/apps/apps-options.md
+    route: api/apps/options
+
   -
     name: Aplications
     method: get
-    location: api/apps.md
+    location: api/apps/apps.md
     route: api/apps
 
   -
     name: Applications/<id>
     method: get
-    location: api/apps-id.md
+    location: api/apps/apps-id.md
     route: api/apps/id
+
+
+  -
+    name: Accounts
+    method: options
+    location: api/accounts/accounts-options.md
+    route: api/accounts/options
+
 
   -
     name: Accounts
     method: get
-    location: api/accounts.md
+    location: api/accounts/accounts.md
     route: api/accounts
 
   -
     name: Accounts/<id>
     method: get
-    location: api/account-id.md
+    location: api/accounts/account-id.md
     route: api/accounts/id
+
+
+  -
+    name: Me
+    method: options
+    location: api/me/me-options.md
+    route: api/me/options
 
   -
     name: Me
     method: get
-    location: api/me.md
+    location: api/me/me.md
     route: api/me
 
   -
     name: Me
-    method: put
-    location: api/me-put.md
-    route: api/me/update
+    method: patch
+    location: api/me/me-put.md
+    route: api/me/patch
+
+
+  -
+    name: Dashboard
+    method: options
+    location: api/dashboards/dashboard-options.md
+    route: api/dashboard-list/get
+
 
   -
     name: Dashboard
     method: get
-    location: api/dashboard-list.md
+    location: api/dashboards/dashboard-list.md
     route: api/dashboard-list/get
 
   -
     name: Dashboard
     method: post
-    location: api/dashboard-post.md
+    location: api/dashboards/dashboard-post.md
     route: api/dashboard/post
 
   -
     name: Dashboard/<id>
     method: get
-    location: api/dashboard-id.md
+    location: api/dashboards/dashboard-id.md
     route: api/dashboard/id
 
   -
     name: Dashboard/<id>/icons
     method: get
-    location: api/dashboard-id-icons.md
+    location: api/dashboards/icons/dashboard-id-icons.md
     route: api/dashboard/id/icons
 
   -
     name: Dashboard/<id>/icons/<id>
     method: get
-    location: api/dashboard-id-icons-id.md
-    route: api/dashboard/id/icons/id/get
+    location: api/dashboards/icons/dashboard-id-icons-id.md
+    route: api/dashboard/id/icons/id
+
+  -
+    name: Dashboard/<id>/icons/<id>/
+    method: post
+    location: api/dashboards/icons/dashboard-id-icons-id-post.md
+    route: api/p
 
   -
     name: Dashboard/<id>/icons/<id>
     method: patch
-    location: api/dashboard-id-icons-id-patch.md
+    location: api/dashboards/icons/dashboard-id-icons-id-patch.md
     route: api/dashboard/id/icons/id/patch
 
   -
     name: Dashboard/<id>/icons/<id>
     method: delete
-    location: api/dashboard-id-icons-id-del.md
+    location: api/dashboards/icons/dashboard-id-icons-id-del.md
     route: api/dashboard/id/icons/id/delete
 
   -
-    name: Dashboard/<id>/icons/<id>/
-    method: post
-    location: api/dashboard-id-icons-id-post.md
-    route: api/p
-
-  -
     name: Dashboard/<id>/icons/<id>/accounts
     method: get
-    location: api/dashboard-id-icons-id-acc.md
+    location: api/dashboards/icons/accounts/dashboard-id-icons-id-acc.md
     route: api/get-all-available-accounts
-
-  -
-    name: Dashboard/<id>/icons/<id>/accounts
-    method: post
-    location: api/dashboard-id-icons-id-acc-post.md
-    route: api/post-shared-icons-account
-
-  -
-    name: Dashboard/<id>/icons/<id>/accounts/<id>
-    method: get
-    location: api/dashboard-id-icons-id-acc-id-get.md
-    route: api/get-shared-icon-account
 
   -
     name: Dashboard/<id>/icons/<id>/accounts/<id>
     method: delete
-    location: api/dashboard-id-icons-id-acc-id-del.md
+    location: api/dashboards/icons/accounts/dashboard-id-icons-id-acc-id-del.md
     route: api/remove-shared-icon-account
 

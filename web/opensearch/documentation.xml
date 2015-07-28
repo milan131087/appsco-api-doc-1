@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:referrer="http://a9.com/-/opensearch/extensions/referrer/">
+    <ShortName>Appsco API Documentation</ShortName>
+    <Description>Searches the Appsco API documentation</Description>
+    <Tags>Appsco documentation</Tags>
+    <Image height="16" width="16" type="image/x-icon">http://docs.bv.bwc.loc/favicon.ico</Image>
+    <Url type="text/html" method="GET" template="http://docs.bv.bwc.loc/search?q={searchTerms}&amp;src={referrer:source?}"/>
+    <InputEncoding>UTF-8</InputEncoding>
+    <AdultContent>false</AdultContent>
+</OpenSearchDescription>
