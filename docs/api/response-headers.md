@@ -55,3 +55,15 @@ Content-type: application/json
 }
 ```
 
+## 422 Unprocessable Entity
+
+```.http
+HTTP/1.1 422 Unprocessable Entity
+Content-type: application/json
+
+{
+    "error": "conflict",
+    "message": "There is no client_id",
+    "status": 422
+}
+```
