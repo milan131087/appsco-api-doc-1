@@ -63,7 +63,7 @@ Content-type: application/json
 
 {
     "error": "conflict",
-    "message": "There is no client_id",
+    "message": "Unprocessable Entity",
     "status": 422
 }
 ```

@@ -4,7 +4,7 @@
 
 ## Resource URL
 
-___https://appsco.com/api/v2/dashboards?title=SomeTitle
+___https://appsco.com/api/v2/dashboards/id___
 
 ## Resource Information
 
@@ -18,18 +18,16 @@ ___https://appsco.com/api/v2/dashboards?title=SomeTitle
 
 ## Parameters
 
-|                               |                                       |
-|-------------------------------|:-------------------------------------:|
-|title                          |Dashboard title                        |
-|notBlank                       |max 255 char                           |
-|limit                          |max 255 char                           |
+|                               |                                                 |
+|-------------------------------|:-----------------------------------------------:|
+|title                          |dashboard[title] (notBlank & limit-max 255 chars)|
 
 
 
 ## Request
 
 ```.http
-POST https://appsco.com/api/v2/dashboards?title=SomeTitle
+POST https://appsco.com/api/v2/dashboards/17
 ```
 
 ## Response
@@ -37,7 +35,7 @@ POST https://appsco.com/api/v2/dashboards?title=SomeTitle
 ```.http
 HTTP/1.1 200 OK
 Content-type: application/json
-Location: https://appsco.com/api/v2/dashboards?title=SomeTitle
+Location: https://appsco.com/api/v2/dashboards/17
 ETag: ""
 Cache-Control: max-age-86400
 X-RateLimit-Limit: 15
@@ -45,10 +43,18 @@ X-RateLimit-Remaining: 14
 X-RateLimit-Reset: 1433771022
 
 {
-    "response": {
-        "status": 200,
-        "message": "Account successfully posted",
-        "self": "https://appsco.com/api/v2/dashboards?title=SomeTitle
+    "dashboard": {
+        "role_id": 17,
+        "alias": 17,
+        "title": "asdqweperaasd",
+        "roles": [
+            "OWNER",
+            "SHARED"
+        ],
+        "default_dashboard": false,
+        "logo": null,
+        "url": "https://appsco.com/17/",
+        "self": "https://appsco.com/api/v2/dashboards/17"
     }
 }
 
@@ -58,4 +64,4 @@ X-RateLimit-Reset: 1433771022
 |HEADER                         |Message                        |Status         |
 |-------------------------------|-------------------------------|---------------|
 |401 UNAUTHORIZED               |Unauthorized Request           |401            |
-|422 Unprocessable Entity       |Form Data is Mailformed        |422            |
+|422 Unprocessable Entity       |Unprocessable Entity           |422            |
