@@ -4,7 +4,7 @@ Returns list of all available applications
 
 ## Resource URL
 
-___https://appsco.com/api/v2/apps___
+___https://appsco.com/api/v2/applications___
 
 ## Resource Information
 
@@ -28,17 +28,17 @@ ___https://appsco.com/api/v2/apps___
 ## Request
 
 ```.http
-GET https://appsco.com/api/v2/apps HTTP/1.1
+GET https://appsco.com/api/v2/applications HTTP/1.1
 ```
 
 ## Response
 
-> Extended hyperlink can be found at this link: [apps/id](apps/id)
+> Extended hyperlink can be found at this link: [applications/id](applications/id)
 
 ```.http
 HTTP/1.1 200 OK
 Content-type: application/json
-Location: "https://appsco.com/api/v2/apps"
+Location: "https://appsco.com/api/v2/applications"
 ETag: ""
 Cache-Control: max-age-86400
 X-RateLimit-Limit: 15
@@ -47,17 +47,17 @@ X-RateLimit-Reset: 1433771022
 
 {
     "apps": [
-        "https://appsco.com/api/v2/apps/1",
-        "https://appsco.com/api/v2/apps/2",
-        "https://appsco.com/api/v2/apps/3",
-        "https://appsco.com/api/v2/apps/4",
-        "https://appsco.com/api/v2/apps/5",
-        "https://appsco.com/api/v2/apps/6"
+        "https://appsco.com/api/v2/applications/1",
+        "https://appsco.com/api/v2/applications/2",
+        "https://appsco.com/api/v2/applications/3",
+        "https://appsco.com/api/v2/applications/4",
+        "https://appsco.com/api/v2/applications/5",
+        "https://appsco.com/api/v2/applications/6"
     ],
     "meta": {
-        "first": "https://appsco.com/api/v2/apps?page=1&filter=filter",
-        "last": "https://appsco.com/api/v2/apps?page=6&filter=filter",
-        "next": "https://appsco.com/api/v2/apps?page=2&filter=filter",
+        "first": "https://appsco.com/api/v2/applications?page=1&filter=filter",
+        "last": "https://appsco.com/api/v2/applications?page=6&filter=filter",
+        "next": "https://appsco.com/api/v2/applications?page=2&filter=filter",
         "page": 1,
         "pages": 6,
         "per_page": 6,

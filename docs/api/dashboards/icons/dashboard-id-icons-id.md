@@ -43,14 +43,6 @@ X-RateLimit-Reset: 1433771022
         "auth_type": "none",
         "url_editable": false,
         "is_configured": true,
-        "icons_img": {
-            "16": "https://appsco.com/api/v2/dashboards/id/icons/484/16.png",
-            "32": "https://appsco.com/api/v2/dashboards/id/icons/484/32.png",
-            "64": "https://appsco.com/api/v2/dashboards/id/icons/484/64.png",
-            "128": "https://appsco.com/api/v2/dashboards/id/icons/484/128.png",
-            "256": "https://appsco.com/api/v2/dashboards/id/icons/484/256.png",
-            "512": "https://appsco.com/api/v2/dashboards/id/icons/484/512.png"
-        },
         "self": "https://appsco.com/api/v2/dashboards/id/icons/484",
         "claims": {
           "username": "user.name@something.com,

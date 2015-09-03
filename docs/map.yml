@@ -157,15 +157,4 @@ side-menu:
     location: api/dashboards/icons/dashboard-id-icons-id-del.md
     route: api/dashboard/id/icons/id/delete
 
-  -
-    name: Dashboard/<id>/icons/<id>/accounts
-    method: get
-    location: api/dashboards/icons/accounts/dashboard-id-icons-id-acc.md
-    route: api/get-all-available-accounts
-
-  -
-    name: Dashboard/<id>/icons/<id>/accounts/<id>
-    method: delete
-    location: api/dashboards/icons/accounts/dashboard-id-icons-id-acc-id-del.md
-    route: api/remove-shared-icon-account
 
