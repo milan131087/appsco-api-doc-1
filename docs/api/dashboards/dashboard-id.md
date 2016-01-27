@@ -44,29 +44,42 @@ GET https://appsco.com/api/v2/dashboards/id HTTP/1.1
 ```.http
 HTTP/1.1 200 OK
 Content-type: application/json
-Location: https://appsco.com/api/v2/dashboards/id/icons
+Location: https://appsco.com/api/v2/dashboards/107
 ETag: ""
-Cache-Control: max-age-86400
-X-RateLimit-Limit: 15
-X-RateLimit-Remaining: 14
-X-RateLimit-Reset: 1433771022
+Cache-Control: no-cache
+
 
 {
-    "dashboards": {
-        "id": 83,
-        "role_id": 105,
-        "alias": "83",
-        "title": "john.doe@boutsourcing.com",
-        "roles": [
-          "OWNER",
-          "SHARED"
-        ],
-        "default_dashboard": false,
-        "self": "https://appsco.com/api/v2/dashboard/83",
-        "meta": {
-            "icons": "https://appsco.com/api/v2/dashboards/id/icons"
-        }
+  "dashboard": {
+    "role_id": 107,
+    "alias": "85",
+    "title": "john.doe@example.com",
+    "roles": [
+      "OWNER",
+      "SHARED"
+    ],
+    "default_dashboard": false,
+    "logo": "https://appsco.com/bundles/appscodashboardapproot/img/dashboard-logo.png",
+    "url": "https://appsco.com/107/",
+    "self": "https://appsco.com/api/v2/dashboards/107"
+  },
+  "meta": {
+    "accounts": {
+      "accounts": [
+        "https://appsco.com/api/v2/accounts/262"
+      ],
+      "count": 1
+    },
+    "icons": {
+      "icons": [
+        "https://appsco.com/api/v2/dashboards/107/icons/484",
+        "https://appsco.com/api/v2/dashboards/107/icons/73200",
+        "https://appsco.com/api/v2/dashboards/107/icons/73202",
+        "https://appsco.com/api/v2/dashboards/107/icons/77663"
+      ],
+      "count": 4
     }
+  }
 }
 
 ```
@@ -76,3 +89,4 @@ X-RateLimit-Reset: 1433771022
 |-------------------------------|-------------------------------|---------------|
 |405 METHOD NOT ALLOWED         |Method Not allowed             |405            |
 |409 CONFLICT                   |resource does not exist        |409            |
+|403 access denied              |Please use token for api calls |403            |

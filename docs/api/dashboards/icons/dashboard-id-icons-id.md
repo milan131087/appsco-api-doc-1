@@ -4,7 +4,7 @@ Returns icon's details of one available icon on dashboard for the current user.
 
 ## Resource URL
 
-___https://appsco.com/api/v2/dashboards/id/icon/id___
+___https://appsco.com/api/v2/dashboards/id/icons/id___
 
 ## Resource Information
 
@@ -27,31 +27,23 @@ GET https://appsco.com/api/v2/dashboards/id/icons/id HTTP/1.1
 ```.http
 HTTP/1.1 200 OK
 Content-type: application/json
-Location: https://appsco.com/api/v2/dashboards/id/icons/484
-ETag: ""
-Cache-Control: max-age-86400
-X-RateLimit-Limit: 15
-X-RateLimit-Remaining: 14
-X-RateLimit-Reset: 1433771022
+Location: https://appsco.com/api/v2/dashboards/107/icons/484
+Cache-Control: no-cache
 
 {
-    "icon": {
-        "id": 484,
-        "application_id": https://appsco.com/api/v2/apps/467,
-        "application_template_id": 14,
-        "title": "MySiteShop",
-        "auth_type": "none",
-        "url_editable": false,
-        "is_configured": true,
-        "self": "https://appsco.com/api/v2/dashboards/id/icons/484",
-        "claims": {
-          "username": "user.name@something.com,
-          "password": "password"
-        },
-        "meta": {
-            "accounts": "https://appsco.com/api/v2/accounts"
-        }
-    }
+  "icon": {
+    "application": "https://appsco.com/api/v2/applications/14",
+    "title": "MySiteShop",
+    "auth_type": "none",
+    "is_configured": false,
+    "url_editable": false,
+    "icon_url": "https://apps.appsco.com/icon/14.png",
+    "url": "https://accounts.mysiteshop.com/",
+    "images": [
+      "https://apps.appsco.com/icon/14.png"
+    ],
+    "self": "https://appsco.com/api/v2/dashboards/107/icons/484"
+  }
 }
 
 ```

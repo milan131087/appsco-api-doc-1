@@ -16,7 +16,7 @@ OPTIONS https://appsco.com/api/v2/me HTTP/1.1
 
 ```.http
 HTTP/1.1 200 OK
-Allow: OPTIONS, GET, PUT
+Allow: OPTIONS, GET
 ```
 
 ## Error Response

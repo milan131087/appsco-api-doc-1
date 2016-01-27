@@ -27,29 +27,21 @@ GET https://appsco.com/api/v2/applications/1 HTTP/1.1
 ```.http
 HTTP/1.1 200 OK
 Content-type: application/json
-Location: "https://appsco.com/api/v2/applications/1"
-ETag: ""
-Cache-Control: max-age-86400
-X-RateLimit-Limit: 15
-X-RateLimit-Remaining: 14
-X-RateLimit-Reset: 1433771022
-
+Cache-Control: no-cache
 {
-    "plugin_data": {
-        "id": 1,
-        "title": "Foo",
-        "url": "https://appsco.com/icon/4",
-        "self": "https://appsco.com/api/v2/applications/1",
-        "icons": {
-             "16": "https://applications.appsco.com/icon/12.png",
-             "24": "https://applications.appsco.com/icon/24.png",
-             "32": "https://applications.appsco.com/icon/32.png",
-             "64": "https://applications.appsco.com/icon/64.png",
-             "128": "https://applications.appsco.com/icon/128.png",
-             "256": "https://applications.appsco.com/icon/256.png",
-             "512": "https://applications.appsco.com/icon/512.png",
-        }
-    }
+  "application": {
+    "id": 1,
+    "title": "Twitter",
+    "url": "https://twitter.com/",
+    "url_editable": false,
+    "icon_url": "https://apps.appsco.com/icon/1.png",
+    "auth_types": {
+      "unpw": "icon_unpw",
+      "none": "icon_none"
+    },
+    "plugin_data": "{\"cookie\":{\"remove\":[\"http:\/\/twitter.com\/\",\"https:\/\/www.twitter.com\/\"],\"rx\":[]},\"login\":[{\"url\":[\"\/twitter.com\",\"\/www.twitter.com\"],\"code\":\"Appsco.Claims.get(function(claims) {\n    Appsco.Browser\n        .type(\"#signin-email\", claims['username'])\n        .type(\"#signin-password\", claims['password'])\n        .uncheck(\"#remember_me\")\n        .click('div.front-signin form.signin button[type=\"submit\"]')\n    ;\n});\n\",\"rx\":[]}],\"success\":[\"a:contains(@AppsCo_Test)\"]}",
+    "self": "https://appsco.com/api/v2/applications/1"
+  }
 }
 ```
 

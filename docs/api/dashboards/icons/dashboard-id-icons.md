@@ -22,7 +22,7 @@ ___https://appsco.com/api/v2/dashboards/id/icons___
 |                               |                                       |
 |-------------------------------|:-------------------------------------:|
 |page                           |Page number                            |
-|expand                         |Show resource link or entire resource  |
+|extended                       |Show resource link or entire resource  |
 
 
 ## Request
@@ -39,32 +39,26 @@ GET https://appsco.com/api/v2/dashboards/id/icons HTTP/1.1
 ```.http
 HTTP/1.1 200 OK
 Content-type: application/json
-Location: https://appsco.com/api/v2/dashboards/id/icons
-ETag: ""
-Cache-Control: max-age-86400
-X-RateLimit-Limit: 15
-X-RateLimit-Remaining: 14
-X-RateLimit-Reset: 1433771022
+Location: https://appsco.com/api/v2/dashboards/107/icons?page=1&extended=0
+Cache-Control: no-cache
 
 {
-    "icons": [
-        "https://appsco.com/api/v2/dashboards/id/icons/7",
-        "https://appsco.com/api/v2/dashboards/id/icons/8",
-        "https://appsco.com/api/v2/dashboards/id/icons/9",
-        "https://appsco.com/api/v2/dashboards/id/icons/10",
-        "https://appsco.com/api/v2/dashboards/id/icons/11",
-        "https://appsco.com/api/v2/dashboards/id/icons/12"
-    ],
-    "meta": {
-        "first": "https://appsco.com/api/v2/dashboards?page=1",
-        "last": "https://appsco.com/api/v2/dashboards?page=6",
-        "next": "https://appsco.com/api/v2/dashboards?page=3",
-        "page": 2,
-        "pages": 6,
-        "per_page": 6,
-        "prev": "https://appsco.com/api/v2/dashboards?page=1",
-        "total": 34
-    }
+  "icons": [
+    "https://appsco.com/api/v2/dashboards/107/icons/484",
+    "https://appsco.com/api/v2/dashboards/107/icons/73200",
+    "https://appsco.com/api/v2/dashboards/107/icons/73202",
+    "https://appsco.com/api/v2/dashboards/107/icons/77663"
+  ],
+  "meta": {
+    "total": 4,
+    "page": 1,
+    "first": "https://appsco.com/api/v2/dashboards/107/icons?page=1&extended=0",
+    "last": "https://appsco.com/api/v2/dashboards/107/icons?page=1&extended=0",
+    "pages": 1,
+    "per_page": 100,
+    "prev": "https://appsco.com/api/v2/dashboards/107/icons?page=1&extended=0",
+    "next": "https://appsco.com/api/v2/dashboards/107/icons?page=1&extended=0"
+  }
 }
 
 ```

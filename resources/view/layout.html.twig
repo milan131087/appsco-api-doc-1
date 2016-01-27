@@ -9,7 +9,7 @@
         <title></title>
 
         <link rel="shortcut icon" href="favicon.png">
-        <link rel="search" type="application/opensearchdescription+xml" href="http://docs.bv.bwc.loc/opensearch/documentation.xml" title="Appsco API documentation" />
+        <link rel="search" type="application/opensearchdescription+xml" href="http://localhost:5000/opensearch/documentation.xml" title="Appsco API documentation" />
 
         {% block stylesheet %}
             <link type="text/css" rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css" />
@@ -21,13 +21,14 @@
         <header class="container-fluid">
             <div class="row">
                 <div class="col-md-3 col-md-offset-2 text-left">
-                    <img src="https://appscomarket.com/img/footer-logo.png">
+                    <img src="http://media.mysiteshop.com/img/appsco-logo.png">
                 </div>
-                <div class="col-md-7 topmenu">
-                    {% for item in topmenu %}
-                        <a href="/{{ item.route }}">{{ item.name }}</a>
-                    {% endfor %}
+                <div class="col-md-3 col-md-offset-3 text-right">
+                    <a href="https://appsco.com/">
+                        return to appsco.com
+                    </a>
                 </div>
+
             </div>
         </header>
         <section class="container-fluid">
@@ -70,11 +71,8 @@
 
         <footer class="container-fluid">
             <div class="row">
-                <div class="col-md-6 col-md-offset-2 text-left">
-                    <p>Copyright 2015 © <a href="https://appsco.com">Appsco</a>, AS. All Rights Reserved.</p>
-                </div>
-                <div class="col-md-2 text-right ">
-                    <img src="https://appscomarket.com/img/footer-logo.png">
+                <div class="col-md-12 text-center">
+                    <img src="http://media.mysiteshop.com/img/appsco-footer.png">
                 </div>
             </div>
         </footer>

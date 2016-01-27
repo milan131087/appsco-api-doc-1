@@ -1,9 +1,3 @@
-top-menu:
-  -
-    name: Api
-    location: api/api.md
-    route: public/api
-
 side-menu:
   -
     name: Public Api
@@ -28,9 +22,9 @@ side-menu:
 
   -
     name: Authentication
-    method: get
+    method: post
     location: api/authentication/authentication.md
-    route: api/authentication
+    route: api/authentication/post
 
   -
     name: Explore API
@@ -47,20 +41,20 @@ side-menu:
   -
     name: Aplications
     method: options
-    location: api/apps/apps-options.md
-    route: api/apps/options
+    location: api/applications/applications-options.md
+    route: api/applications/options
 
   -
     name: Aplications
     method: get
-    location: api/apps/apps.md
-    route: api/apps
+    location: api/applications/applications.md
+    route: api/applications
 
   -
     name: Applications/<id>
     method: get
-    location: api/apps/apps-id.md
-    route: api/apps/id
+    location: api/applications/applications-id.md
+    route: api/applications/id
 
 
   -
@@ -96,17 +90,10 @@ side-menu:
     route: api/me
 
   -
-    name: Me
-    method: patch
-    location: api/me/me-put.md
-    route: api/me/patch
-
-
-  -
     name: Dashboard
     method: options
     location: api/dashboards/dashboard-options.md
-    route: api/dashboard-list/get
+    route: api/dashboard-list/options
 
 
   -
@@ -114,12 +101,6 @@ side-menu:
     method: get
     location: api/dashboards/dashboard-list.md
     route: api/dashboard-list/get
-
-  -
-    name: Dashboard
-    method: post
-    location: api/dashboards/dashboard-post.md
-    route: api/dashboard/post
 
   -
     name: Dashboard/<id>
@@ -140,21 +121,7 @@ side-menu:
     route: api/dashboard/id/icons/id
 
   -
-    name: Dashboard/<id>/icons/<id>/
-    method: post
-    location: api/dashboards/icons/dashboard-id-icons-id-post.md
-    route: api/p
-
-  -
-    name: Dashboard/<id>/icons/<id>
-    method: patch
-    location: api/dashboards/icons/dashboard-id-icons-id-patch.md
-    route: api/dashboard/id/icons/id/patch
-
-  -
     name: Dashboard/<id>/icons/<id>
     method: delete
     location: api/dashboards/icons/dashboard-id-icons-id-del.md
     route: api/dashboard/id/icons/id/delete
-
-
