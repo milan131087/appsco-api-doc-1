@@ -17,19 +17,17 @@ DELETE https://appsco.com/api/v2/dashboards/id/icons/8 HTTP/1.1
 ```.http
 HTTP/1.1 200 OK
 Content-type: application/json
-Location: https://appsco.com/api/v2/dashboards/id/icons/8
-ETag: ""
-Cache-Control: max-age-86400
-X-RateLimit-Limit: 1
-X-RateLimit-Remaining: 0
-X-RateLimit-Reset: 1433771022
+Location: https://appsco.com/api/v2/dashboards/107/icons
+Cache-Control: no-cache
 
 {
-    "response": {
-        "status": 200,
-        "message": "Account successfully delete",
-        "self": "https://appsco.com/api/v2/dashboards/id/icons/8"
-    }
+  "response": {
+    "message": "Successful",
+    "code": 200
+  },
+  "meta": {
+    "icons": "https://appsco.com/api/v2/dashboards/107/icons"
+  }
 }
 
 ```

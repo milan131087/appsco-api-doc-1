@@ -4,7 +4,7 @@ Returns options of all available applications
 
 ## Resource URL
 
-___https://appsco.com/api/v2/apps___
+___https://appsco.com/api/v2/applications___
 
 ## Resource Information
 
@@ -19,7 +19,7 @@ ___https://appsco.com/api/v2/apps___
 ## Request
 
 ```.http
-OPTIONS https://appsco.com/api/v2/apps HTTP/1.1
+OPTIONS https://appsco.com/api/v2/applications HTTP/1.1
 ```
 
 ## Response

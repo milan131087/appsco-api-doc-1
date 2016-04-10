@@ -26,7 +26,14 @@ OPTIONS https://appsco.com/api/v2/dashboards/83 HTTP/1.1
 
 ```.http
 HTTP/1.1 200 OK
-Allow: OPTIONS, GET
+Location: https://appsco.com/api/v2/dashboards
+
+{
+  "allow": [
+    "GET",
+    "OPTIONS"
+  ]
+}
 ```
 
 ## Error Response

@@ -21,7 +21,7 @@ ___https://appsco.com/api/v2/dashboards___
 |                               |                                       |
 |-------------------------------|:-------------------------------------:|
 |page                           |Page number                            |
-|expand                         |Show resource link or entire resource  |
+|extended                       |Show resource link or entire resource  |
 
 
 ## Request
@@ -38,7 +38,7 @@ GET https://appsco.com/api/v2/dashboards HTTP/1.1
 ```.http
 HTTP/1.1 200 OK
 Content-type: application/json
-Location: https://appsco.com/api/v2/dashboards
+Location: https://appsco.com/api/v2/dashboards?page=1&extended=0
 ETag: ""
 Cache-Control: max-age-86400
 X-RateLimit-Limit: 15
@@ -46,25 +46,19 @@ X-RateLimit-Remaining: 14
 X-RateLimit-Reset: 1433771022
 
 {
-    "dashboards": [
-        "https://appsco.com/api/v2/dashboard/7",
-        "https://appsco.com/api/v2/dashboard/8",
-        "https://appsco.com/api/v2/dashboard/9",
-        "https://appsco.com/api/v2/dashboard/10",
-        "https://appsco.com/api/v2/dashboard/11",
-        "https://appsco.com/api/v2/dashboard/12"
-    ],
-    "extended": "https://appsco.com/api/v2/dashboards/id",
-    "meta": {
-        "first": "https://appsco.com/api/v2/dashboards?page=1",
-        "last": "https://appsco.com/api/v2/dashboards?page=6",
-        "next": "https://appsco.com/api/v2/dashboards?page=3",
-        "page": 2,
-        "pages": 6,
-        "per_page": 6,
-        "prev": "https://appsco.com/api/v2/dashboards?page=1",
-        "total": 34
-    }
+  "dashboards": [
+    "https://appsco.com/api/v2/dashboards/108"
+  ],
+  "meta": {
+    "total": 1,
+    "page": 1,
+    "first": "https://appsco.com/api/v2/dashboards?page=1&extended=0",
+    "last": "https://appsco.com/api/v2/dashboards?page=1&extended=0",
+    "pages": 1,
+    "per_page": 100,
+    "prev": "https://appsco.com/api/v2/dashboards?page=1&extended=0",
+    "next": "https://appsco.com/api/v2/dashboards?page=1&extended=0"
+  }
 }
 
 ```

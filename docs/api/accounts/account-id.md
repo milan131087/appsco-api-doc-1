@@ -27,28 +27,30 @@ GET https://appsco.com/api/v2/accounts/id
 ```.http
 HTTP/1.1 200 OK
 Content-type: application/json
-Location: "https://appsco.com/api/v2/accounts"
-ETag: ""
-Cache-Control: max-age-86400
-X-RateLimit-Limit: 15
-X-RateLimit-Remaining: 14
-X-RateLimit-Reset: 1433771022
+Location: "https://appsco.com/api/v2/accounts/1"
+Cache-Control: no-cache
 
 {
-    "accounts": {
-        "id": 1,
-        "first_name": "Foo",
-        "last_name": "Bar",
-        "email": "foo@bar.com",
-        "phone": "+11111111111111",
-        "locale": "nn",
-        "timezone": "Europe/Wonderland",
-        "gender": "m",
-        "country": "NO",
-        "picture": "https://appsco.com/public/pic/3",
-        "self": "https://appsco.com/api/v2/accounts/1"
-    }
-
+  "account": {
+    "email": "admin@appsco.com",
+    "country": "AF",
+    "name": "Appsco Admin",
+    "first_name": "Appsco",
+    "last_name": "Admin",
+    "gender": null,
+    "locale": "en",
+    "picture_url": null,
+    "username": "admin@appsco.com",
+    "roles": [
+      "ROLE_ADMIN",
+      "ROLE_WELCOME",
+      "ROLE_USER"
+    ],
+    "self": "https://appsco.com/api/v2/accounts/1"
+  },
+  "meta": {
+    "share": "https://appsco.com/api/v2/accounts/1/share"
+  }
 }
 
 ```
