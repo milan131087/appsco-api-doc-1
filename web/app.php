@@ -26,7 +26,7 @@ $location = findLocation($menu['side-menu'], $pathInfo);
 //}
 
 if(null == $location){
-    $location = $menu['top-menu'][0]['location'];
+    $location = $menu['side-menu'][0]['location'];
 }
 $res = \Michelf\MarkdownExtra::defaultTransform(file_get_contents($root."/docs/".$location));
 
