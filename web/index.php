@@ -24,12 +24,10 @@ $location = findLocation($menu['side-menu'], $pathInfo);
 //        $location = trim($item['location'], '/');
 //    }
 //}
-
 if(null == $location){
-    $location = $menu['top-menu'][0]['location'];
+    $location = $menu['side-menu'][0]['location'];
 }
 $res = \Michelf\MarkdownExtra::defaultTransform(file_get_contents($root."/docs/".$location));
-
 
 echo $twig->render('layout.html.twig', [
     "content" => $res,
