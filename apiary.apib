@@ -3,36 +3,36 @@ HOST: https://appsco.com/
 
 # AppsCo
 
-    AppsCo helps you securely manage all your private applications access and digital confidential information from any device.
+AppsCo helps you securely manage all your private applications access and digital confidential information from any device.
 
 ## How to use AppsCo api
     
-    Appsco API supports [OAuth protocol](https://oauth.net/2/).
+Appsco API supports [OAuth protocol](https://oauth.net/2/).
 OAuth Request code in order to retrieve token for loggedin user.
-    Use client id and scope in order to request equivalent token.
-    Redirect uri can be used for redirect response.
-    System will return code which you can later use to retrieve access_token.
+Use client id and scope in order to request equivalent token.
+Redirect uri can be used for redirect response.
+System will return code which you can later use to retrieve access_token.
     
 
 # Dashboard
     
-    Dashboard represents holder for application instances. Its content will be presented to user. 
+Dashboard represents holder for application instances. Its content will be presented to user.
 User can have only one dashboard, but many dashboards can be shared to user.
-    Sharing a dashboard is creating specific role for that user. This role is used to log all user interactions
-    in the system.
+Sharing a dashboard is creating specific role for that user. This role is used to log all user interactions
+in the system.
 
 # Account
 
-    Account in AppsCo represents user identity. Identity can be used to interact with other software.
-    All actions that are preformed by the identity or in the name of the identity are loggeed in the system.
+Account in AppsCo represents user identity. Identity can be used to interact with other software.
+All actions that are preformed by the identity or in the name of the identity are loggeed in the system.
 
 # Application Template
 
-    Applicaiton Template represents import from application catalog list.
-    These applications are used by user in order to setup application credentials.
-    AppsCo uses them in order to perform login.
+Applicaiton Template represents import from application catalog list.
+These applications are used by user in order to setup application credentials.
+AppsCo uses them in order to perform login.
 Application catalog is a separate system that AppsCo uses in order to provide as many applications as possible to the user.
-    This list also holds methods of authentication.
+This list also holds methods of authentication.
 Supported authentication methods
 - Form Fill
 - Auto Login
@@ -41,24 +41,24 @@ Supported authentication methods
 
 # Application
 
-    Application is an instance of application template and is further used for configuring credentials.
-    Application is used to store all user interactions with the resource credentials, login user, share credentials with other users.
+Application is an instance of application template and is further used for configuring credentials.
+Application is used to store all user interactions with the resource credentials, login user, share credentials with other users.
 Shared Application represents instance of application that is assigned to the user. 
 
 
 # Application instance (Application Icon)
 
-    Application instance represents instance of application and it is unique for the user.
-    Each interaction with application icon is logged in the application it self.
-    If application is removed all coresponding application icons will be also removed.
+Application instance represents instance of application and it is unique for the user.
+Each interaction with application icon is logged in the application it self.
+If application is removed all coresponding application icons will be also removed.
 
 
 
 # Request Token [/api/v2/request-token]
 
-    In order to retrieve token user should first perform OAuth request which will provide code.
-    Code is used after that to retrieve token. 
-    To retrieve token use code and basic authentication using your app credentials (`client_id`, `client_secret`).
+In order to retrieve token user should first perform OAuth request which will provide code.
+Code is used after that to retrieve token.
+To retrieve token use code and basic authentication using your app credentials (`client_id`, `client_secret`).
 
 ### Exchange code and application credentials for token [POST]
 
@@ -75,8 +75,8 @@ Shared Application represents instance of application that is assigned to the us
 
 # Explore Api [/api/v2]
 
-    This link can be used to retrieve list of all available resources.
-    In order to access this list user first need to authenticate.
+This link can be used to retrieve list of all available resources.
+In order to access this list user first need to authenticate.
 
 ## Retrieve api resources [GET]
 
@@ -109,7 +109,7 @@ Shared Application represents instance of application that is assigned to the us
 
 # Dashboards [/api/v2/dashboards]
 
-    List all dashboards that user has right to access.
+List all dashboards that user has right to access.
 
 ### Retrieve Dashboards [GET]
 
@@ -126,7 +126,7 @@ Shared Application represents instance of application that is assigned to the us
 
 # Dashboard [/api/v2/dashboards/{dashboardRole}]
 
-    Returns dashboard details.
+Returns dashboard details.
 
 + Attributes (Dashboard Model)
 
@@ -145,7 +145,7 @@ Shared Application represents instance of application that is assigned to the us
 
 # List dashboard roles - shared accounts [/api/v2/dashboards/{dashboardRole}/accounts]
 
-    List all accounts that have shared application on the dashboard.
+List all accounts that have shared application on the dashboard.
 
 ### Retrieve dashboard accounts [GET]
 + Parameters
@@ -163,7 +163,7 @@ Shared Application represents instance of application that is assigned to the us
 
 # List all Applications on Dashboard [/api/v2/dashboards/{dashboardRole}/applications]
 
-    Return all dashboard applications.
+Return all dashboard applications.
 
 ### Retrieve dashboard applications [GET]
 + Parameters
@@ -180,7 +180,7 @@ Shared Application represents instance of application that is assigned to the us
 
 # List of Application instances on dashboard [/api/v2/dashboards/{dashboardRole}/icons]
 
-    Returns all available application instances (icons) of the specific dashboard role.
+Returns all available application instances (icons) of the specific dashboard role.
 
 ### Retrieve icons [GET]
 + Parameters
@@ -199,7 +199,7 @@ Shared Application represents instance of application that is assigned to the us
 
 ### Create application instance [POST]
 
-    This call will also fire Modify application instance claims [PATCH] if you add username, password or note.
+This call will also fire Modify application instance claims [PATCH] if you add username, password or note.
 
 + Parameters
     + dashboardRole: 551 (number) - ID of the Dashboard Role
@@ -231,7 +231,7 @@ Shared Application represents instance of application that is assigned to the us
 
 # Application Instances [/api/v2/dashboards/{dashboard}/icons]
 
-    Return and update application instance for the current dashboard user.
+Return and update application instance for the current dashboard user.
 
 
 ### Retrieve application instances [GET]
@@ -280,7 +280,7 @@ Shared Application represents instance of application that is assigned to the us
 
 ### Remove application instance from the dashboard [DELETE]
 
-    This call will also log the user changes for the Application.
+This call will also log the user changes for the Application.
 
 + Parameters
     + dashboard: 551 (number) - ID of the Dashboard in the form of an integer
@@ -325,7 +325,7 @@ Return AppsCo user account information.
 
 # Account Profile Image [/api/v2/me/profile-image]
 
-    Return profile image of currently logged in user.
+Return profile image of currently logged in user.
 
 ### Setup account profile image [POST]
 + Attributes
@@ -348,7 +348,7 @@ Return AppsCo user account information.
 
 # Account Partner [/api/v2/me/partner]
 
-    Information regarding AppsCo Partner.
+Information regarding AppsCo Partner.
 
 
 ### Retrieve partner information [GET]
@@ -380,7 +380,7 @@ Return AppsCo user account information.
 
 # Account Application instances [/api/v2/me/icons]
 
-    Returns AppsCo account application instances of currently logged in user, regardles of the dashboard.
+Returns AppsCo account application instances of currently logged in user, regardles of the dashboard.
 
 ### Retrieve all application instances/icons [GET]
 
@@ -396,7 +396,7 @@ Return AppsCo user account information.
 
 # Account Application instance [/api/v2/me/icons/{applicationIcon}]
 
-    Returns AppsCo account application instance of currently logged in user.
+Returns AppsCo account application instance of currently logged in user.
 
 ### Retrieve application instance [GET]
 + Parameters
@@ -412,7 +412,7 @@ Return AppsCo user account information.
 
 # My Account's Applications [/api/v2/me/applications]
 
-    Returns AppsCo account applications of currently logged in user.
+Returns AppsCo account applications of currently logged in user.
 
 ### Retrieve applications of my account [GET]
 
@@ -428,7 +428,7 @@ Return AppsCo user account information.
 
 # Account Application [/api/v2/me/applications/{applicationIcon}]
 
-    Returns AppsCo account application of currently logged in user.
+Returns AppsCo account application of currently logged in user.
 
 ### Retrieve specific application's information [GET]
 + Parameters
@@ -443,7 +443,7 @@ Return AppsCo user account information.
 
 # Account Two-Factor Authentication [/api/v2/me/2fa]
 
-    Is two-factor authentication turned on or off.
+Is two-factor authentication turned on or off.
 
 ### Two-factor authentication status [GET]
 
@@ -482,7 +482,7 @@ Return AppsCo user account information.
 
 # Two-factor Authentication recovery codes [/api/v2/me/2fa/codes]
 
-    Returns AppsCo account two factor authentication recovery codes of currently logged in user
+Returns AppsCo account two factor authentication recovery codes of currently logged in user
 
 ### Retrieve two-factor recovery codes [GET]
 + Request
@@ -495,7 +495,7 @@ Return AppsCo user account information.
 
 # Change Password [/api/v2/me/change-password]
 
-    AppsCo account change password of currently logged in user.
+AppsCo account change password of currently logged in user.
 
 ### Setup new password for my account [POST]
 + Attributes  (Setup password)
@@ -510,7 +510,7 @@ Return AppsCo user account information.
 
 # Account's Authorized Apps [/api/v2/me/authorized-apps]
 
-    Return AppsCo account two-factor authorized applications of currently logged in user.
+Return AppsCo account two-factor authorized applications of currently logged in user.
 
 ### Retrieve authorization's information [GET]
 + Request
@@ -525,7 +525,7 @@ Return AppsCo user account information.
 
 # Me Authorized Apps ID [/api/v2/me/authorized-apps/{oauthApp}]
 
-    Delete AppsCo account oauth application of currently logged in user.
+Delete AppsCo account oauth application of currently logged in user.
 
 ### Remove authorization of application  [DELETE]
 + Parameters
@@ -541,7 +541,7 @@ Return AppsCo user account information.
 
 # Account Logs [/api/v2/me/log]
 
-    Return account logs of currently logged in user.
+Return account logs of currently logged in user.
 
 ### Retrieve logs [GET]
 + Request
@@ -556,7 +556,7 @@ Return AppsCo user account information.
 
 # Template Applications [/api/v2/applications]
 
-    Return all available template applications.
+Return all available template applications.
 
 ### Retrieve all template applications [GET]
 + Request
@@ -571,7 +571,7 @@ Return AppsCo user account information.
 
 # Single Application [/api/v2/application/{application}]
 
-    Return Appsco application information on the user's dashboard.
+Return Appsco application information on the user's dashboard.
 
 ### Retrieve all information about application [GET]
 + Parameters
@@ -599,7 +599,7 @@ Return AppsCo user account information.
 
 # Switch Application [/api/v2/application/{application}/switch]
 
-    Change AppsCo application login type.
+Change AppsCo application login type.
 
 ### Switch application login type [POST]
 + Parameters
@@ -615,7 +615,7 @@ Return AppsCo user account information.
 
 # Application's Log [/api/v2/application/{application}/log]
 
-    Return AppsCo application logs.
+Return AppsCo application logs.
 
 ### Retrieve logs for application [GET]
 + Parameters
@@ -632,7 +632,7 @@ Return AppsCo user account information.
 
 # Application's Subscribers [/api/v2/application/{application}/subscribers]
 
-    Return AppsCo application subscribers for a currently loged user.
+Return AppsCo application subscribers for a currently loged user.
 
 ### Retrieve subscribers for application [GET]
 + Parameters
@@ -663,7 +663,7 @@ Return AppsCo user account information.
 
 # Notifications [/api/v2/notifications]
 
-    Return AppsCo notifications for a currently loged in user.
+Return AppsCo notifications for a currently loged in user.
 
 ### Retrieve notifications [GET]
 + Request
@@ -691,7 +691,7 @@ Return AppsCo user account information.
 
 # Account [/api/v2/accounts/{accountId}]
 
-    Return AppsCo account information.
+Return AppsCo account information.
 
 ### Retrieve account [GET]
 + Parameters
@@ -708,7 +708,7 @@ Return AppsCo user account information.
 
 # Share Accounts [/api/v2/accounts/{accountId}/share]
 
-  Share AppsCo account.
+Share AppsCo account.
 
 ### Share account instance [POST]
 + Parameters
@@ -728,7 +728,7 @@ Return AppsCo user account information.
 
 # Vault Items [/api/v2/vault]
 
-  Return AppsCo vault items of currently loged in user.
+Return AppsCo vault items of currently loged in user.
 
 ### Retrieve vault items [GET]
 + Request
@@ -753,7 +753,7 @@ Return AppsCo user account information.
 
 # Vault Item [/api/v2/vault/{vault}]
 
-  Return Appsco specific vault item.
+Return Appsco specific vault item.
 
 ### Retrieve vault item [GET]
 + Parameters
@@ -794,7 +794,7 @@ Return AppsCo user account information.
 
 # Vault Credit Cards [/api/v2/vault-cc]
 
-  Return AppsCo vault credit cards.
+Return AppsCo vault credit cards.
 
 ### Retrieve credit cards [GET]
 + Request
@@ -821,7 +821,7 @@ Return AppsCo user account information.
 
 # Vault Credit Card [/api/v2/vault-cc/{cc}]
 
-  Return AppsCo specific credi card.
+Return AppsCo specific credi card.
 
 ### Retrieve credit card [GET]
 + Parameters
@@ -862,7 +862,7 @@ Return AppsCo user account information.
 
 # Vault Identities [/api/v2/vault-identity]
 
-  Return AppsCo vault identities.
+Return AppsCo vault identities.
 
 ### Retrieve vault identities [GET]
 + Request
@@ -888,7 +888,7 @@ Return AppsCo user account information.
 
 # Vault Identity [/api/v2/vault-identity/{identity}]
 
-  Return AppsCo vault identity.
+Return AppsCo vault identity.
 
 ### Retrieve identity [GET]
 + Parameters
@@ -930,7 +930,7 @@ Return AppsCo user account information.
 
 # Vault Passports [/api/v2/vault-passport]
 
-  Return AppsCo vault passports.
+Return AppsCo vault passports.
 
 ### Retrieve passports [GET]
 + Request
@@ -956,7 +956,7 @@ Return AppsCo user account information.
 
 # Vault Passport [/api/v2/vault-passport/{passport}]
 
-  Return AppsCo specific vault passport.
+Return AppsCo specific vault passport.
 
 ### Retrieve passport [GET]
 + Parameters
@@ -998,7 +998,7 @@ Return AppsCo user account information.
 
 # Vault Security Notes [/api/v2/vault-secure-note]
 
-  Return AppsCo vault security notes.
+Return AppsCo vault security notes.
 
 ### Retrieve security notes [GET]
 + Request
@@ -1024,7 +1024,7 @@ Return AppsCo user account information.
 
 # Vault Secure Note [/api/v2/vault-secure-note/{note}]
 
-  Return Appsco security note.
+Return Appsco security note.
 
 ## Retrieve security note [GET]
 + Parameters
@@ -1066,7 +1066,7 @@ Return AppsCo user account information.
 
 # Vault Software Licences [/api/v2/vault-software-licence]
 
-  Return AppsCo vault software licences.
+Return AppsCo vault software licences.
 
 ### Retrieve software licences [GET]
 + Request
@@ -1093,7 +1093,7 @@ Return AppsCo user account information.
 
 # Vault Software Licence [/api/v2/vault-software-licence/{licence}]
 
-  Return AppsCo specific software licence.
+Return AppsCo specific software licence.
 
 ### Retrieve software licence [GET]
 + Parameters
