@@ -1213,43 +1213,35 @@
 <h1 class="ui huge header" id="introduction">AppsCo</h1>
 <hr class="ui divider">
 <div class="description">
-  <pre><code>AppsCo helps you securely manage all your private applications access and digital confidential information from any device.
-</code></pre>
+  <p>AppsCo helps you securely manage all your private applications access and digital confidential information from any device.</p>
 
 <h2 id="how-to-use-appsco-api">How to use AppsCo api</h2>
 
-<pre><code>Appsco API supports [OAuth protocol](https://oauth.net/2/).
-</code></pre>
-
-<p>OAuth Request code in order to retrieve token for loggedin user.
-    Use client id and scope in order to request equivalent token.
-    Redirect uri can be used for redirect response.
-    System will return code which you can later use to retrieve access_token.</p>
+<p>Appsco API supports <a href="https://oauth.net/2/">OAuth protocol</a>.
+OAuth Request code in order to retrieve token for loggedin user.
+Use client id and scope in order to request equivalent token.
+Redirect uri can be used for redirect response.
+System will return code which you can later use to retrieve access_token.</p>
 
 <h1 id="dashboard">Dashboard</h1>
 
-<pre><code>Dashboard represents holder for application instances. Its content will be presented to user. 
-</code></pre>
-
-<p>User can have only one dashboard, but many dashboards can be shared to user.
-    Sharing a dashboard is creating specific role for that user. This role is used to log all user interactions
-    in the system.</p>
+<p>Dashboard represents holder for application instances. Its content will be presented to user.
+User can have only one dashboard, but many dashboards can be shared to user.
+Sharing a dashboard is creating specific role for that user. This role is used to log all user interactions
+in the system.</p>
 
 <h1 id="account">Account</h1>
 
-<pre><code>Account in AppsCo represents user identity. Identity can be used to interact with other software.
-All actions that are preformed by the identity or in the name of the identity are loggeed in the system.
-</code></pre>
+<p>Account in AppsCo represents user identity. Identity can be used to interact with other software.
+All actions that are preformed by the identity or in the name of the identity are loggeed in the system.</p>
 
 <h1 id="application-template">Application Template</h1>
 
-<pre><code>Applicaiton Template represents import from application catalog list.
+<p>Applicaiton Template represents import from application catalog list.
 These applications are used by user in order to setup application credentials.
 AppsCo uses them in order to perform login.
-</code></pre>
-
-<p>Application catalog is a separate system that AppsCo uses in order to provide as many applications as possible to the user.
-    This list also holds methods of authentication.
+Application catalog is a separate system that AppsCo uses in order to provide as many applications as possible to the user.
+This list also holds methods of authentication.
 Supported authentication methods</p>
 
 <ul>
@@ -1264,18 +1256,15 @@ Supported authentication methods</p>
 
 <h1 id="application">Application</h1>
 
-<pre><code>Application is an instance of application template and is further used for configuring credentials.
+<p>Application is an instance of application template and is further used for configuring credentials.
 Application is used to store all user interactions with the resource credentials, login user, share credentials with other users.
-</code></pre>
-
-<p>Shared Application represents instance of application that is assigned to the user.</p>
+Shared Application represents instance of application that is assigned to the user.</p>
 
 <h1 id="application-instance-application-icon">Application instance (Application Icon)</h1>
 
-<pre><code>Application instance represents instance of application and it is unique for the user.
+<p>Application instance represents instance of application and it is unique for the user.
 Each interaction with application icon is logged in the application it self.
-If application is removed all coresponding application icons will be also removed.
-</code></pre>
+If application is removed all coresponding application icons will be also removed.</p>
 
 </div>
 
@@ -1299,10 +1288,9 @@ If application is removed all coresponding application icons will be also remove
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <pre><code>In order to retrieve token user should first perform OAuth request which will provide code.
-Code is used after that to retrieve token. 
-To retrieve token use code and basic authentication using your app credentials (`client_id`, `client_secret`).
-</code></pre>
+              <p>In order to retrieve token user should first perform OAuth request which will provide code.
+Code is used after that to retrieve token.
+To retrieve token use code and basic authentication using your app credentials (<code>client_id</code>, <code>client_secret</code>).</p>
 
             </div>
           </div>
@@ -1428,9 +1416,8 @@ To retrieve token use code and basic authentication using your app credentials (
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <pre><code>This link can be used to retrieve list of all available resources.
-In order to access this list user first need to authenticate.
-</code></pre>
+              <p>This link can be used to retrieve list of all available resources.
+In order to access this list user first need to authenticate.</p>
 
             </div>
           </div>
@@ -1563,8 +1550,7 @@ In order to access this list user first need to authenticate.
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <pre><code>List all dashboards that user has right to access.
-</code></pre>
+              <p>List all dashboards that user has right to access.</p>
 
             </div>
           </div>
@@ -1736,8 +1722,7 @@ In order to access this list user first need to authenticate.
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <pre><code>Returns dashboard details.
-</code></pre>
+              <p>Returns dashboard details.</p>
 
             </div>
           </div>
@@ -1987,8 +1972,7 @@ In order to access this list user first need to authenticate.
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <pre><code>List all accounts that have shared application on the dashboard.
-</code></pre>
+              <p>List all accounts that have shared application on the dashboard.</p>
 
             </div>
           </div>
@@ -2186,8 +2170,7 @@ In order to access this list user first need to authenticate.
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <pre><code>Return all dashboard applications.
-</code></pre>
+              <p>Return all dashboard applications.</p>
 
             </div>
           </div>
@@ -2385,8 +2368,7 @@ In order to access this list user first need to authenticate.
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <pre><code>Returns all available application instances (icons) of the specific dashboard role.
-</code></pre>
+              <p>Returns all available application instances (icons) of the specific dashboard role.</p>
 
             </div>
           </div>
@@ -2583,8 +2565,7 @@ In order to access this list user first need to authenticate.
             <h3 class="ui block center aligned header" id="list-of-application-instances-on-dashboard-create-application-instance">
               Create application instance
             </h3>
-            <div class="description"><pre><code>This call will also fire Modify application instance claims [PATCH] if you add username, password or note.
-</code></pre>
+            <div class="description"><p>This call will also fire Modify application instance claims [PATCH] if you add username, password or note.</p>
 </div>
 
             
@@ -3239,8 +3220,7 @@ In order to access this list user first need to authenticate.
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <pre><code>Return and update application instance for the current dashboard user.
-</code></pre>
+              <p>Return and update application instance for the current dashboard user.</p>
 
             </div>
           </div>
@@ -4105,8 +4085,7 @@ In order to access this list user first need to authenticate.
             <h3 class="ui block center aligned header" id="application-instance-remove-application-instance-from-the-dashboard">
               Remove application instance from the dashboard
             </h3>
-            <div class="description"><pre><code>This call will also log the user changes for the Application.
-</code></pre>
+            <div class="description"><p>This call will also log the user changes for the Application.</p>
 </div>
 
             
@@ -4903,8 +4882,7 @@ In order to access this list user first need to authenticate.
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <pre><code>Return profile image of currently logged in user.
-</code></pre>
+              <p>Return profile image of currently logged in user.</p>
 
             </div>
           </div>
@@ -5055,8 +5033,7 @@ In order to access this list user first need to authenticate.
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <pre><code>Information regarding AppsCo Partner.
-</code></pre>
+              <p>Information regarding AppsCo Partner.</p>
 
             </div>
           </div>
@@ -5398,8 +5375,7 @@ In order to access this list user first need to authenticate.
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <pre><code>Returns AppsCo account application instances of currently logged in user, regardles of the dashboard.
-</code></pre>
+              <p>Returns AppsCo account application instances of currently logged in user, regardles of the dashboard.</p>
 
             </div>
           </div>
@@ -5571,8 +5547,7 @@ In order to access this list user first need to authenticate.
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <pre><code>Returns AppsCo account application instance of currently logged in user.
-</code></pre>
+              <p>Returns AppsCo account application instance of currently logged in user.</p>
 
             </div>
           </div>
@@ -5902,8 +5877,7 @@ In order to access this list user first need to authenticate.
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <pre><code>Returns AppsCo account applications of currently logged in user.
-</code></pre>
+              <p>Returns AppsCo account applications of currently logged in user.</p>
 
             </div>
           </div>
@@ -6075,8 +6049,7 @@ In order to access this list user first need to authenticate.
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <pre><code>Returns AppsCo account application of currently logged in user.
-</code></pre>
+              <p>Returns AppsCo account application of currently logged in user.</p>
 
             </div>
           </div>
@@ -6260,8 +6233,7 @@ In order to access this list user first need to authenticate.
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <pre><code>Is two-factor authentication turned on or off.
-</code></pre>
+              <p>Is two-factor authentication turned on or off.</p>
 
             </div>
           </div>
@@ -6598,8 +6570,7 @@ In order to access this list user first need to authenticate.
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <pre><code>Returns AppsCo account two factor authentication recovery codes of currently logged in user
-</code></pre>
+              <p>Returns AppsCo account two factor authentication recovery codes of currently logged in user</p>
 
             </div>
           </div>
@@ -6717,8 +6688,7 @@ In order to access this list user first need to authenticate.
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <pre><code>AppsCo account change password of currently logged in user.
-</code></pre>
+              <p>AppsCo account change password of currently logged in user.</p>
 
             </div>
           </div>
@@ -6843,8 +6813,7 @@ In order to access this list user first need to authenticate.
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <pre><code>Return AppsCo account two-factor authorized applications of currently logged in user.
-</code></pre>
+              <p>Return AppsCo account two-factor authorized applications of currently logged in user.</p>
 
             </div>
           </div>
@@ -7031,8 +7000,7 @@ In order to access this list user first need to authenticate.
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <pre><code>Delete AppsCo account oauth application of currently logged in user.
-</code></pre>
+              <p>Delete AppsCo account oauth application of currently logged in user.</p>
 
             </div>
           </div>
@@ -7183,8 +7151,7 @@ In order to access this list user first need to authenticate.
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <pre><code>Return account logs of currently logged in user.
-</code></pre>
+              <p>Return account logs of currently logged in user.</p>
 
             </div>
           </div>
@@ -7373,8 +7340,7 @@ In order to access this list user first need to authenticate.
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <pre><code>Return all available template applications.
-</code></pre>
+              <p>Return all available template applications.</p>
 
             </div>
           </div>
@@ -7546,8 +7512,7 @@ In order to access this list user first need to authenticate.
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <pre><code>Return Appsco application information on the user's dashboard.
-</code></pre>
+              <p>Return Appsco application information on the user&rsquo;s dashboard.</p>
 
             </div>
           </div>
@@ -7860,8 +7825,7 @@ In order to access this list user first need to authenticate.
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <pre><code>Change AppsCo application login type.
-</code></pre>
+              <p>Change AppsCo application login type.</p>
 
             </div>
           </div>
@@ -8024,8 +7988,7 @@ In order to access this list user first need to authenticate.
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <pre><code>Return AppsCo application logs.
-</code></pre>
+              <p>Return AppsCo application logs.</p>
 
             </div>
           </div>
@@ -8240,8 +8203,7 @@ In order to access this list user first need to authenticate.
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <pre><code>Return AppsCo application subscribers for a currently loged user.
-</code></pre>
+              <p>Return AppsCo application subscribers for a currently loged user.</p>
 
             </div>
           </div>
@@ -8583,8 +8545,7 @@ In order to access this list user first need to authenticate.
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <pre><code>Return AppsCo notifications for a currently loged in user.
-</code></pre>
+              <p>Return AppsCo notifications for a currently loged in user.</p>
 
             </div>
           </div>
@@ -8881,8 +8842,7 @@ In order to access this list user first need to authenticate.
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <pre><code>Return AppsCo account information.
-</code></pre>
+              <p>Return AppsCo account information.</p>
 
             </div>
           </div>
