@@ -92,6 +92,13 @@ If application is removed all coresponding application icons will be also remove
 * Account authorized application
 * Account revoked application authorization
 
+# Company OrgUnits
+
+  Company represents something to write...
+
+# OrgUnit - Application - Account policy
+
+  OrgUnit is something something
 
 
 # Request Token [/api/v2/request-token]
@@ -1173,6 +1180,125 @@ Return AppsCo specific software licence.
         +  Response (Response App Model)
 
 
+# Companies  [/api/v2/companies]
+
+    Return AppsCo companies for current user.
+
+### Retrieve companies  [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes
+        + companies (array[string])
+        + meta (Paging)
+
+# Company [/api/v2/companies/{company_id}]
+
+    Return AppsCo Company information for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+
+
+### Retrieve company  [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Company)
+
+
+# Company Applications [/api/v2/companies/{company_id}/applications]
+
+    Return AppsCo Company information for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+
+
+### Retrieve company applications  [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes
+        + applications (array[string])
+        + meta (Paging)
+
+### Add company application to organization unit [POST]
++ Request
+    + Attributes (Setup App to OrgUnit)
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Company Application)
+
+# Company OrgUnits [/api/v2/companies/{company_id}/org-units]
+
+  Return AppsCo Company OrgUnits for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+
+### Retrieve company orgunits  [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes
+        + orgunits (array[string])
+        + meta (Paging)
+
+# Company OrgUnit [/api/v2/companies/{company_id}/org-units/{orgunit_id}]
+
+  Return AppsCo Company OrgUnits for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + `orgunit_id`: 44 (number) - ID of the Company OrgUnit in the form of an integer
+
+### Retrieve company orgunit  [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes
+        + item (Model OrgUnit)
+
+### Add new organization unit [POST]
++ Request
+    + Attributes (Setup OrgUnit)
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes
+        + orgunit (Model OrgUnit)
+
+### Remove organization unit [DELETE]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes
+        + response (Response App Model)
+
 
 
 # Data Structures
@@ -1552,3 +1678,88 @@ Return AppsCo specific software licence.
 + error: Unprocessable Entity (string)
 + message: "" (string)
 + code: 422 (number)
+
+
+## Company (object)
++ name (string) - Name of company
++ `contact_email` (string) - Contact email
++ domain (string) - Domain of company
++ `intranet_website` (string) - Intranet website of company
++ `remaining_trial_period` (number) - Remaining trial period
++ `trial_period` (number) - Trial period
++ image (string) - Image route
++ self (string) - Company route
++ meta (Meta Company)
+
+## Meta Company (object)
++ applications - Company applications route
++ settings - Company settings route
++ logo - Company logo route
+
+## Setup Company Application (object)
++ `application_templates[]` (string, required) - Company applications route
+
+## Setup App to OrgUnit (object)
++ `applications[]` (string, required) - Route of application which user wants to add to OrgUnit
+
+## Company Application (object)
++ `application_template` (object) - Application template
+    + title - Title of application
+    + `supported_auth_types`: unpw (array)
+        + none
+        + item
+    + `icon_url` - Icon url
+    + url - Application  url
+    + `url_editable` (boolean)
+    + self - Application route
++ title - Title of application
++ alias (number)
++ `claim_type` - Claim type
++ `auth_type` - Auth type
++ `url_editable` (boolean) - Url editable
++ `application_url` - Application url
++ url - Url route
++ images (array[string]) - Images
++ security (object)
+    + info  (object)
+        + `not_configured` (number)
+        + configured (number)
+        + `lowest_score` (number)
+    + score (number)
++ `last_login` - Who was last logged in
++ claims (array)
+    + username
+    + password
++ `org_units` (array[OrgUnits])
++ `last_modified` (object)
+    + account - Name of account user
+    + date (DateTime Model)
++ `daily_usage` (number)
++ meta (Meta Company App)
++ self
+
+## OrgUnits (object)
++ name - Name of org units
++ description - Description of urg unit
++ alias (number) - Alias
++ meta (object)
+    + remove - Remove url
+
+## Meta Company App (object)
++ log - Application log route
++ subscribers - Application subscribers route
++ `update_claims` - Application claims route
++ update - Update
++ `account_claims` - Application account claims route
++ `account_icon`
+
+## Model OrgUnit (object)
++ name - Name of OrgUnit
++ alias (number) - Alias
++ description - Description of OrgUnit
++ parent - Parent route of OrgUnit
++ self - OrgUnit route
+
+## Setup OrgUnit (object)
++ `org_unit[name]` (string, required) - Name of OrgUnit
++ `org_unit[description]` - Description of OrgUnit

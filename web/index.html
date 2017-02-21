@@ -1202,6 +1202,132 @@
     </div>
     
   
+    
+    <div class="title ">
+      <i class="dropdown icon"></i>
+      
+        <strong>Companies</strong>
+      
+    </div>
+    <div class="content ">
+      <div class="ui fluid secondary vertical menu">
+      
+        <a class="item green" href="#companies-retrieve-companies">
+          <i class="ui green empty circular label"></i>
+          
+            <span>Retrieve companies</span>
+          
+        </a>
+      
+      </div>
+    </div>
+    
+  
+    
+    <div class="title ">
+      <i class="dropdown icon"></i>
+      
+        <strong>Company</strong>
+      
+    </div>
+    <div class="content ">
+      <div class="ui fluid secondary vertical menu">
+      
+        <a class="item green" href="#company-retrieve-company">
+          <i class="ui green empty circular label"></i>
+          
+            <span>Retrieve company</span>
+          
+        </a>
+      
+      </div>
+    </div>
+    
+  
+    
+    <div class="title ">
+      <i class="dropdown icon"></i>
+      
+        <strong>Company Applications</strong>
+      
+    </div>
+    <div class="content ">
+      <div class="ui fluid secondary vertical menu">
+      
+        <a class="item green" href="#company-applications-retrieve-company-applications">
+          <i class="ui green empty circular label"></i>
+          
+            <span>Retrieve company applications</span>
+          
+        </a>
+      
+        <a class="item blue" href="#company-applications-add-company-application-to-organization-unit">
+          <i class="ui blue empty circular label"></i>
+          
+            <span>Add company application to organization unit</span>
+          
+        </a>
+      
+      </div>
+    </div>
+    
+  
+    
+    <div class="title ">
+      <i class="dropdown icon"></i>
+      
+        <strong>Company OrgUnits</strong>
+      
+    </div>
+    <div class="content ">
+      <div class="ui fluid secondary vertical menu">
+      
+        <a class="item green" href="#company-orgunits-retrieve-company-orgunits">
+          <i class="ui green empty circular label"></i>
+          
+            <span>Retrieve company orgunits</span>
+          
+        </a>
+      
+      </div>
+    </div>
+    
+  
+    
+    <div class="title ">
+      <i class="dropdown icon"></i>
+      
+        <strong>Company OrgUnit</strong>
+      
+    </div>
+    <div class="content ">
+      <div class="ui fluid secondary vertical menu">
+      
+        <a class="item green" href="#company-orgunit-retrieve-company-orgunit">
+          <i class="ui green empty circular label"></i>
+          
+            <span>Retrieve company orgunit</span>
+          
+        </a>
+      
+        <a class="item blue" href="#company-orgunit-add-new-organization-unit">
+          <i class="ui blue empty circular label"></i>
+          
+            <span>Add new organization unit</span>
+          
+        </a>
+      
+        <a class="item red" href="#company-orgunit-remove-organization-unit">
+          <i class="ui red empty circular label"></i>
+          
+            <span>Remove organization unit</span>
+          
+        </a>
+      
+      </div>
+    </div>
+    
+  
 </div>
 
 
@@ -1341,6 +1467,14 @@ If application is removed all coresponding application icons will be also remove
 
 <li><p>Account revoked application authorization</p></li>
 </ul>
+
+<h1 id="company-orgunits">Company OrgUnits</h1>
+
+<p>Company represents something to write&hellip;</p>
+
+<h1 id="orgunit--application--account-policy">OrgUnit - Application - Account policy</h1>
+
+<p>OrgUnit is something something</p>
 
 </div>
 
@@ -14424,6 +14558,1425 @@ In order to access this list user first need to authenticate.</p>
   &#34;type&#34;: &#34;object&#34;,
   &#34;properties&#34;: {
     &#34;Response&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;message&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;code&#34;: {
+          &#34;type&#34;: &#34;number&#34;,
+          &#34;description&#34;: &#34;Response code&#34;
+        }
+      }
+    }
+  }
+}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        
+        </div>
+      <div class="ui hidden divider"></div>
+    
+  
+    
+      <div class="ui stacked segments">
+        <div class="ui basic segment resource">
+          <div class="ui purple huge ribbon label">
+            Companies
+          </div>
+          <div class="ui header">
+            <div class="ui sub header">
+              <pre><code>Return AppsCo companies for current user.
+</code></pre>
+
+            </div>
+          </div>
+        </div>
+
+        
+          
+<div class="ui grey horizontal small divider header">
+  <i class="ui grey micro circular label"></i>
+  <i class="ui pink micro circular label"></i>
+  <i class="ui grey micro circular label"></i>
+</div>
+
+          <div class="ui basic segment">
+            <h3 class="ui block center aligned header" id="companies-retrieve-companies">
+              Retrieve companies
+            </h3>
+            <div class="description"></div>
+
+            
+              <h4 class="ui horizontal divider">
+                REQUEST
+              </h4>
+              <div class="description"></div>
+              <div class="fluid ui large labeled button">
+                <div class="ui green large button">
+                  <h3>GET</h3>
+                </div>
+                <a class="ui basic fluid green label">
+                  <code>https://appsco.com/api/v2/companies</code>
+                </a>
+              </div>
+              
+              
+                
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Authorization</td>
+      <td><code>token absdef12345</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              
+              
+
+              <h4 class="ui horizontal divider">RESPONSE</h4>
+              <div class="description"></div>
+              
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Content-Type</td>
+      <td><code>application/json</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              <div class="ui stacked blue segment">
+                <div class="ui fluid transaction accordion">
+                  <div class="title center aligned">
+                    <a class="ui blue circular label">
+                      200
+                    </a>
+                    <code>application/json</code>
+                  </div>
+                  <div class="content tabbed">
+                    <div class="ui top attached tabular menu">
+                      <a data-tab="body" class="active item">BODY</a>
+                      <a data-tab="schema" class="item">SCHEMA</a>
+                    </div>
+                    <div class="ui bottom attached active tab segment" data-tab="body">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;companies&#34;: [],
+  &#34;meta&#34;: {
+    &#34;total&#34;: 0,
+    &#34;page&#34;: 0,
+    &#34;first&#34;: &#34;&#34;,
+    &#34;last&#34;: &#34;&#34;,
+    &#34;pages&#34;: 0,
+    &#34;per_page&#34;: 0,
+    &#34;prev&#34;: &#34;&#34;,
+    &#34;next&#34;: &#34;&#34;
+  }
+}</code>
+                      </pre>
+                    </div>
+                    <div class="ui bottom attached tab segment" data-tab="schema">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;$schema&#34;: &#34;http://json-schema.org/draft-04/schema#&#34;,
+  &#34;type&#34;: &#34;object&#34;,
+  &#34;properties&#34;: {
+    &#34;companies&#34;: {
+      &#34;type&#34;: &#34;array&#34;
+    },
+    &#34;meta&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;total&#34;: {
+          &#34;type&#34;: &#34;number&#34;,
+          &#34;description&#34;: &#34;Total number of items&#34;
+        },
+        &#34;page&#34;: {
+          &#34;type&#34;: &#34;number&#34;,
+          &#34;description&#34;: &#34;Current page&#34;
+        },
+        &#34;first&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;First page in collection&#34;
+        },
+        &#34;last&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Last page in collection&#34;
+        },
+        &#34;pages&#34;: {
+          &#34;type&#34;: &#34;number&#34;,
+          &#34;description&#34;: &#34;Number of pages&#34;
+        },
+        &#34;per_page&#34;: {
+          &#34;type&#34;: &#34;number&#34;,
+          &#34;description&#34;: &#34;Number of items per page&#34;
+        },
+        &#34;prev&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Previous page&#34;
+        },
+        &#34;next&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Next page&#34;
+        }
+      }
+    }
+  }
+}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        
+        </div>
+      <div class="ui hidden divider"></div>
+    
+  
+    
+      <div class="ui stacked segments">
+        <div class="ui basic segment resource">
+          <div class="ui purple huge ribbon label">
+            Company
+          </div>
+          <div class="ui header">
+            <div class="ui sub header">
+              <pre><code>Return AppsCo Company information for currently logged in user.
+</code></pre>
+
+            </div>
+          </div>
+        </div>
+
+        
+          
+<div class="ui grey horizontal small divider header">
+  <i class="ui grey micro circular label"></i>
+  <i class="ui pink micro circular label"></i>
+  <i class="ui grey micro circular label"></i>
+</div>
+
+          <div class="ui basic segment">
+            <h3 class="ui block center aligned header" id="company-retrieve-company">
+              Retrieve company
+            </h3>
+            <div class="description"></div>
+
+            
+              <h4 class="ui horizontal divider">
+                REQUEST
+              </h4>
+              <div class="description"></div>
+              <div class="fluid ui large labeled button">
+                <div class="ui green large button">
+                  <h3>GET</h3>
+                </div>
+                <a class="ui basic fluid green label">
+                  <code>https://appsco.com/api/v2/companies/{company_id}</code>
+                </a>
+              </div>
+              
+              
+                
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Authorization</td>
+      <td><code>token absdef12345</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              
+              
+
+              <h4 class="ui horizontal divider">RESPONSE</h4>
+              <div class="description"></div>
+              
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Content-Type</td>
+      <td><code>application/json</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              <div class="ui stacked blue segment">
+                <div class="ui fluid transaction accordion">
+                  <div class="title center aligned">
+                    <a class="ui blue circular label">
+                      200
+                    </a>
+                    <code>application/json</code>
+                  </div>
+                  <div class="content tabbed">
+                    <div class="ui top attached tabular menu">
+                      <a data-tab="body" class="active item">BODY</a>
+                      <a data-tab="schema" class="item">SCHEMA</a>
+                    </div>
+                    <div class="ui bottom attached active tab segment" data-tab="body">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;name&#34;: &#34;&#34;,
+  &#34;contact_email&#34;: &#34;&#34;,
+  &#34;domain&#34;: &#34;&#34;,
+  &#34;intranet_website&#34;: &#34;&#34;,
+  &#34;remaining_trial_period&#34;: 0,
+  &#34;trial_period&#34;: 0,
+  &#34;image&#34;: &#34;&#34;,
+  &#34;self&#34;: &#34;&#34;,
+  &#34;meta&#34;: {
+    &#34;applications&#34;: &#34;&#34;,
+    &#34;settings&#34;: &#34;&#34;,
+    &#34;logo&#34;: &#34;&#34;
+  }
+}</code>
+                      </pre>
+                    </div>
+                    <div class="ui bottom attached tab segment" data-tab="schema">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;$schema&#34;: &#34;http://json-schema.org/draft-04/schema#&#34;,
+  &#34;type&#34;: &#34;object&#34;,
+  &#34;properties&#34;: {
+    &#34;name&#34;: {
+      &#34;type&#34;: &#34;string&#34;,
+      &#34;description&#34;: &#34;Name of company&#34;
+    },
+    &#34;contact_email&#34;: {
+      &#34;type&#34;: &#34;string&#34;,
+      &#34;description&#34;: &#34;Contact email&#34;
+    },
+    &#34;domain&#34;: {
+      &#34;type&#34;: &#34;string&#34;,
+      &#34;description&#34;: &#34;Domain of company&#34;
+    },
+    &#34;intranet_website&#34;: {
+      &#34;type&#34;: &#34;string&#34;,
+      &#34;description&#34;: &#34;Intranet website of company&#34;
+    },
+    &#34;remaining_trial_period&#34;: {
+      &#34;type&#34;: &#34;number&#34;,
+      &#34;description&#34;: &#34;Remaining trial period&#34;
+    },
+    &#34;trial_period&#34;: {
+      &#34;type&#34;: &#34;number&#34;,
+      &#34;description&#34;: &#34;Trial period&#34;
+    },
+    &#34;image&#34;: {
+      &#34;type&#34;: &#34;string&#34;,
+      &#34;description&#34;: &#34;Image route&#34;
+    },
+    &#34;self&#34;: {
+      &#34;type&#34;: &#34;string&#34;,
+      &#34;description&#34;: &#34;Company route&#34;
+    },
+    &#34;meta&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;applications&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Company applications route&#34;
+        },
+        &#34;settings&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Company settings route&#34;
+        },
+        &#34;logo&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Company logo route&#34;
+        }
+      }
+    }
+  }
+}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        
+        </div>
+      <div class="ui hidden divider"></div>
+    
+  
+    
+      <div class="ui stacked segments">
+        <div class="ui basic segment resource">
+          <div class="ui purple huge ribbon label">
+            Company Applications
+          </div>
+          <div class="ui header">
+            <div class="ui sub header">
+              <pre><code>Return AppsCo Company information for currently logged in user.
+</code></pre>
+
+            </div>
+          </div>
+        </div>
+
+        
+          
+<div class="ui grey horizontal small divider header">
+  <i class="ui grey micro circular label"></i>
+  <i class="ui pink micro circular label"></i>
+  <i class="ui grey micro circular label"></i>
+</div>
+
+          <div class="ui basic segment">
+            <h3 class="ui block center aligned header" id="company-applications-retrieve-company-applications">
+              Retrieve company applications
+            </h3>
+            <div class="description"></div>
+
+            
+              <h4 class="ui horizontal divider">
+                REQUEST
+              </h4>
+              <div class="description"></div>
+              <div class="fluid ui large labeled button">
+                <div class="ui green large button">
+                  <h3>GET</h3>
+                </div>
+                <a class="ui basic fluid green label">
+                  <code>https://appsco.com/api/v2/companies/{company_id}/applications</code>
+                </a>
+              </div>
+              
+              
+                
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Authorization</td>
+      <td><code>token absdef12345</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              
+              
+
+              <h4 class="ui horizontal divider">RESPONSE</h4>
+              <div class="description"></div>
+              
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Content-Type</td>
+      <td><code>application/json</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              <div class="ui stacked blue segment">
+                <div class="ui fluid transaction accordion">
+                  <div class="title center aligned">
+                    <a class="ui blue circular label">
+                      200
+                    </a>
+                    <code>application/json</code>
+                  </div>
+                  <div class="content tabbed">
+                    <div class="ui top attached tabular menu">
+                      <a data-tab="body" class="active item">BODY</a>
+                      <a data-tab="schema" class="item">SCHEMA</a>
+                    </div>
+                    <div class="ui bottom attached active tab segment" data-tab="body">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;applications&#34;: [],
+  &#34;meta&#34;: {
+    &#34;total&#34;: 0,
+    &#34;page&#34;: 0,
+    &#34;first&#34;: &#34;&#34;,
+    &#34;last&#34;: &#34;&#34;,
+    &#34;pages&#34;: 0,
+    &#34;per_page&#34;: 0,
+    &#34;prev&#34;: &#34;&#34;,
+    &#34;next&#34;: &#34;&#34;
+  }
+}</code>
+                      </pre>
+                    </div>
+                    <div class="ui bottom attached tab segment" data-tab="schema">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;$schema&#34;: &#34;http://json-schema.org/draft-04/schema#&#34;,
+  &#34;type&#34;: &#34;object&#34;,
+  &#34;properties&#34;: {
+    &#34;applications&#34;: {
+      &#34;type&#34;: &#34;array&#34;
+    },
+    &#34;meta&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;total&#34;: {
+          &#34;type&#34;: &#34;number&#34;,
+          &#34;description&#34;: &#34;Total number of items&#34;
+        },
+        &#34;page&#34;: {
+          &#34;type&#34;: &#34;number&#34;,
+          &#34;description&#34;: &#34;Current page&#34;
+        },
+        &#34;first&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;First page in collection&#34;
+        },
+        &#34;last&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Last page in collection&#34;
+        },
+        &#34;pages&#34;: {
+          &#34;type&#34;: &#34;number&#34;,
+          &#34;description&#34;: &#34;Number of pages&#34;
+        },
+        &#34;per_page&#34;: {
+          &#34;type&#34;: &#34;number&#34;,
+          &#34;description&#34;: &#34;Number of items per page&#34;
+        },
+        &#34;prev&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Previous page&#34;
+        },
+        &#34;next&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Next page&#34;
+        }
+      }
+    }
+  }
+}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        
+          
+<div class="ui grey horizontal small divider header">
+  <i class="ui grey micro circular label"></i>
+  <i class="ui pink micro circular label"></i>
+  <i class="ui grey micro circular label"></i>
+</div>
+
+          <div class="ui basic segment">
+            <h3 class="ui block center aligned header" id="company-applications-add-company-application-to-organization-unit">
+              Add company application to organization unit
+            </h3>
+            <div class="description"></div>
+
+            
+              <h4 class="ui horizontal divider">
+                REQUEST
+              </h4>
+              <div class="description"></div>
+              <div class="fluid ui large labeled button">
+                <div class="ui blue large button">
+                  <h3>POST</h3>
+                </div>
+                <a class="ui basic fluid blue label">
+                  <code>https://appsco.com/api/v2/companies/{company_id}/applications</code>
+                </a>
+              </div>
+              
+              
+                
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Authorization</td>
+      <td><code>token absdef12345</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              
+              
+
+              <h4 class="ui horizontal divider">RESPONSE</h4>
+              <div class="description"></div>
+              
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Content-Type</td>
+      <td><code>application/json</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              <div class="ui stacked blue segment">
+                <div class="ui fluid transaction accordion">
+                  <div class="title center aligned">
+                    <a class="ui blue circular label">
+                      200
+                    </a>
+                    <code>application/json</code>
+                  </div>
+                  <div class="content tabbed">
+                    <div class="ui top attached tabular menu">
+                      <a data-tab="body" class="active item">BODY</a>
+                      <a data-tab="schema" class="item">SCHEMA</a>
+                    </div>
+                    <div class="ui bottom attached active tab segment" data-tab="body">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;application_template&#34;: {
+    &#34;title&#34;: &#34;&#34;,
+    &#34;supported_auth_types&#34;: [
+      &#34;unpw&#34;,
+      &#34;none&#34;,
+      &#34;item&#34;
+    ],
+    &#34;icon_url&#34;: &#34;&#34;,
+    &#34;url&#34;: &#34;&#34;,
+    &#34;url_editable&#34;: false,
+    &#34;self&#34;: &#34;&#34;
+  },
+  &#34;title&#34;: &#34;&#34;,
+  &#34;alias&#34;: 0,
+  &#34;claim_type&#34;: &#34;&#34;,
+  &#34;auth_type&#34;: &#34;&#34;,
+  &#34;url_editable&#34;: false,
+  &#34;application_url&#34;: &#34;&#34;,
+  &#34;url&#34;: &#34;&#34;,
+  &#34;images&#34;: [],
+  &#34;security&#34;: {
+    &#34;info&#34;: {
+      &#34;not_configured&#34;: 0,
+      &#34;configured&#34;: 0,
+      &#34;lowest_score&#34;: 0
+    },
+    &#34;score&#34;: 0
+  },
+  &#34;last_login&#34;: &#34;&#34;,
+  &#34;claims&#34;: [
+    &#34;username&#34;,
+    &#34;password&#34;
+  ],
+  &#34;org_units&#34;: [
+    {
+      &#34;name&#34;: &#34;&#34;,
+      &#34;description&#34;: &#34;&#34;,
+      &#34;alias&#34;: 0,
+      &#34;meta&#34;: {
+        &#34;remove&#34;: &#34;&#34;
+      }
+    }
+  ],
+  &#34;last_modified&#34;: {
+    &#34;account&#34;: &#34;&#34;,
+    &#34;date&#34;: {
+      &#34;date&#34;: &#34;&#34;,
+      &#34;timezone_type&#34;: 0,
+      &#34;timezone&#34;: &#34;&#34;
+    }
+  },
+  &#34;daily_usage&#34;: 0,
+  &#34;meta&#34;: {
+    &#34;log&#34;: &#34;&#34;,
+    &#34;subscribers&#34;: &#34;&#34;,
+    &#34;update_claims&#34;: &#34;&#34;,
+    &#34;update&#34;: &#34;&#34;,
+    &#34;account_claims&#34;: &#34;&#34;,
+    &#34;account_icon&#34;: &#34;&#34;
+  },
+  &#34;self&#34;: &#34;&#34;
+}</code>
+                      </pre>
+                    </div>
+                    <div class="ui bottom attached tab segment" data-tab="schema">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;$schema&#34;: &#34;http://json-schema.org/draft-04/schema#&#34;,
+  &#34;type&#34;: &#34;object&#34;,
+  &#34;properties&#34;: {
+    &#34;application_template&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;title&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Title of application&#34;
+        },
+        &#34;supported_auth_types&#34;: {
+          &#34;type&#34;: &#34;array&#34;
+        },
+        &#34;icon_url&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Icon url&#34;
+        },
+        &#34;url&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Application  url&#34;
+        },
+        &#34;url_editable&#34;: {
+          &#34;type&#34;: &#34;boolean&#34;
+        },
+        &#34;self&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Application route&#34;
+        }
+      },
+      &#34;description&#34;: &#34;Application template&#34;
+    },
+    &#34;title&#34;: {
+      &#34;type&#34;: &#34;string&#34;,
+      &#34;description&#34;: &#34;Title of application&#34;
+    },
+    &#34;alias&#34;: {
+      &#34;type&#34;: &#34;number&#34;
+    },
+    &#34;claim_type&#34;: {
+      &#34;type&#34;: &#34;string&#34;,
+      &#34;description&#34;: &#34;Claim type&#34;
+    },
+    &#34;auth_type&#34;: {
+      &#34;type&#34;: &#34;string&#34;,
+      &#34;description&#34;: &#34;Auth type&#34;
+    },
+    &#34;url_editable&#34;: {
+      &#34;type&#34;: &#34;boolean&#34;,
+      &#34;description&#34;: &#34;Url editable&#34;
+    },
+    &#34;application_url&#34;: {
+      &#34;type&#34;: &#34;string&#34;,
+      &#34;description&#34;: &#34;Application url&#34;
+    },
+    &#34;url&#34;: {
+      &#34;type&#34;: &#34;string&#34;,
+      &#34;description&#34;: &#34;Url route&#34;
+    },
+    &#34;images&#34;: {
+      &#34;type&#34;: &#34;array&#34;,
+      &#34;description&#34;: &#34;Images&#34;
+    },
+    &#34;security&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;info&#34;: {
+          &#34;type&#34;: &#34;object&#34;,
+          &#34;properties&#34;: {
+            &#34;not_configured&#34;: {
+              &#34;type&#34;: &#34;number&#34;
+            },
+            &#34;configured&#34;: {
+              &#34;type&#34;: &#34;number&#34;
+            },
+            &#34;lowest_score&#34;: {
+              &#34;type&#34;: &#34;number&#34;
+            }
+          }
+        },
+        &#34;score&#34;: {
+          &#34;type&#34;: &#34;number&#34;
+        }
+      }
+    },
+    &#34;last_login&#34;: {
+      &#34;type&#34;: &#34;string&#34;,
+      &#34;description&#34;: &#34;Who was last logged in&#34;
+    },
+    &#34;claims&#34;: {
+      &#34;type&#34;: &#34;array&#34;
+    },
+    &#34;org_units&#34;: {
+      &#34;type&#34;: &#34;array&#34;
+    },
+    &#34;last_modified&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;account&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Name of account user&#34;
+        },
+        &#34;date&#34;: {
+          &#34;type&#34;: &#34;object&#34;,
+          &#34;properties&#34;: {
+            &#34;date&#34;: {
+              &#34;type&#34;: &#34;string&#34;,
+              &#34;description&#34;: &#34;Date time in iso&#34;
+            },
+            &#34;timezone_type&#34;: {
+              &#34;type&#34;: &#34;number&#34;
+            },
+            &#34;timezone&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            }
+          }
+        }
+      }
+    },
+    &#34;daily_usage&#34;: {
+      &#34;type&#34;: &#34;number&#34;
+    },
+    &#34;meta&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;log&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Application log route&#34;
+        },
+        &#34;subscribers&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Application subscribers route&#34;
+        },
+        &#34;update_claims&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Application claims route&#34;
+        },
+        &#34;update&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Update&#34;
+        },
+        &#34;account_claims&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Application account claims route&#34;
+        },
+        &#34;account_icon&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        }
+      }
+    },
+    &#34;self&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    }
+  }
+}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        
+        </div>
+      <div class="ui hidden divider"></div>
+    
+  
+    
+      <div class="ui stacked segments">
+        <div class="ui basic segment resource">
+          <div class="ui purple huge ribbon label">
+            Company OrgUnits
+          </div>
+          <div class="ui header">
+            <div class="ui sub header">
+              <p>Return AppsCo Company OrgUnits for currently logged in user.</p>
+
+            </div>
+          </div>
+        </div>
+
+        
+          
+<div class="ui grey horizontal small divider header">
+  <i class="ui grey micro circular label"></i>
+  <i class="ui pink micro circular label"></i>
+  <i class="ui grey micro circular label"></i>
+</div>
+
+          <div class="ui basic segment">
+            <h3 class="ui block center aligned header" id="company-orgunits-retrieve-company-orgunits">
+              Retrieve company orgunits
+            </h3>
+            <div class="description"></div>
+
+            
+              <h4 class="ui horizontal divider">
+                REQUEST
+              </h4>
+              <div class="description"></div>
+              <div class="fluid ui large labeled button">
+                <div class="ui green large button">
+                  <h3>GET</h3>
+                </div>
+                <a class="ui basic fluid green label">
+                  <code>https://appsco.com/api/v2/companies/{company_id}/org-units</code>
+                </a>
+              </div>
+              
+              
+                
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Authorization</td>
+      <td><code>token absdef12345</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              
+              
+
+              <h4 class="ui horizontal divider">RESPONSE</h4>
+              <div class="description"></div>
+              
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Content-Type</td>
+      <td><code>application/json</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              <div class="ui stacked blue segment">
+                <div class="ui fluid transaction accordion">
+                  <div class="title center aligned">
+                    <a class="ui blue circular label">
+                      200
+                    </a>
+                    <code>application/json</code>
+                  </div>
+                  <div class="content tabbed">
+                    <div class="ui top attached tabular menu">
+                      <a data-tab="body" class="active item">BODY</a>
+                      <a data-tab="schema" class="item">SCHEMA</a>
+                    </div>
+                    <div class="ui bottom attached active tab segment" data-tab="body">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;orgunits&#34;: [],
+  &#34;meta&#34;: {
+    &#34;total&#34;: 0,
+    &#34;page&#34;: 0,
+    &#34;first&#34;: &#34;&#34;,
+    &#34;last&#34;: &#34;&#34;,
+    &#34;pages&#34;: 0,
+    &#34;per_page&#34;: 0,
+    &#34;prev&#34;: &#34;&#34;,
+    &#34;next&#34;: &#34;&#34;
+  }
+}</code>
+                      </pre>
+                    </div>
+                    <div class="ui bottom attached tab segment" data-tab="schema">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;$schema&#34;: &#34;http://json-schema.org/draft-04/schema#&#34;,
+  &#34;type&#34;: &#34;object&#34;,
+  &#34;properties&#34;: {
+    &#34;orgunits&#34;: {
+      &#34;type&#34;: &#34;array&#34;
+    },
+    &#34;meta&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;total&#34;: {
+          &#34;type&#34;: &#34;number&#34;,
+          &#34;description&#34;: &#34;Total number of items&#34;
+        },
+        &#34;page&#34;: {
+          &#34;type&#34;: &#34;number&#34;,
+          &#34;description&#34;: &#34;Current page&#34;
+        },
+        &#34;first&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;First page in collection&#34;
+        },
+        &#34;last&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Last page in collection&#34;
+        },
+        &#34;pages&#34;: {
+          &#34;type&#34;: &#34;number&#34;,
+          &#34;description&#34;: &#34;Number of pages&#34;
+        },
+        &#34;per_page&#34;: {
+          &#34;type&#34;: &#34;number&#34;,
+          &#34;description&#34;: &#34;Number of items per page&#34;
+        },
+        &#34;prev&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Previous page&#34;
+        },
+        &#34;next&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Next page&#34;
+        }
+      }
+    }
+  }
+}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        
+        </div>
+      <div class="ui hidden divider"></div>
+    
+  
+    
+      <div class="ui stacked segments">
+        <div class="ui basic segment resource">
+          <div class="ui purple huge ribbon label">
+            Company OrgUnit
+          </div>
+          <div class="ui header">
+            <div class="ui sub header">
+              <p>Return AppsCo Company OrgUnits for currently logged in user.</p>
+
+            </div>
+          </div>
+        </div>
+
+        
+          
+<div class="ui grey horizontal small divider header">
+  <i class="ui grey micro circular label"></i>
+  <i class="ui pink micro circular label"></i>
+  <i class="ui grey micro circular label"></i>
+</div>
+
+          <div class="ui basic segment">
+            <h3 class="ui block center aligned header" id="company-orgunit-retrieve-company-orgunit">
+              Retrieve company orgunit
+            </h3>
+            <div class="description"></div>
+
+            
+              <h4 class="ui horizontal divider">
+                REQUEST
+              </h4>
+              <div class="description"></div>
+              <div class="fluid ui large labeled button">
+                <div class="ui green large button">
+                  <h3>GET</h3>
+                </div>
+                <a class="ui basic fluid green label">
+                  <code>https://appsco.com/api/v2/companies/{company_id}/org-units/{orgunit_id}</code>
+                </a>
+              </div>
+              
+              
+                
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Authorization</td>
+      <td><code>token absdef12345</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              
+              
+
+              <h4 class="ui horizontal divider">RESPONSE</h4>
+              <div class="description"></div>
+              
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Content-Type</td>
+      <td><code>application/json</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              <div class="ui stacked blue segment">
+                <div class="ui fluid transaction accordion">
+                  <div class="title center aligned">
+                    <a class="ui blue circular label">
+                      200
+                    </a>
+                    <code>application/json</code>
+                  </div>
+                  <div class="content tabbed">
+                    <div class="ui top attached tabular menu">
+                      <a data-tab="body" class="active item">BODY</a>
+                      <a data-tab="schema" class="item">SCHEMA</a>
+                    </div>
+                    <div class="ui bottom attached active tab segment" data-tab="body">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;item&#34;: {
+    &#34;name&#34;: &#34;&#34;,
+    &#34;alias&#34;: 0,
+    &#34;description&#34;: &#34;&#34;,
+    &#34;parent&#34;: &#34;&#34;,
+    &#34;self&#34;: &#34;&#34;
+  }
+}</code>
+                      </pre>
+                    </div>
+                    <div class="ui bottom attached tab segment" data-tab="schema">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;$schema&#34;: &#34;http://json-schema.org/draft-04/schema#&#34;,
+  &#34;type&#34;: &#34;object&#34;,
+  &#34;properties&#34;: {
+    &#34;item&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;name&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Name of OrgUnit&#34;
+        },
+        &#34;alias&#34;: {
+          &#34;type&#34;: &#34;number&#34;,
+          &#34;description&#34;: &#34;Alias&#34;
+        },
+        &#34;description&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Description of OrgUnit&#34;
+        },
+        &#34;parent&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Parent route of OrgUnit&#34;
+        },
+        &#34;self&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;OrgUnit route&#34;
+        }
+      }
+    }
+  }
+}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        
+          
+<div class="ui grey horizontal small divider header">
+  <i class="ui grey micro circular label"></i>
+  <i class="ui pink micro circular label"></i>
+  <i class="ui grey micro circular label"></i>
+</div>
+
+          <div class="ui basic segment">
+            <h3 class="ui block center aligned header" id="company-orgunit-add-new-organization-unit">
+              Add new organization unit
+            </h3>
+            <div class="description"></div>
+
+            
+              <h4 class="ui horizontal divider">
+                REQUEST
+              </h4>
+              <div class="description"></div>
+              <div class="fluid ui large labeled button">
+                <div class="ui blue large button">
+                  <h3>POST</h3>
+                </div>
+                <a class="ui basic fluid blue label">
+                  <code>https://appsco.com/api/v2/companies/{company_id}/org-units/{orgunit_id}</code>
+                </a>
+              </div>
+              
+              
+                
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Authorization</td>
+      <td><code>token absdef12345</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              
+              
+
+              <h4 class="ui horizontal divider">RESPONSE</h4>
+              <div class="description"></div>
+              
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Content-Type</td>
+      <td><code>application/json</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              <div class="ui stacked blue segment">
+                <div class="ui fluid transaction accordion">
+                  <div class="title center aligned">
+                    <a class="ui blue circular label">
+                      200
+                    </a>
+                    <code>application/json</code>
+                  </div>
+                  <div class="content tabbed">
+                    <div class="ui top attached tabular menu">
+                      <a data-tab="body" class="active item">BODY</a>
+                      <a data-tab="schema" class="item">SCHEMA</a>
+                    </div>
+                    <div class="ui bottom attached active tab segment" data-tab="body">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;orgunit&#34;: {
+    &#34;name&#34;: &#34;&#34;,
+    &#34;alias&#34;: 0,
+    &#34;description&#34;: &#34;&#34;,
+    &#34;parent&#34;: &#34;&#34;,
+    &#34;self&#34;: &#34;&#34;
+  }
+}</code>
+                      </pre>
+                    </div>
+                    <div class="ui bottom attached tab segment" data-tab="schema">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;$schema&#34;: &#34;http://json-schema.org/draft-04/schema#&#34;,
+  &#34;type&#34;: &#34;object&#34;,
+  &#34;properties&#34;: {
+    &#34;orgunit&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;name&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Name of OrgUnit&#34;
+        },
+        &#34;alias&#34;: {
+          &#34;type&#34;: &#34;number&#34;,
+          &#34;description&#34;: &#34;Alias&#34;
+        },
+        &#34;description&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Description of OrgUnit&#34;
+        },
+        &#34;parent&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Parent route of OrgUnit&#34;
+        },
+        &#34;self&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;OrgUnit route&#34;
+        }
+      }
+    }
+  }
+}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        
+          
+<div class="ui grey horizontal small divider header">
+  <i class="ui grey micro circular label"></i>
+  <i class="ui pink micro circular label"></i>
+  <i class="ui grey micro circular label"></i>
+</div>
+
+          <div class="ui basic segment">
+            <h3 class="ui block center aligned header" id="company-orgunit-remove-organization-unit">
+              Remove organization unit
+            </h3>
+            <div class="description"></div>
+
+            
+              <h4 class="ui horizontal divider">
+                REQUEST
+              </h4>
+              <div class="description"></div>
+              <div class="fluid ui large labeled button">
+                <div class="ui red large button">
+                  <h3>DELETE</h3>
+                </div>
+                <a class="ui basic fluid red label">
+                  <code>https://appsco.com/api/v2/companies/{company_id}/org-units/{orgunit_id}</code>
+                </a>
+              </div>
+              
+              
+                
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Authorization</td>
+      <td><code>token absdef12345</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              
+              
+
+              <h4 class="ui horizontal divider">RESPONSE</h4>
+              <div class="description"></div>
+              
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Content-Type</td>
+      <td><code>application/json</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              <div class="ui stacked blue segment">
+                <div class="ui fluid transaction accordion">
+                  <div class="title center aligned">
+                    <a class="ui blue circular label">
+                      200
+                    </a>
+                    <code>application/json</code>
+                  </div>
+                  <div class="content tabbed">
+                    <div class="ui top attached tabular menu">
+                      <a data-tab="body" class="active item">BODY</a>
+                      <a data-tab="schema" class="item">SCHEMA</a>
+                    </div>
+                    <div class="ui bottom attached active tab segment" data-tab="body">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;response&#34;: {
+    &#34;message&#34;: &#34;&#34;,
+    &#34;code&#34;: 0
+  }
+}</code>
+                      </pre>
+                    </div>
+                    <div class="ui bottom attached tab segment" data-tab="schema">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;$schema&#34;: &#34;http://json-schema.org/draft-04/schema#&#34;,
+  &#34;type&#34;: &#34;object&#34;,
+  &#34;properties&#34;: {
+    &#34;response&#34;: {
       &#34;type&#34;: &#34;object&#34;,
       &#34;properties&#34;: {
         &#34;message&#34;: {
