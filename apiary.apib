@@ -1,4 +1,4 @@
-FORMAT: 1A
+git FORMAT: 1A
 HOST: https://appsco.com/
 
 # AppsCo
@@ -1194,7 +1194,7 @@ Return AppsCo specific software licence.
     + Attributes
         + companies (array[string])
         + meta (Paging)
-
+        
 
 # Create Company  [/api/v2/company]
 
@@ -1433,7 +1433,7 @@ Return AppsCo specific software licence.
 
 + Response 200 (application/json)
     + Attributes (Company PK)
-
+    
 # Company Billing Subscription [/api/v2/companies/{company_id}/billing/subscription]
 
     Return AppsCo Company subscription information for currently logged in user.
@@ -1469,7 +1469,7 @@ Return AppsCo specific software licence.
 
 + Response 200 (application/json)
     + Attributes (Company Subscription)
-
+    
 # Company Billing Invoice List [/api/v2/companies/{company_id}/billing/invoice/list]
 
     Return AppsCo Company inovoice list information for currently logged in user.
@@ -1510,7 +1510,7 @@ Return AppsCo specific software licence.
 
 + Parameters
     + `company_id`: 16 (number) - ID of the Company in the form of an integer
-    + invoiceId: in_1AAEHWJBp3ytiq1AvWN
+    + invoiceId: in_1AAEHWJBp3ytiq1AvWN 
 
 
 ### Send billing invoice [POST]
@@ -1520,7 +1520,7 @@ Return AppsCo specific software licence.
             Authorization: token absdef12345
 
 + Response 200 (application/json)
-
+    
         []
 
 # Company Log Events [/api/v2/companies/{company_id}/log/events]
@@ -1573,7 +1573,7 @@ Return AppsCo specific software licence.
             Authorization: token absdef12345
 
 + Response 200 (application/json)
-    + Attributes
+    + Attributes 
         + `company_roles` (array[])
         + meta (Paging)
 
@@ -1585,13 +1585,351 @@ Return AppsCo specific software licence.
             Authorization: token absdef12345
 
 + Response 200 (application/json)
-    + Attributes
+    + Attributes 
+        + `company_roles` (array[])
+        + meta (Paging)
+
+# Company Directory Role [/api/v2/companies/{company_id}/directory/roles/{companyRole}]
+
+    Return AppsCo Company directory role for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + `companyRole`: 103 (number) - ID of the company role in the form of integer
+
+### Retrieve company directory role [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Directory Role)
+
+### Update company directory role [PUT]
++ Request
+    + Attributes (Update Role Attr)
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes 
         + `company_roles` (array[])
         + meta (Paging)
 
 
+# Company Directory Role Applicatoins [/api/v2/companies/{company_id}/directory/roles/{companyRole}/applications]
+
+    Return AppsCo Company directory role applications for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + `companyRole`: 103 (number) - ID of the company role in the form of integer
+
+
+### Retrieve company directory role applications [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes 
+        + `applications` (array[])
+        + meta (Paging)
+
+# Company Directory Role Can Be Manage [/api/v2/companies/{company_id}/directory/roles/{companyRole}/can-be-managed]
+
+    Return AppsCo Company directory role can be managed for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + `companyRole`: 103 (number) - ID of the company role in the form of integer
+
+### Can company directory role be managed [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Role Success Response)
+
+# Company Directory Role Change Password [/api/v2/companies/{company_id}/directory/roles/{companyRole}/change-password]
+
+    Change password AppsCo Company directory role for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + `companyRole`: 103 (number) - ID of the company role in the form of integer
+
+### Company directory role change password [POST]
++ Request
+    + Attributes (Role Change Pass Attr)
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Role Success Response)
+
+
+# Company Directory Role Notification [/api/v2/companies/{company_id}/directory/roles/{companyRole}/notifications]
+
+    Return AppsCo Company directory role notifications for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + `companyRole`: 103 (number) - ID of the company role in the form of integer
+
+### Company directory role notifications [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (array[Role Notifications])
+
+
+# Company Directory Role Two Factor Authentication [/api/v2/companies/{company_id}/directory/roles/{companyRole}/2fa]
+
+    Return AppsCo Company directory role two factor authentication for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + `companyRole`: 103 (number) - ID of the company role in the form of integer
+
+### Company directory role notifications [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Enabled Response)
+
+# Company Directory Role Import [/api/v2/companies/{company_id}/directory/roles/import]
+
+### Import company directory roles [POST]
++ Attributes
+    + file - The CSV file
+
++ Request (multipart/form-data)
+    + Headers
+
+            Authorization: token absdef12345
+
+    + Body
+
+            -----WebKitFormBoundary7Lk1ieut0jQaBl3L
+                Content-Disposition: form-data; name="file"; filename="example_import.csv"
+                Content-Type: text/csv
+            -----WebKitFormBoundary7Lk1ieut0jQaBl3L--
+
++ Response  200 (application/json)
+    + Attributes  (Roles Import)
+
+
+# Company Directory Role Log [/api/v2/companies/{company_id}/directory/roles/{companyRole}/log]
+
+    Return AppsCo Company directory role log for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + `companyRole`: 103 (number) - ID of the company role in the form of integer
+
+### Company directory role logs [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes 
+        + log (array[Directory Log], fixed)
+
+
+# Company Directory Role Org Units [/api/v2/companies/{company_id}/directory/roles/{companyRole}/org-units/{orgUnit}]
+
+    Return AppsCo Company directory role log for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + `companyRole`: 103 (number) - ID of the company role in the form of integer
+    + `orgUnit`: 103 (number) - ID of the company org unit in the form of integer
+
+### Remove company directory org unit [DELETE]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Remove Directory Org Units)
+
+
+
+# Company Directory Available Integrations [/api/v2/companies/{company_id}/integrations/available]
+
+    Return available AppsCo Company directory integrations for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+
+### Available company integrations [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes 
+        + available_integrations (array[Directory Integrations Available])
+        + meta (Paging)
+
+
+# Company Directory Integration [/api/v2/companies/{company_id}/integrations/available/{integrationAvailable}]
+
+    Return available AppsCo Company directory integrations for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + `integrationAvailable`: 1 (number) - ID of the Company directory integration in the form of an integer
+
+### Return company integration [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Directory Integrations Available)
+
+
+### Activate company integration [POST]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes 
+        + authorization_url
+
+
+# Company Directory Active [/api/v2/companies/{company_id}/integrations/active]
+
+    Return active AppsCo Company directory integrations for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+
+### Return active company integrations [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes 
+        + active_integrations (array[Directory Integrations Active])
+        + meta (Paging)
+
+
+# Company Directory Active [/api/v2/companies/{company_id}/integrations/active/{integrationActive}]
+
+    Return active AppsCo Company directory integration for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + `integrationActive`: 5 (number) - ID of the Company active integration in the form of an integer
+
+### Return active company integration [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes 
+        + active_integrations (array[Directory Integrations Active])
+
+
+# Company Directory Mappings [/api/v2/companies/{company_id}/integrations/active/{integrationActive}/mappings]
+
+    Return AppsCo Company directory mappings for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + `integrationActive`: 5 (number) - ID of the Company active integration in the form of an integer
+
+### Return company directory mappings [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes 
+        + mappings (array[Directory Integrations Mappings])
+        + meta (Paging)
+
+### Fetch company directory mappings [PATCH]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Directory Fetch Mappings)
+
+
+# Company Directory Mapping [/api/v2/companies/{company_id}/integrations/active/{integrationActive}/mappings/{integrationMapping}]
+
+    Return AppsCo Company directory mapping for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + `integrationActive`: 5 (number) - ID of the Company active integration in the form of an integer
+    + `integrationMapping`: 72 (number) - ID of the Company mapping in the form of an integer
+
+### Return company directory mapping [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes 
+        + mapping (array[Directory Integrations Mappings])
+        
+### Remove company directory mapping [DELETE]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Role Success Response)
+        
+### Create company directory mapping [POST]
++ Request
+    + Attributes (Setup mapping)
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Role Success Response)
+        
+
 
 # Data Structures
+
+## Enabled Response (object)
++ enabled (boolean)
 
 ## Code (object)
 +  code: 404oookk4ooccgsws2pxjq4rkeccg0co0wsk8 (string) - That is base64 of `client_id` and `client_secret`
@@ -1840,6 +2178,7 @@ Return AppsCo specific software licence.
 + `profile[gender]` (string) - User's gender male/female
 
 ## Company Model (object)
++ alias (number)
 + name (string) - Company Name
 + `contact_email` (string) - Contact email
 + domain (string) - Company domain
@@ -1897,7 +2236,7 @@ Return AppsCo specific software licence.
 + `company_number` (string) - Partner phone
 + `contact_email` (string) - Parner email
 + `company_logo` (string) - Partner logo
-
+ 
 ## Authorized Apps Model (object)
 + created (DateTime Model) - Date when application was created
 + scopes
@@ -1930,7 +2269,7 @@ Return AppsCo specific software licence.
 ## Response App Model (object)
 + message
 + code (number) - Response code
-
+          
 ## Meta Icons (object)
 + icons - Application icon route
 
@@ -2062,15 +2401,15 @@ Return AppsCo specific software licence.
 
 ## Model Domain
 + alias (number) - ID of domain
-+ domain
++ domain 
 + `crated_at` (DateTime Model)
 + `verified_at` (DateTime Model)
 + `verification_code` - Code for verification
 + company - Company of domain
-+ self
++ self 
 
 ## Setup Domain (object)
-+ `company_domain[domain]`
++ `company_domain[domain]` 
 
 ## Company Domains (object)
 + domains (array[string])
@@ -2080,9 +2419,9 @@ Return AppsCo specific software licence.
 ## Create Company Response (object)
 + id (number)
 + `dashboard_roles` (array)
-+ email
++ email 
 + timezone
-+ country
++ country 
 + `created_at` (DateTime Model)
 + name
 + enabled (boolean)
@@ -2101,12 +2440,12 @@ Return AppsCo specific software licence.
 + partner (boolean)
 + companies (object)
     + company (array[Company])
-    + icons
+    + icons 
     + company_admin (boolean)
 + meta (object)
     + share
     + self
-
+    
 ## Company CC (object)
 + id (number)
 + object
@@ -2165,7 +2504,7 @@ Return AppsCo specific software licence.
 
 
 ## Invoice Items (object)
-+ id
++ id 
 + quantity (number)
 + amount (number)
 + currency
@@ -2238,3 +2577,163 @@ Return AppsCo specific software licence.
 
 ## Roles Attr (object)
 + `roles[]`: https://my.appsco.com/api/v2/companies/16/directory/roles/209
+
+## Account Directory Role (object)
++ id (number)
++ dashboard_roles (array)
++ email
++ timezone
++ country
++ `created_at` (DateTime Model)
++ name
++ enabled (boolean)
++ `first_name`
++ `last_name`
++ gender
++ last_login (DateTime Model)
++ locale
++ phone
++ picture_url
++ username
++ roles (array[])
+    + `ROLE_SUPER_ADMIN`
+    + `ROLE_PARTNER`
+    + `ROLE_USER`
++ display_name
++ profile_options (object)
+    + public (boolean)
++ partner (boolean)
++ companies (array[Company])
++ icons
++ `company_admin` (boolean)
++ org_units (array[OrgUnits])
++ meta (object)
+    + share
++ self
++ company (Company)
++ roles (Directory Admin Company Roles)
++ alias (number)
++ security (object)
+    + `application_score` (number)
+    + `two_factor` (boolean)
++ self
++ meta (object) 
+    + log
+    + applications
+
+## Directory Admin Company Roles (object)
++ `COMPANY_ROLE_EMPLOYEE`
++ `COMPANY_ROLE_ADMIN`
+
+## Directory Admin Roles (object)
++ `ROLE_SUPER_ADMIN`
++ `ROLE_PARTNER`
++ `ROLE_USER`
+
+## Update Role Attr (object)
++ `profile[first_name]`
++ `profile[last_name]`
++ `profile[timezone]`
++ `profile[country]`
++ `profile[phone]`
++ `profile[gender]`
++ `profile[public]` (boolean)
+
+## Role Success Response (object)
++ success (boolean)
+
+## Role Change Pass Attr (object)
++ `update_account_password[newPassword][plainPassword][first]`
++ `update_account_password[newPassword][plainPassword][second]`
+
+## Role Notifications (object)
++ id (number)
++ body
++ imageUrl 
++ createdAt 
+
+## Roles Import (object)
++ total (number)
++ numberOfInvitations (number)
++ numberOfRoles (number)
++ numberOfFailed (number)
++ maxSubscriptionSizeReached (boolean)
+  
+## Meta Log (object)
++ total (number)
++ page (number)
++ first 
++ last
++ pages (number)
++ `per_page` (number)
++ prev
++ next
+
+## Directory Log (object)
++ account (object)
+    + `display_name`
+    + email
+    + image
++ created_at (DateTime Model)
++ ip 
++ `user_agent`
++ type
++ data (object)
+
+## Remove Directory Org Units (object)
++ account (Account Directory Role)
++ company (Company Model)
++ roles (array)
++ alias (number)
++ security (object)
+    + application_score
+    + two_factor (boolean)
++ self
++ meta (object) 
+    + log
+    + applications
+    
+## Directory Integrations Available (object)
++ title
++ image
++ website
++ self
++ alias (number)
+
+## Active Integrations Domains (object)
++ name 
++ primary (boolean)
++ synced (boolean)
+
+## Directory Integrations Active (object)
++ self
++ integration (Directory Integrations Available)
++ domains (object)
+    + companyName (Active Integrations Domains)
++ kind
++ meta (object)
+    + mappings
+
+## Directory Integrations Mappings (object)
++ self
++ remote (object)
+    + id (number)
+    + display_name
+    + first_name
+    + last_name
+    + email
+    + `picture_url`
++ local
++ meta (object)
+    + create
+    
+## Directory Fetch Mappings (object)
++ success (boolean)
++ added (number)
++ deleted (number)
++ count (number) 
+
+## Setup mapping (object)
++ `company_role`: https://my-dev.appsco.com/api/v2/companies/16/directory/roles/622
+
+## Directory Role (object)
