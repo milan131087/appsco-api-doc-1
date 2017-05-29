@@ -441,6 +441,61 @@ Returns AppsCo account application instances of currently logged in user, regard
         + icons (array[string])
         + meta (Paging)
 
+# Application Instances Personal [/api/v2/me/icons/personal]
+
+Returns AppsCo account application personal instances/icons currently logged in user
+
+### Retrieve personal application instances/icons [GET]
+
++ Request
+    + Headers
+
+            Authorization: Token absdef12345
+
++ Response  200 (application/json)
+    + Attributes
+        + icons (array[string])
+        + meta (Paging)
+
+
+# Application Instances Shared With Me [/api/v2/me/icons/shared-with-me]
+
+Returns AppsCo account application instances shared with company
+
+### Retrieve all application instances/icons [GET]
+
++ Request
+    + Headers
+
+            Authorization: Token absdef12345
+
++ Response  200 (application/json)
+    + Attributes
+        + icons (array[string])
+        + meta (Paging)
+
+
+# Application Instances Shared With Me Company [/api/v2/me/icons/shared-with-me-company/{company}]
+
+Returns AppsCo account application instances shared with currently logged in user, regardles of the dashboard.
+
++ Parameters
+    + company (number) - ID of the company in the form of an integer
+
+
+### Retrieve application instances/icons shared with company [GET]
+
++ Request
+    + Headers
+
+            Authorization: Token absdef12345
+
++ Response  200 (application/json)
+    + Attributes
+        + icons (array[string])
+        + meta (Paging)
+
+
 # Account Application instance [/api/v2/me/icons/{applicationIcon}]
 
 Returns AppsCo account application instance of currently logged in user.
@@ -574,9 +629,11 @@ Return AppsCo account two-factor authorized applications of currently logged in 
 
 Delete AppsCo account oauth application of currently logged in user.
 
-### Remove authorization of application  [DELETE]
 + Parameters
     + oauthApp (number) - ID of the Authorized application in the form of an integer
+
+### Remove authorization of application  [DELETE]
+
 + Request
     + Headers
 
@@ -616,7 +673,7 @@ Return all available template applications.
         + applications (array[string])
         + meta (Paging)
 
-# Single Application [/api/v2/application/{application}]
+# Single Application [/api/v2/applications/{application}]
 
 Return Appsco application information on the user's dashboard.
 
@@ -644,7 +701,7 @@ Return Appsco application information on the user's dashboard.
         + meta (Meta Icons)
 
 
-# Switch Application [/api/v2/application/{application}/switch]
+# Switch Application [/api/v2/applications/{application}/switch]
 
 Change AppsCo application login type.
 
@@ -660,7 +717,7 @@ Change AppsCo application login type.
     + Attributes
         + Response (Response App Model)
 
-# Application's Log [/api/v2/application/{application}/log]
+# Application's Log [/api/v2/applications/{application}/log]
 
 Return AppsCo application logs.
 
@@ -677,7 +734,7 @@ Return AppsCo application logs.
         + log (array[Log Model])
         + meta (Paging)
 
-# Application's Subscribers [/api/v2/application/{application}/subscribers]
+# Application's Subscribers [/api/v2/applications/{application}/subscribers]
 
 Return AppsCo application subscribers for a currently loged user.
 
@@ -707,6 +764,21 @@ Return AppsCo application subscribers for a currently loged user.
 + Response  200 (application/json)
     + Attributes
         + Response (Response App Model)
+
+# Application's Track Events [/api/v2/applications/{application}/track-events]
+
+ AppsCo application track events for a currently loged user.
+
+### Retrieve application track event [GET]
++ Request
+    + Attributes (Setup Track Events)
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response  200 (application/json)
+    + Attributes (Response App Model)
+
 
 # Notifications [/api/v2/notifications]
 
@@ -1194,7 +1266,7 @@ Return AppsCo specific software licence.
     + Attributes
         + companies (array[string])
         + meta (Paging)
-        
+
 
 # Create Company  [/api/v2/company]
 
@@ -1305,6 +1377,17 @@ Return AppsCo specific software licence.
     + Attributes
         + orgunit (Model OrgUnit)
 
+### Update organization unit [PATCH]
++ Request
+    + Attributes (Setup OrgUnit)
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes
+        + orgunit (Model OrgUnit)
+
 ### Remove organization unit [DELETE]
 + Request
     + Headers
@@ -1312,8 +1395,45 @@ Return AppsCo specific software licence.
             Authorization: token absdef12345
 
 + Response 200 (application/json)
+    + Attributes (OrgUnit Delete Response)
+
+
+# Company OrgUnit Applications [/api/v2/companies/{company_id}/org-units/{orgunit_id}/applications]
+
+  Return AppsCo Company OrgUnits applications for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + `orgunit_id`: 44 (number) - ID of the Company OrgUnit in the form of an integer
+
+### Add application company orgunit  [POST]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
     + Attributes
-        + response (Response App Model)
+        + applications (array[])
+
+# Company OrgUnit Roles [/api/v2/companies/{company_id}/org-units/{orgunit_id}/roles]
+
+  Return AppsCo Company OrgUnits accounts for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + `orgunit_id`: 44 (number) - ID of the Company OrgUnit in the form of an integer
+
+### Add accounts company orgunit  [POST]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes
+        + `company_roles` (array[])
+
 
 
 # Company Domains [/api/v2/companies/{company_id}/domains]
@@ -1433,7 +1553,7 @@ Return AppsCo specific software licence.
 
 + Response 200 (application/json)
     + Attributes (Company PK)
-    
+
 # Company Billing Subscription [/api/v2/companies/{company_id}/billing/subscription]
 
     Return AppsCo Company subscription information for currently logged in user.
@@ -1469,7 +1589,7 @@ Return AppsCo specific software licence.
 
 + Response 200 (application/json)
     + Attributes (Company Subscription)
-    
+
 # Company Billing Invoice List [/api/v2/companies/{company_id}/billing/invoice/list]
 
     Return AppsCo Company inovoice list information for currently logged in user.
@@ -1510,7 +1630,7 @@ Return AppsCo specific software licence.
 
 + Parameters
     + `company_id`: 16 (number) - ID of the Company in the form of an integer
-    + invoiceId: in_1AAEHWJBp3ytiq1AvWN 
+    + invoiceId: in_1AAEHWJBp3ytiq1AvWN
 
 
 ### Send billing invoice [POST]
@@ -1520,7 +1640,7 @@ Return AppsCo specific software licence.
             Authorization: token absdef12345
 
 + Response 200 (application/json)
-    
+
         []
 
 # Company Log Events [/api/v2/companies/{company_id}/log/events]
@@ -1573,7 +1693,7 @@ Return AppsCo specific software licence.
             Authorization: token absdef12345
 
 + Response 200 (application/json)
-    + Attributes 
+    + Attributes
         + `company_roles` (array[])
         + meta (Paging)
 
@@ -1585,7 +1705,7 @@ Return AppsCo specific software licence.
             Authorization: token absdef12345
 
 + Response 200 (application/json)
-    + Attributes 
+    + Attributes
         + `company_roles` (array[])
         + meta (Paging)
 
@@ -1614,7 +1734,7 @@ Return AppsCo specific software licence.
             Authorization: token absdef12345
 
 + Response 200 (application/json)
-    + Attributes 
+    + Attributes
         + `company_roles` (array[])
         + meta (Paging)
 
@@ -1635,7 +1755,7 @@ Return AppsCo specific software licence.
             Authorization: token absdef12345
 
 + Response 200 (application/json)
-    + Attributes 
+    + Attributes
         + `applications` (array[])
         + meta (Paging)
 
@@ -1747,7 +1867,7 @@ Return AppsCo specific software licence.
             Authorization: token absdef12345
 
 + Response 200 (application/json)
-    + Attributes 
+    + Attributes
         + log (array[Directory Log], fixed)
 
 
@@ -1785,7 +1905,7 @@ Return AppsCo specific software licence.
             Authorization: token absdef12345
 
 + Response 200 (application/json)
-    + Attributes 
+    + Attributes
         + available_integrations (array[Directory Integrations Available])
         + meta (Paging)
 
@@ -1815,7 +1935,7 @@ Return AppsCo specific software licence.
             Authorization: token absdef12345
 
 + Response 200 (application/json)
-    + Attributes 
+    + Attributes
         + authorization_url
 
 
@@ -1833,7 +1953,7 @@ Return AppsCo specific software licence.
             Authorization: token absdef12345
 
 + Response 200 (application/json)
-    + Attributes 
+    + Attributes
         + active_integrations (array[Directory Integrations Active])
         + meta (Paging)
 
@@ -1853,11 +1973,11 @@ Return AppsCo specific software licence.
             Authorization: token absdef12345
 
 + Response 200 (application/json)
-    + Attributes 
+    + Attributes
         + active_integrations (array[Directory Integrations Active])
 
 
-# Company Directory Mappings [/api/v2/companies/{company_id}/integrations/active/{integrationActive}/mappings]
+# Company Directory Integration Mappings [/api/v2/companies/{company_id}/integrations/active/{integrationActive}/mappings]
 
     Return AppsCo Company directory mappings for currently logged in user.
 
@@ -1872,7 +1992,7 @@ Return AppsCo specific software licence.
             Authorization: token absdef12345
 
 + Response 200 (application/json)
-    + Attributes 
+    + Attributes
         + mappings (array[Directory Integrations Mappings])
         + meta (Paging)
 
@@ -1886,7 +2006,7 @@ Return AppsCo specific software licence.
     + Attributes (Directory Fetch Mappings)
 
 
-# Company Directory Mapping [/api/v2/companies/{company_id}/integrations/active/{integrationActive}/mappings/{integrationMapping}]
+# Company Directory Integration Mapping [/api/v2/companies/{company_id}/integrations/active/{integrationActive}/mappings/{integrationMapping}]
 
     Return AppsCo Company directory mapping for currently logged in user.
 
@@ -1902,9 +2022,9 @@ Return AppsCo specific software licence.
             Authorization: token absdef12345
 
 + Response 200 (application/json)
-    + Attributes 
+    + Attributes
         + mapping (array[Directory Integrations Mappings])
-        
+
 ### Remove company directory mapping [DELETE]
 + Request
     + Headers
@@ -1913,7 +2033,7 @@ Return AppsCo specific software licence.
 
 + Response 200 (application/json)
     + Attributes (Role Success Response)
-        
+
 ### Create company directory mapping [POST]
 + Request
     + Attributes (Setup mapping)
@@ -1923,7 +2043,194 @@ Return AppsCo specific software licence.
 
 + Response 200 (application/json)
     + Attributes (Role Success Response)
-        
+
+# Company Directory Invitation [/api/v2/companies/{company_id}/invitation]
+
+    Return AppsCo Company invitations for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+
+### Return company invitations [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes
+        + invitations (array[])
+        + meta (Paging)
+
+### Create company invitations [POST]
++ Request
+    + Attributes (Setup Company Invitation)
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Create Company Invitation)
+
+
+
+# Company Directory Resend Invitation [/api/v2/companies/{company_id}/invitation/{invitation}/resend]
+
+    Resend AppsCo Company invitation for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + `invitation`: 73925b4e-250b-11e7-854f-0242d77b14e5 - ID of the Company invitation in the form of an integer
+
+### Resend company invitation [PATCH]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Company Resend Invitation)
+
+
+# Company Directory Invitation [/api/v2/companies/{company_id}/invitation/{invitation}]
+
+    Return AppsCo Company invitation for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + `invitation`: 73925b4e-250b-11e7-854f-0242d77b14e5 - ID of the Company invitation in the form of an integer
+
+### Return company invitation [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Company Resend Invitation)
+
+### Remove company invitation [DELETE]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Company Resend Invitation)
+
+# Company Settings [/api/v2/companies/{company_id}/settings]
+
+    Update AppsCo Company settings for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+
+### Update company settings [GET]
++ Request
+    + Attributes (Setup Company Settings)
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Company Model)
+
+
+# Company Branding [/api/v2/companies/{company_id}/branding]
+
+    Update AppsCo Company branding for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+
+### Update company branding [PATCH]
++ Request
+    + Attributes (Setup Company Branding)
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Company Model)
+
+
+# Company Logo [/api/v2/companies/{company_id}/logo]
+
+    Update AppsCo Company logo for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+
+### Update company logo [POST]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
+    + Body
+
+            -----WebKitFormBoundary7Lk1ieut0jQaBl3L
+                Content-Disposition: form-data; name="file"; filename="example_img.png"
+                Content-Type: image/png
+            -----WebKitFormBoundary7Lk1ieut0jQaBl3L--
+
+
++ Response 200 (application/json)
+    + Attributes (Company Model)
+
+
+# Company Signup [/api/v2/companies/{company_id}/signup]
+
+    Return AppsCo Company signup for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+
+### Retrive company signup [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes
+        + items (array[])
+        + meta (Paging)
+
+# Confirm Company Signup Request [/api/v2/companies/{company_id}/signup/request/{companySignupRequest}/confirm]
+
+    Return AppsCo Company signup for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + `companySignupRequest` - ID of the Company signup request
+
+### Confirm company signup request [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (OrgUnit Delete Response)
+
+
+# Delete Company Signup Request [/api/v2/companies/{company_id}/signup-request/{companySignupRequest}]
+
+    Delete AppsCo Company signup for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + `companySignupRequest` - ID of the Company signup request
+
+### Delete company signup request [DELETE]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Signup Delete Response)
 
 
 # Data Structures
@@ -2236,7 +2543,7 @@ Return AppsCo specific software licence.
 + `company_number` (string) - Partner phone
 + `contact_email` (string) - Parner email
 + `company_logo` (string) - Partner logo
- 
+
 ## Authorized Apps Model (object)
 + created (DateTime Model) - Date when application was created
 + scopes
@@ -2269,7 +2576,7 @@ Return AppsCo specific software licence.
 ## Response App Model (object)
 + message
 + code (number) - Response code
-          
+
 ## Meta Icons (object)
 + icons - Application icon route
 
@@ -2401,15 +2708,15 @@ Return AppsCo specific software licence.
 
 ## Model Domain
 + alias (number) - ID of domain
-+ domain 
++ domain
 + `crated_at` (DateTime Model)
 + `verified_at` (DateTime Model)
 + `verification_code` - Code for verification
 + company - Company of domain
-+ self 
++ self
 
 ## Setup Domain (object)
-+ `company_domain[domain]` 
++ `company_domain[domain]`
 
 ## Company Domains (object)
 + domains (array[string])
@@ -2419,9 +2726,9 @@ Return AppsCo specific software licence.
 ## Create Company Response (object)
 + id (number)
 + `dashboard_roles` (array)
-+ email 
++ email
 + timezone
-+ country 
++ country
 + `created_at` (DateTime Model)
 + name
 + enabled (boolean)
@@ -2440,12 +2747,12 @@ Return AppsCo specific software licence.
 + partner (boolean)
 + companies (object)
     + company (array[Company])
-    + icons 
+    + icons
     + company_admin (boolean)
 + meta (object)
     + share
     + self
-    
+
 ## Company CC (object)
 + id (number)
 + object
@@ -2504,7 +2811,7 @@ Return AppsCo specific software licence.
 
 
 ## Invoice Items (object)
-+ id 
++ id
 + quantity (number)
 + amount (number)
 + currency
@@ -2617,7 +2924,7 @@ Return AppsCo specific software licence.
     + `application_score` (number)
     + `two_factor` (boolean)
 + self
-+ meta (object) 
++ meta (object)
     + log
     + applications
 
@@ -2649,8 +2956,8 @@ Return AppsCo specific software licence.
 ## Role Notifications (object)
 + id (number)
 + body
-+ imageUrl 
-+ createdAt 
++ imageUrl
++ createdAt
 
 ## Roles Import (object)
 + total (number)
@@ -2658,11 +2965,11 @@ Return AppsCo specific software licence.
 + numberOfRoles (number)
 + numberOfFailed (number)
 + maxSubscriptionSizeReached (boolean)
-  
+
 ## Meta Log (object)
 + total (number)
 + page (number)
-+ first 
++ first
 + last
 + pages (number)
 + `per_page` (number)
@@ -2675,7 +2982,7 @@ Return AppsCo specific software licence.
     + email
     + image
 + created_at (DateTime Model)
-+ ip 
++ ip
 + `user_agent`
 + type
 + data (object)
@@ -2689,10 +2996,10 @@ Return AppsCo specific software licence.
     + application_score
     + two_factor (boolean)
 + self
-+ meta (object) 
++ meta (object)
     + log
     + applications
-    
+
 ## Directory Integrations Available (object)
 + title
 + image
@@ -2701,7 +3008,7 @@ Return AppsCo specific software licence.
 + alias (number)
 
 ## Active Integrations Domains (object)
-+ name 
++ name
 + primary (boolean)
 + synced (boolean)
 
@@ -2726,14 +3033,82 @@ Return AppsCo specific software licence.
 + local
 + meta (object)
     + create
-    
+
 ## Directory Fetch Mappings (object)
 + success (boolean)
 + added (number)
 + deleted (number)
-+ count (number) 
++ count (number)
 
 ## Setup mapping (object)
 + `company_role`: https://my-dev.appsco.com/api/v2/companies/16/directory/roles/622
 
+## Company Resend Invitation (object)
++ alias
++ company (Company)
++ email
++ `first_name`
++ `last_name`
++ `created_at` (DateTime Model)
++ `resent_at` (DateTime Model)
++ `resent_count` (number)
++ self
+
+## Create Company Invitation (object)
++ invitation (Company Resend Invitation)
++ role
+
+## Setup Company Invitation (object)
++ `invitation[first_name]`
++ `invitation[last_name]`
++ `invitation[email]`
+
+## OrgUnit Delete Response (object)
++ id (number)
++ `dashboard_roles` (array)
++ email
++ timezone
++ country
++ `created_at` (DateTime Model)
++ name
++ enabled (boolean)
++ `first_name`
++ `last_name`
++ gender
++ `last_login` (DateTime Model)
++ locale
++ phone
++ `picture_url`
++ username
++ roles (Dashboard Roles, fixed-type)
++ `display_name`
++ `profile_options` (object)
+    + public (boolean)
++ partner (boolean)
++ companies (object)
+    + company (array[Company])
+    + icons
+    + company_admin (boolean)
++ `org_units` (array[OrgUnits])
++ meta (object)
+    + share
++ self
+
+## Setup Company Settings (object)
++ `company_settings[name]`
++ `company_settings[contactEmail]`
++ `company_settings[billingEmail]`
+
+## Setup Company Branding (object)
++ `company_branding[primaryColor]`
++ `company_branding[secondaryColor]`
+
+## Signup Delete Response (object)
++ email
++ createdOn
++ self
+
+## Setup Track Events (object)
++ `track_events[event_type]` (string, required)
++ `track_events[field]` (string, required)
 ## Directory Role (object)
