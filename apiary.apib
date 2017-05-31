@@ -2233,6 +2233,194 @@ Return AppsCo specific software licence.
     + Attributes (Signup Delete Response)
 
 
+# Company Labels [/api/v2/companies/{company_id}/labels]
+
+    Return AppsCo Company labels for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+
+### Retrive company labels [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes
+        + company_labels (array[])
+        + meta (Paging)
+
+### Create company label [POST]
++ Request
+    + Attributes (Setup Label)
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Company Label)
+
+# Company Label [/api/v2/companies/{company_id}/label/{label}]
+
+    Return AppsCo Company label for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + label - ID of the Company label
+
+### Retrive company label [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes
+        + company_label (Company Label)
+
+
+### Remove company label [DELETE]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Response App Model)
+
+
+# Label Company Roles [/api/v2/companies/{company_id}/label/{label}/company-roles]
+
+    Return AppsCo label company roles for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + label - ID of the Company label
+
+### Retrive company label company roles [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes
+        + company_roles (array[])
+        + meta (Paging)
+
+# Label Company Role [/api/v2/companies/{company_id}/label/{label}/company-roles/{companyRole}]
+
+    Detach AppsCo label company roles for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + label - ID of the Company label
+    + companyRole - ID of the Company role
+
+### Detach company label company role [DELETE]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Response App Model)
+
+
+# Label Company Applications [/api/v2/companies/{company_id}/label/{label}/applications]
+
+    Return AppsCo label company applications for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + label - ID of the Company label
+
+### Retrive company label company applications [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes
+        + applications (array[])
+        + meta (Paging)
+
+
+# Label Company Application [/api/v2/companies/{company_id}/label/{label}/applications/{application}]
+
+    Detach AppsCo label company application for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + label - ID of the Company label
+    + application - ID of the Company application
+
+### Detach company label company application [DELETE]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes
+        + application (Application)
+        + Response (Response App Model)
+
+
+# Company Statistics Two Factor [/api/v2/companies/{company_id}/statistics/twofa]
+
+    Return AppsCo label company statistics for two factor.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+
+### Retrive company two factor statistics [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Company TwoFa)
+
+
+# Company Statistics Licences [/api/v2/companies/{company_id}/statistics/licences]
+
+    Return AppsCo label company statistics licences.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+
+### Retrive company licences [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Company Licences)
+
+
+# Company Statistics User Password Scores [/api/v2/companies/{company_id}/statistics/user-password-scores]
+
+    Return AppsCo label company statistics user password scores.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+
+### Retrive company user password scores [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Company User)
+
+
+
 # Data Structures
 
 ## Enabled Response (object)
@@ -3111,4 +3299,62 @@ Return AppsCo specific software licence.
 ## Setup Track Events (object)
 + `track_events[event_type]` (string, required)
 + `track_events[field]` (string, required)
+
+## Setup Label (object)
++ `company_label[name]`
+
+## Company Label (object)
++ alias
++ company (Company Model)
++ name
++ cratedAt (DateTime Model)
++ meta
+    + `company_roles` (array[])
+    + applications (array[])
+    + self
+
+## Company TwoFa (object)
++ active (number)
++ inactive (number)
+
+## Company Licences (object)
++ appscoLicences (number)
++ currentLicences (number)
++ active_users (number)
+
+## Company User (object)
++ id (number)
++ `dashboard_roles` (array)
++ email
++ timezone
++ country
++ `created_at` (DateTime Model)
++ name
++ enabled (boolean)
++ `first_name`
++ `last_name`
++ gender
++ `last_login` (DateTime Model)
++ locale
++ phone
++ `picture_url`
++ username
++ roles (Dashboard Roles, fixed-type)
++ `display_name`
++ `profile_options` (object)
+    + public (boolean)
++ partner (boolean)
++ companies (array[Companies Array])
++ `application_scores` (array[])
+
+## Meta Share (object)
++ share
+
+## Companies Array (object)
++ company (array[Company])
+    + icons
+    + `company_admin`
++ meta (Meta Share)
++ self
+
 ## Directory Role (object)
