@@ -55,14 +55,14 @@ If application is removed all coresponding application icons will be also remove
 
 # AppsCo Log
 
-* Create Application
-* Application Claims Update
-* Application Update
-* Application remove from org unit
-* Application removed
-* Application icon removed
-* Application shared
-* Application icon claims updated
+* Create Resource
+* Resource Claims Update
+* Resource Update
+* Resource remove from org unit
+* Resource removed
+* Resource icon removed
+* Resource shared
+* Resource icon claims updated
 * Subscription update
 * Cancel subscription
 * Send invoice to email
@@ -78,7 +78,7 @@ If application is removed all coresponding application icons will be also remove
 * Organization unit create
 * Update organization unit
 * Remove organization unit
-* Add application to organization unit
+* Add resource to organization unit
 * Add account to organization unit
 * Company settings updated
 * Company logo changed
@@ -96,7 +96,7 @@ If application is removed all coresponding application icons will be also remove
 
   Company represents something to write...
 
-# OrgUnit - Application - Account policy
+# OrgUnit - Resource - Account policy
 
   OrgUnit is something something
 
@@ -107,15 +107,15 @@ In order to retrieve token user should first perform OAuth request which will pr
 Code is used after that to retrieve token.
 To retrieve token use code and basic authentication using your app credentials (`client_id`, `client_secret`).
 
-### Exchange code and application credentials for token [POST]
+### Exchange code and resource credentials for token [POST]
 
 + Request
     + Attributes (object)
         + code: 404oookk4ooccgsws2pxjq4rkeccg0co0wsk8 (string)
     + Headers
-    
+
                 Authorization: Basic base64
-                    
+
 + Response  200 (application/json)
 
     + Attributes (Token)
@@ -208,11 +208,11 @@ List all accounts that have shared application on the dashboard.
         + accounts (array[string])
         + meta (Paging)
 
-# List all Applications on Dashboard [/api/v2/dashboards/{dashboardRole}/applications]
+# List all Resources on Dashboard [/api/v2/dashboards/{dashboardRole}/applications]
 
-Return all dashboard applications.
+Return all dashboard resources.
 
-### Retrieve dashboard applications [GET]
+### Retrieve dashboard resources [GET]
 + Parameters
     + dashboardRole: 551 (number) - ID of the Dashboard Role
 + Request
@@ -225,9 +225,9 @@ Return all dashboard applications.
         + applications (array[string])
         + meta (Paging)
 
-# List of Application instances on dashboard [/api/v2/dashboards/{dashboardRole}/icons]
+# List of Resource instances on dashboard [/api/v2/dashboards/{dashboardRole}/icons]
 
-Returns all available application instances (icons) of the specific dashboard role.
+Returns all available resource instances (icons) of the specific dashboard role.
 
 ### Retrieve icons [GET]
 + Parameters
@@ -244,9 +244,9 @@ Returns all available application instances (icons) of the specific dashboard ro
         + icons (array[string])
         + meta (Paging)
 
-### Create application instance [POST]
+### Create resource instance [POST]
 
-This call will also fire Modify application instance claims [PATCH] if you add username, password or note.
+This call will also fire Modify resource instance claims [PATCH] if you add username, password or note.
 
 + Parameters
     + dashboardRole: 551 (number) - ID of the Dashboard Role
@@ -260,9 +260,9 @@ This call will also fire Modify application instance claims [PATCH] if you add u
     + Attributes
         + icon (Application Icon Model)
 
-# Dashboard Application [/api/v2/dashboards/{dashboard}/icons/{icon}/application]
+# Dashboard Resource [/api/v2/dashboards/{dashboard}/icons/{icon}/application]
 
-### Modify application instance claims [PATCH]
+### Modify resource instance claims [PATCH]
 + Parameters
     + dashboard: 551 (number) - ID of the Dashboard in the form of an integer
     + icon: 247155 (number) - ID of the Icon in the form of an integer
@@ -276,12 +276,12 @@ This call will also fire Modify application instance claims [PATCH] if you add u
     + Attributes
         + icon (Application Icon Model)
 
-# Application Instances [/api/v2/dashboards/{dashboard}/icons]
+# Resource Instances [/api/v2/dashboards/{dashboard}/icons]
 
-Return and update application instance for the current dashboard user.
+Return and update resource instance for the current dashboard user.
 
 
-### Retrieve application instances [GET]
+### Retrieve resource instances [GET]
 + Parameters
     + dashboard: 551 (number) - ID of the Dashboard in the form of an integer
 + Request
@@ -294,11 +294,11 @@ Return and update application instance for the current dashboard user.
         + icons (array[string])
         + meta (Paging)
 
-# Application Instance [/api/v2/dashboards/{dashboard}/icons/{icon}]
+# Resource Instance [/api/v2/dashboards/{dashboard}/icons/{icon}]
 
-    Return and update application instance for the current dashboard user.
+    Return and update resource instance for the current dashboard user.
 
-### Retrieve application instance [GET]
+### Retrieve resource instance [GET]
 + Parameters
     + dashboard: 551 (number) - ID of the Dashboard in the form of an integer
     + icon: 247155 (number) - ID of the Icon in the form of an integer
@@ -311,7 +311,7 @@ Return and update application instance for the current dashboard user.
     + Attributes
         + icon (Application Icon Model)
 
-### Modify application instance claims [PATCH]
+### Modify resource instance claims [PATCH]
 + Parameters
     + dashboard: 551 (number) - ID of the Dashboard in the form of an integer
     + icon: 247155 (number) - ID of the Icon in the form of an integer
@@ -325,9 +325,9 @@ Return and update application instance for the current dashboard user.
     + Attributes
         + icon (Application Icon Model)
 
-### Remove application instance from the dashboard [DELETE]
+### Remove resource instance from the dashboard [DELETE]
 
-This call will also log the user changes for the Application.
+This call will also log the user changes for the Resource.
 
 + Parameters
     + dashboard: 551 (number) - ID of the Dashboard in the form of an integer
@@ -343,7 +343,7 @@ This call will also log the user changes for the Application.
             + message (string)
             + code (number)
         + meta (object)
-            + icons (string) - List all dashboard role application instances
+            + icons (string) - List all dashboard role resource instances
 
 # My Account [/api/v2/me]
 
@@ -441,28 +441,11 @@ Returns AppsCo account application instances of currently logged in user, regard
         + icons (array[string])
         + meta (Paging)
 
-# Application Instances Personal [/api/v2/me/icons/personal]
+# Resource Instances Personal [/api/v2/me/icons/personal]
 
-Returns AppsCo account application personal instances/icons currently logged in user
+Returns AppsCo account resource personal instances/icons currently logged in user
 
-### Retrieve personal application instances/icons [GET]
-
-+ Request
-    + Headers
-
-            Authorization: Token absdef12345
-
-+ Response  200 (application/json)
-    + Attributes
-        + icons (array[string])
-        + meta (Paging)
-
-
-# Application Instances Shared With Me [/api/v2/me/icons/shared-with-me]
-
-Returns AppsCo account application instances shared with company
-
-### Retrieve all application instances/icons [GET]
+### Retrieve personal resource instances/icons [GET]
 
 + Request
     + Headers
@@ -475,15 +458,32 @@ Returns AppsCo account application instances shared with company
         + meta (Paging)
 
 
-# Application Instances Shared With Me Company [/api/v2/me/icons/shared-with-me-company/{company}]
+# Resource Instances Shared With Me [/api/v2/me/icons/shared-with-me]
 
-Returns AppsCo account application instances shared with currently logged in user, regardles of the dashboard.
+Returns AppsCo account resource instances shared with company
+
+### Retrieve all resource instances/icons [GET]
+
++ Request
+    + Headers
+
+            Authorization: Token absdef12345
+
++ Response  200 (application/json)
+    + Attributes
+        + icons (array[string])
+        + meta (Paging)
+
+
+# Resource Instances Shared With Me Company [/api/v2/me/icons/shared-with-me-company/{company}]
+
+Returns AppsCo account resource instances shared with currently logged in user, regardles of the dashboard.
 
 + Parameters
     + company (number) - ID of the company in the form of an integer
 
 
-### Retrieve application instances/icons shared with company [GET]
+### Retrieve resource instances/icons shared with company [GET]
 
 + Request
     + Headers
@@ -496,13 +496,13 @@ Returns AppsCo account application instances shared with currently logged in use
         + meta (Paging)
 
 
-# Account Application instance [/api/v2/me/icons/{applicationIcon}]
+# Account Resource instance [/api/v2/me/icons/{applicationIcon}]
 
-Returns AppsCo account application instance of currently logged in user.
+Returns AppsCo account resource instance of currently logged in user.
 
-### Retrieve application instance [GET]
+### Retrieve resource instance [GET]
 + Parameters
-    + applicationIcon: 247155 (number) - ID of the Application Icon in the form of an integer
+    + applicationIcon: 247155 (number) - ID of the Resource Icon in the form of an integer
 + Request
     + Headers
 
@@ -512,11 +512,11 @@ Returns AppsCo account application instance of currently logged in user.
     + Attributes
         + icon (Application Icon Model)
 
-# My Account's Applications [/api/v2/me/applications]
+# My Account's Resources [/api/v2/me/applications]
 
-Returns AppsCo account applications of currently logged in user.
+Returns AppsCo account resources of currently logged in user.
 
-### Retrieve applications of my account [GET]
+### Retrieve resources of my account [GET]
 
 + Request
     + Headers
@@ -528,13 +528,13 @@ Returns AppsCo account applications of currently logged in user.
         + applications (array[string])
         + meta (Paging)
 
-# Account Application [/api/v2/me/applications/{applicationIcon}]
+# Account Resource [/api/v2/me/applications/{applicationIcon}]
 
-Returns AppsCo account application of currently logged in user.
+Returns AppsCo account resource of currently logged in user.
 
-### Retrieve specific application's information [GET]
+### Retrieve specific resource's information [GET]
 + Parameters
-    + applicationIcon: 247155 (number) - ID of the Application Icon in the form of an integer
+    + applicationIcon: 247155 (number) - ID of the Resource Icon in the form of an integer
 + Request
     + Headers
 
@@ -658,11 +658,11 @@ Return account logs of currently logged in user.
         + log (array[Log Model])
         + meta (Paging)
 
-# Template Applications [/api/v2/applications]
+# Template Resources [/api/v2/applications]
 
-Return all available template applications.
+Return all available template resources.
 
-### Retrieve all template applications [GET]
+### Retrieve all template resources [GET]
 + Request
     + Headers
 
@@ -673,13 +673,13 @@ Return all available template applications.
         + applications (array[string])
         + meta (Paging)
 
-# Single Application [/api/v2/applications/{application}]
+# Single Resource [/api/v2/applications/{application}]
 
-Return Appsco application information on the user's dashboard.
+Return Appsco resource information on the user's dashboard.
 
-### Retrieve all information about application [GET]
+### Retrieve all information about resource [GET]
 + Parameters
-    + application: 2 (number) - ID of the Application in the form of an integer
+    + application: 2 (number) - ID of the Resource in the form of an integer
 + Request
     + Headers
 
@@ -689,7 +689,7 @@ Return Appsco application information on the user's dashboard.
     + Attributes
         + application (Application)
 
-### Remove single application from dashboard [DELETE]
+### Remove single resource from dashboard [DELETE]
 + Request
     + Headers
 
@@ -701,13 +701,13 @@ Return Appsco application information on the user's dashboard.
         + meta (Meta Icons)
 
 
-# Switch Application [/api/v2/applications/{application}/switch]
+# Switch Resource [/api/v2/applications/{application}/switch]
 
-Change AppsCo application login type.
+Change AppsCo resource login type.
 
-### Switch application login type [POST]
+### Switch resource login type [POST]
 + Parameters
-    + application: 2 (number) - ID of the Application in the form of an integer
+    + application: 2 (number) - ID of the Resource in the form of an integer
 + Request
     + Headers
 
@@ -717,13 +717,13 @@ Change AppsCo application login type.
     + Attributes
         + Response (Response App Model)
 
-# Application's Log [/api/v2/applications/{application}/log]
+# Resource's Log [/api/v2/applications/{application}/log]
 
-Return AppsCo application logs.
+Return AppsCo resource logs.
 
-### Retrieve logs for application [GET]
+### Retrieve logs for resource [GET]
 + Parameters
-    + application: 2 (number) - ID of the Application in the form of an integer
+    + application: 2 (number) - ID of the Resource in the form of an integer
 + Request
     + Headers
 
@@ -734,13 +734,13 @@ Return AppsCo application logs.
         + log (array[Log Model])
         + meta (Paging)
 
-# Application's Subscribers [/api/v2/applications/{application}/subscribers]
+# Resource's Subscribers [/api/v2/applications/{application}/subscribers]
 
-Return AppsCo application subscribers for a currently loged user.
+Return AppsCo resource subscribers for a currently loged user.
 
-### Retrieve subscribers for application [GET]
+### Retrieve subscribers for resource [GET]
 + Parameters
-    + application: 2 (number) - ID of the Application in the form of an integer
+    + application: 2 (number) - ID of the Resource in the form of an integer
 + Request
     + Headers
 
@@ -753,7 +753,7 @@ Return AppsCo application subscribers for a currently loged user.
 
 ### Delete specific subscriber [DELETE]
 + Parameters
-    + application: 2 (number) - ID of the Application in the form of an integer
+    + application: 2 (number) - ID of the Resource in the form of an integer
 + Request
     + Attributes
         + account: https://appsco.com/api/v2/accounts/10 (string) - Subscriber's account
@@ -765,11 +765,11 @@ Return AppsCo application subscribers for a currently loged user.
     + Attributes
         + Response (Response App Model)
 
-# Application's Track Events [/api/v2/applications/{application}/track-events]
+# Resource's Track Events [/api/v2/applications/{application}/track-events]
 
- AppsCo application track events for a currently loged user.
+ AppsCo resource track events for a currently loged user.
 
-### Retrieve application track event [GET]
+### Retrieve resource track event [GET]
 + Request
     + Attributes (Setup Track Events)
     + Headers
@@ -845,413 +845,6 @@ Share AppsCo account.
         + Response (Response App Model)
 
 
-# Vault Items [/api/v2/vault]
-
-Return AppsCo vault items of currently loged in user.
-
-### Retrieve vault items [GET]
-+ Request
-    + Headers
-
-            Authorization: token absdef12345
-
-+ Response  200 (application/json)
-    + Attributes
-        + items (array[string])
-        + meta (Paging)
-
-### Create new vault item [POST]
-+ Request
-    + Attributes  (Setup vault login)
-    + Headers
-
-            Authorization: token absdef12345
-
-+ Response  200 (application/json)
-    + Attributes  (Login)
-
-# Vault Item [/api/v2/vault/{vault}]
-
-Return Appsco specific vault item.
-
-### Retrieve vault item [GET]
-+ Parameters
-    + vault: 127 (number) - ID of the Vault Login in the form of an integer
-+ Request
-    + Headers
-
-            Authorization: token absdef12345
-
-+ Response  200 (application/json)
-    + Attributes
-        + item (Login)
-
-### Update vault item [PATCH]
-+ Parameters
-    + vault: 127 (number) - ID of the Vault Login in the form of an integer
-+ Request
-    + Attributes  (Setup vault login)
-    + Headers
-
-            Authorization: token absdef12345
-
-+ Response  200 (application/json)
-    + Attributes
-        + item (Login)
-
-### Remove single vault item [DELETE]
-+ Parameters
-    + vault: 127 (number) - ID of the Vault Login in the form of an integer
-+ Request
-    + Headers
-
-            Authorization: token absdef12345
-
-+ Response  200 (application/json)
-    + Attributes
-        + Response (Response App Model)
-
-# Vault Credit Cards [/api/v2/vault-cc]
-
-Return AppsCo vault credit cards.
-
-### Retrieve credit cards [GET]
-+ Request
-    + Headers
-
-            Authorization: token absdef12345
-
-+ Response  200 (application/json)
-    + Attributes
-        + items (array[string])
-        + meta (Paging)
-
-### Add credit card [POST]
-+ Request
-    + Attributes  (Setup Credit Card)
-    + Headers
-
-            Authorization: token absdef12345
-
-+ Response  200 (application/json)
-    + Attributes
-        + item (Credit Card)
-
-
-# Vault Credit Card [/api/v2/vault-cc/{cc}]
-
-Return AppsCo specific credi card.
-
-### Retrieve credit card [GET]
-+ Parameters
-    + cc: 36 (number) - ID of the Vault Credit Card in the form of an integer
-+ Request
-    + Headers
-
-            Authorization: token absdef12345
-
-+ Response  200 (application/json)
-    + Attributes
-        + item (Credit Card)
-
-### Update credit card [PATCH]
-+ Parameters
-    + cc: 36 (number) - ID of the Vault Credit Card in the form of an integer
-+ Request
-    + Attributes  (Setup Credit Card)
-    + Headers
-
-            Authorization: token absdef12345
-
-+ Response  200 (application/json)
-    + Attributes
-        + item (Credit Card)
-
-### Remove credit card [DELETE]
-+ Parameters
-    + cc: 36 (number) - ID of the Vault Credit Card in the form of an integer
-+ Request
-    + Headers
-
-            Authorization: token absdef12345
-
-+ Response  200 (application/json)
-    + Attributes
-        + Response (Response App Model)
-
-# Vault Identities [/api/v2/vault-identity]
-
-Return AppsCo vault identities.
-
-### Retrieve vault identities [GET]
-+ Request
-    + Headers
-
-            Authorization: token absdef12345
-
-+ Response  200 (application/json)
-    + Attributes
-        + items (array[string])
-        + meta (Paging)
-
-### Create new identitiy [POST]
-+ Request
-    + Attributes  (Setup Identity)
-    + Headers
-
-            Authorization: token absdef12345
-
-+ Response  200 (application/json)
-    + Attributes
-        + item (Identity)
-
-# Vault Identity [/api/v2/vault-identity/{identity}]
-
-Return AppsCo vault identity.
-
-### Retrieve identity [GET]
-+ Parameters
-    + identity: 48 (number) - ID of the Vault Identity in the form of an integer
-+ Request
-    + Headers
-
-            Authorization: token absdef12345
-
-+ Response  200 (application/json)
-    + Attributes
-        + item (Identity)
-
-### Update identity [PATCH]
-+ Parameters
-    + identity: 48 (number) - ID of the Vault Identity in the form of an integer
-+ Request
-    + Attributes  (Setup Identity)
-    + Headers
-
-            Authorization: token absdef12345
-
-+ Response  200 (application/json)
-    + Attributes
-        + item (Identity)
-
-### Remove identity [DELETE]
-+ Parameters
-    + identity: 48 (number) - ID of the Vault Identity in the form of an integer
-+ Request
-    + Headers
-
-            Authorization: token absdef12345
-
-+ Response  200 (application/json)
-    + Attributes
-        + Response (Response App Model)
-
-
-# Vault Passports [/api/v2/vault-passport]
-
-Return AppsCo vault passports.
-
-### Retrieve passports [GET]
-+ Request
-    + Headers
-
-            Authorization: token absdef12345
-
-+ Response  200 (application/json)
-    + Attributes
-        + items (array[string])
-        + meta (Paging)
-
-### Add a new passport [POST]
-+ Request
-    + Attributes  (Setup Passport)
-    + Headers
-
-            Authorization: token absdef12345
-
-+ Response  200 (application/json)
-    + Attributes
-        + item (Passport)
-
-# Vault Passport [/api/v2/vault-passport/{passport}]
-
-Return AppsCo specific vault passport.
-
-### Retrieve passport [GET]
-+ Parameters
-    + passport: 28 (number) - ID of the Vault Passport in the form of an integer
-+ Request
-    + Headers
-
-            Authorization: token absdef12345
-
-+ Response  200 (application/json)
-    + Attributes
-        + item (Passport)
-
-### Update passport [PATCH]
-+ Parameters
-    + passport: 28 (number) - ID of the Vault Passport in the form of an integer
-+ Request
-    + Attributes  (Setup Passport)
-    + Headers
-
-            Authorization: token absdef12345
-
-+ Response  200 (application/json)
-    + Attributes
-        + item (Passport)
-
-### Remove passport [DELETE]
-+ Parameters
-    + passport: 28 (number) - ID of the Vault Passport in the form of an integer
-+ Request
-    + Headers
-
-            Authorization: token absdef12345
-
-+ Response  200 (application/json)
-    + Attributes
-        + Response (Response App Model)
-
-
-# Vault Security Notes [/api/v2/vault-secure-note]
-
-Return AppsCo vault security notes.
-
-### Retrieve security notes [GET]
-+ Request
-    + Headers
-
-            Authorization: token absdef12345
-
-+ Response  200 (application/json)
-    + Attributes
-        + items (array[string])
-        + meta (Paging)
-
-### Create security note [POST]
-+ Request
-    + Attributes  (Setup Secure Note)
-    + Headers
-
-            Authorization: token absdef12345
-
-+ Response  200 (application/json)
-    + Attributes
-        + item (Secure Note)
-
-# Vault Secure Note [/api/v2/vault-secure-note/{note}]
-
-Return Appsco security note.
-
-## Retrieve security note [GET]
-+ Parameters
-    + note: 23 (number) - ID of the Vault Secure Note in the form of an integer
-+ Request
-    + Headers
-
-            Authorization: token absdef12345
-
-+ Response  200 (application/json)
-    + Attributes
-        + item (Secure Note)
-
-### Update security note [PATCH]
-+ Parameters
-    + note: 23 (number) - ID of the Vault Secure Note in the form of an integer
-+ Request
-    + Attributes  (Setup Secure Note)
-    + Headers
-
-            Authorization: token absdef12345
-
-+ Response  200 (application/json)
-    + Attributes
-        + item (Secure Note)
-
-### Remove security note [DELETE]
-+ Parameters
-    + note: 23 (number) - ID of the Vault Secure Note in the form of an integer
-+ Request
-    + Headers
-
-            Authorization: token absdef12345
-
-+ Response  200 (application/json)
-    + Attributes
-        + Response (Response App Model)
-
-
-# Vault Software Licences [/api/v2/vault-software-licence]
-
-Return AppsCo vault software licences.
-
-### Retrieve software licences [GET]
-+ Request
-    + Headers
-
-            Authorization: token absdef12345
-
-+ Response  200 (application/json)
-    + Attributes
-        + items (array[string])
-        + meta (Paging)
-
-### Add software licence [POST]
-+ Request
-    + Attributes  (Setup Software Licence)
-    + Headers
-
-            Authorization: token absdef12345
-
-+ Response  200 (application/json)
-    + Attributes
-        + item (Software Licence)
-
-
-# Vault Software Licence [/api/v2/vault-software-licence/{licence}]
-
-Return AppsCo specific software licence.
-
-### Retrieve software licence [GET]
-+ Parameters
-    + licence: 12 (number) - ID of the Vault Secure Note in the form of an integer
-+ Request
-    + Headers
-
-            Authorization: token absdef12345
-
-+ Response  200 (application/json)
-    + Attributes
-        + item (Software Licence)
-
-### Update software licence [PATCH]
-+ Parameters
-    + licence: 12 (number) - ID of the Vault Secure Note in the form of an integer
-+ Request
-    + Attributes  (Setup Software Licence)
-    + Headers
-
-            Authorization: token absdef12345
-
-+ Response  200 (application/json)
-    + Attributes
-        + item (Software Licence)
-
-### Remove software licence [DELETE]
-+ Parameters
-    + licence: 12 (number) - ID of the Vault Secure Note in the form of an integer
-+ Request
-    + Headers
-
-            Authorization: token absdef12345
-
-+ Response  200 (application/json)
-    + Attributes
-        +  Response (Response App Model)
-
-
 # Companies  [/api/v2/companies]
 
     Return AppsCo companies for current user.
@@ -1301,7 +894,7 @@ Return AppsCo specific software licence.
     + Attributes (Company)
 
 
-# Company Applications [/api/v2/companies/{company_id}/applications]
+# Company Resources [/api/v2/companies/{company_id}/applications]
 
     Return AppsCo Company information for currently logged in user.
 
@@ -1309,7 +902,7 @@ Return AppsCo specific software licence.
     + `company_id`: 16 (number) - ID of the Company in the form of an integer
 
 
-### Retrieve company applications  [GET]
+### Retrieve company resources  [GET]
 + Request
     + Headers
 
@@ -1320,7 +913,7 @@ Return AppsCo specific software licence.
         + applications (array[string])
         + meta (Paging)
 
-### Add company application to organization unit [POST]
+### Add company resource to organization unit [POST]
 + Request
     + Attributes (Setup App to OrgUnit)
     + Headers
@@ -1329,6 +922,9 @@ Return AppsCo specific software licence.
 
 + Response 200 (application/json)
     + Attributes (Company Application)
+
+
+
 
 # Company OrgUnits [/api/v2/companies/{company_id}/org-units]
 
@@ -1398,15 +994,15 @@ Return AppsCo specific software licence.
     + Attributes (OrgUnit Delete Response)
 
 
-# Company OrgUnit Applications [/api/v2/companies/{company_id}/org-units/{orgunit_id}/applications]
+# Company OrgUnit Resources [/api/v2/companies/{company_id}/org-units/{orgunit_id}/applications]
 
-  Return AppsCo Company OrgUnits applications for currently logged in user.
+  Return AppsCo Company OrgUnits resources for currently logged in user.
 
 + Parameters
     + `company_id`: 16 (number) - ID of the Company in the form of an integer
     + `orgunit_id`: 44 (number) - ID of the Company OrgUnit in the form of an integer
 
-### Add application company orgunit  [POST]
+### Add resource company orgunit  [POST]
 + Request
     + Headers
 
@@ -1739,16 +1335,16 @@ Return AppsCo specific software licence.
         + meta (Paging)
 
 
-# Company Directory Role Applicatoins [/api/v2/companies/{company_id}/directory/roles/{companyRole}/applications]
+# Company Directory Role Resources [/api/v2/companies/{company_id}/directory/roles/{companyRole}/applications]
 
-    Return AppsCo Company directory role applications for currently logged in user.
+    Return AppsCo Company directory role resources for currently logged in user.
 
 + Parameters
     + `company_id`: 16 (number) - ID of the Company in the form of an integer
     + `companyRole`: 103 (number) - ID of the company role in the form of integer
 
 
-### Retrieve company directory role applications [GET]
+### Retrieve company directory role resources [GET]
 + Request
     + Headers
 
@@ -2328,15 +1924,15 @@ Return AppsCo specific software licence.
     + Attributes (Response App Model)
 
 
-# Label Company Applications [/api/v2/companies/{company_id}/label/{label}/applications]
+# Label Company Resources [/api/v2/companies/{company_id}/label/{label}/applications]
 
-    Return AppsCo label company applications for currently logged in user.
+    Return AppsCo label company resources for currently logged in user.
 
 + Parameters
     + `company_id`: 16 (number) - ID of the Company in the form of an integer
     + label - ID of the Company label
 
-### Retrive company label company applications [GET]
+### Retrive company label company resources [GET]
 + Request
     + Headers
 
@@ -2348,16 +1944,16 @@ Return AppsCo specific software licence.
         + meta (Paging)
 
 
-# Label Company Application [/api/v2/companies/{company_id}/label/{label}/applications/{application}]
+# Label Company Resource [/api/v2/companies/{company_id}/label/{label}/applications/{application}]
 
-    Detach AppsCo label company application for currently logged in user.
+    Detach AppsCo label company resource for currently logged in user.
 
 + Parameters
     + `company_id`: 16 (number) - ID of the Company in the form of an integer
     + label - ID of the Company label
-    + application - ID of the Company application
+    + application - ID of the Company resource
 
-### Detach company label company application [DELETE]
+### Detach company label company resource [DELETE]
 + Request
     + Headers
 
