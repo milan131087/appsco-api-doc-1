@@ -2061,15 +2061,15 @@ Share AppsCo account.
         + contacts (array[])
         + meta (Paging)
 
-### Create company contacts [POST]
+### Create company contact [POST]
 + Request
-    + Attributes (Setup Contacts)
+    + Attributes (Setup Contact)
     + Headers
 
             Authorization: token absdef12345
 
 + Response 200 (application/json)
-    + Attributes (Company Contacts)
+    + Attributes (Company Contact)
 
 
 # Company Contact [/api/v2/companies/{company_id}/contact/{contact}]
@@ -2124,7 +2124,7 @@ Share AppsCo account.
     + `company_id`: 16 (number) - ID of the Company in the form of an integer
     + contact - ID of the Company in the form of an integer
 
-### Retrive company contact [GET]
+### Retrive company contact applications [GET]
 + Request
     + Headers
 
@@ -2143,7 +2143,7 @@ Share AppsCo account.
 + Parameters
     + `company_id`: 16 (number) - ID of the Company in the form of an integer
 
-### Retrive company contact [POST]
+### Import company contacts [POST]
 + Request
     + Headers
 
@@ -3096,7 +3096,7 @@ Share AppsCo account.
 + meta (Meta Share)
 + self
 
-## Setup Contacts (object)
+## Setup Contact (object)
 + `contact[first_name]`
 + `contact[last_name]`
 + `contact[email]`
@@ -3127,6 +3127,7 @@ Share AppsCo account.
 + meta
     + `promote_to_user`
     + applications
+    + log
 
 ## Contacts Import (object)
 + total (number)
