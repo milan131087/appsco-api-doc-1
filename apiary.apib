@@ -101,20 +101,6 @@ If application is removed all coresponding application icons will be also remove
 
   OrgUnit is something something
 
-# Login [/api/v2/login]
-
-Login.
-
-### Login [POST]
-
-+ Request
-    + Attributes (Setup Login)
-
-
-+ Response  200 (application/json)
-
-
-
 # Check Login [/api/v2/login_check]
 
 Login check.
@@ -126,6 +112,9 @@ Login check.
 
 
 + Response  200 (application/json)
+
+
+
 
 
 # Request Token [/api/v2/request-token]
@@ -730,7 +719,7 @@ Return Appsco resource information on the user's dashboard.
 
 # Switch Resource [/api/v2/applications/{application}/switch]
 
-Change AppsCo resource login type.
+Autologin sign-in process automation switch is only available if the designated application supports both UN/PW and Item as Auth types.
 
 ### Switch resource login type [POST]
 + Parameters
@@ -2061,15 +2050,15 @@ Share AppsCo account.
         + contacts (array[])
         + meta (Paging)
 
-### Create company contact [POST]
+### Create company contacts [POST]
 + Request
-    + Attributes (Setup Contact)
+    + Attributes (Setup Contacts)
     + Headers
 
             Authorization: token absdef12345
 
 + Response 200 (application/json)
-    + Attributes (Company Contact)
+    + Attributes (Company Contacts)
 
 
 # Company Contact [/api/v2/companies/{company_id}/contact/{contact}]
@@ -2124,7 +2113,7 @@ Share AppsCo account.
     + `company_id`: 16 (number) - ID of the Company in the form of an integer
     + contact - ID of the Company in the form of an integer
 
-### Retrive company contact applications [GET]
+### Retrive company contact [GET]
 + Request
     + Headers
 
@@ -2143,7 +2132,7 @@ Share AppsCo account.
 + Parameters
     + `company_id`: 16 (number) - ID of the Company in the form of an integer
 
-### Import company contacts [POST]
+### Retrive company contact [POST]
 + Request
     + Headers
 
@@ -3096,7 +3085,7 @@ Share AppsCo account.
 + meta (Meta Share)
 + self
 
-## Setup Contact (object)
+## Setup Contacts (object)
 + `contact[first_name]`
 + `contact[last_name]`
 + `contact[email]`
@@ -3127,7 +3116,6 @@ Share AppsCo account.
 + meta
     + `promote_to_user`
     + applications
-    + log
 
 ## Contacts Import (object)
 + total (number)
