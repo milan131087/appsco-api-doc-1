@@ -67,9 +67,10 @@
         <div class="sidenav">
           
 <div class="ui horizontal divider">
-  <a class="item" href="#introduction">
-    <img src="https://appsco.com/bundles/appscodashboardapproot/img/landing-logo.png?1.0.7" alt="AppsCo" class="landing-logo">
-  </a>
+  <a href="#introduction">Introduction</a>
+</div>
+<div class="ui fluid secondary vertical menu">
+  <a class="item" href="#introduction">AppsCo</a>
 </div>
 
 
@@ -79,31 +80,10 @@
     <div class="title active">
       <i class="dropdown icon"></i>
       
-        <strong>Login</strong>
-      
-    </div>
-    <div class="content active">
-      <div class="ui fluid secondary vertical menu">
-      
-        <a class="item blue" href="#login-login">
-          <i class="ui blue empty circular label"></i>
-          
-            <span>Login</span>
-          
-        </a>
-      
-      </div>
-    </div>
-    
-  
-    
-    <div class="title ">
-      <i class="dropdown icon"></i>
-      
         <strong>Check Login</strong>
       
     </div>
-    <div class="content ">
+    <div class="content active">
       <div class="ui fluid secondary vertical menu">
       
         <a class="item blue" href="#check-login-login-check">
@@ -2213,10 +2193,10 @@
           
         </a>
       
-        <a class="item blue" href="#company-contacts-create-company-contact">
+        <a class="item blue" href="#company-contacts-create-company-contacts">
           <i class="ui blue empty circular label"></i>
           
-            <span>Create company contact</span>
+            <span>Create company contacts</span>
           
         </a>
       
@@ -2283,10 +2263,10 @@
     <div class="content ">
       <div class="ui fluid secondary vertical menu">
       
-        <a class="item green" href="#company-contact-applications-retrive-company-contact-applications">
+        <a class="item green" href="#company-contact-applications-retrive-company-contact">
           <i class="ui green empty circular label"></i>
           
-            <span>Retrive company contact applications</span>
+            <span>Retrive company contact</span>
           
         </a>
       
@@ -2304,10 +2284,10 @@
     <div class="content ">
       <div class="ui fluid secondary vertical menu">
       
-        <a class="item blue" href="#import-company-contacts-import-company-contacts">
+        <a class="item blue" href="#import-company-contacts-retrive-company-contact">
           <i class="ui blue empty circular label"></i>
           
-            <span>Import company contacts</span>
+            <span>Retrive company contact</span>
           
         </a>
       
@@ -2478,103 +2458,6 @@ If application is removed all coresponding application icons will be also remove
       
     </div>
   </div>
-  
-    
-      <div class="ui stacked segments">
-        <div class="ui basic segment resource">
-          <div class="ui purple huge ribbon label">
-            Login
-          </div>
-          <div class="ui header">
-            <div class="ui sub header">
-              <p>Login.</p>
-
-            </div>
-          </div>
-        </div>
-
-        
-          
-<div class="ui grey horizontal small divider header">
-  <i class="ui grey micro circular label"></i>
-  <i class="ui pink micro circular label"></i>
-  <i class="ui grey micro circular label"></i>
-</div>
-
-          <div class="ui basic segment">
-            <h3 class="ui block center aligned header" id="login-login">
-              Login
-            </h3>
-            <div class="description"></div>
-
-            
-              <h4 class="ui horizontal divider">
-                REQUEST
-              </h4>
-              <div class="description"></div>
-              <div class="fluid ui large labeled button">
-                <div class="ui blue large button">
-                  <h3>POST</h3>
-                </div>
-                <a class="ui basic fluid blue label">
-                  <code>https://appsco.com/api/v2/login</code>
-                </a>
-              </div>
-              
-              
-              
-
-              <h4 class="ui horizontal divider">RESPONSE</h4>
-              <div class="description"></div>
-              
-<table class="ui celled definition table">
-  <thead>
-    <tr>
-      <th colspan="2">Headers</th>
-    </tr>
-  </thead>
-  <tbody>
-  
-    <tr>
-      <td class="four wide">Content-Type</td>
-      <td><code>application/json</code></td>
-    </tr>
-  
-  </tbody>
-</table>
-
-              <div class="ui stacked blue segment">
-                <div class="ui fluid transaction accordion">
-                  <div class="title center aligned">
-                    <a class="ui blue circular label">
-                      200
-                    </a>
-                    <code></code>
-                  </div>
-                  <div class="content tabbed">
-                    <div class="ui top attached tabular menu">
-                      <a data-tab="body" class="active item">BODY</a>
-                      <a data-tab="schema" class="item">SCHEMA</a>
-                    </div>
-                    <div class="ui bottom attached active tab segment" data-tab="body">
-                      <pre style="white-space: inherit">
-                        <code class="language-"></code>
-                      </pre>
-                    </div>
-                    <div class="ui bottom attached tab segment" data-tab="schema">
-                      <pre style="white-space: inherit">
-                        <code class="language-json"></code>
-                      </pre>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            
-          </div>
-        
-        </div>
-      <div class="ui hidden divider"></div>
-    
   
     
       <div class="ui stacked segments">
@@ -3164,7 +3047,7 @@ In order to access this list user first need to authenticate.</p>
       </td>
       <td><code>dashboardRole</code></td>
       <td class="center aligned">
-        <code>string</code>
+        <code>number</code>
         <code class="ui label">551</code>
       </td>
       <td class="eight wide"><p>ID of the Dashboard Role</p>
@@ -3414,7 +3297,7 @@ In order to access this list user first need to authenticate.</p>
       </td>
       <td><code>dashboardRole</code></td>
       <td class="center aligned">
-        <code>string</code>
+        <code>number</code>
         <code class="ui label">551</code>
       </td>
       <td class="eight wide"><p>ID of the Dashboard Role</p>
@@ -3612,7 +3495,7 @@ In order to access this list user first need to authenticate.</p>
       </td>
       <td><code>dashboardRole</code></td>
       <td class="center aligned">
-        <code>string</code>
+        <code>number</code>
         <code class="ui label">551</code>
       </td>
       <td class="eight wide"><p>ID of the Dashboard Role</p>
@@ -3810,7 +3693,7 @@ In order to access this list user first need to authenticate.</p>
       </td>
       <td><code>dashboardRole</code></td>
       <td class="center aligned">
-        <code>string</code>
+        <code>number</code>
         <code class="ui label">551</code>
       </td>
       <td class="eight wide"><p>ID of the Dashboard Role</p>
@@ -3990,7 +3873,7 @@ In order to access this list user first need to authenticate.</p>
       </td>
       <td><code>dashboardRole</code></td>
       <td class="center aligned">
-        <code>string</code>
+        <code>number</code>
         <code class="ui label">551</code>
       </td>
       <td class="eight wide"><p>ID of the Dashboard Role</p>
@@ -4319,7 +4202,7 @@ In order to access this list user first need to authenticate.</p>
       </td>
       <td><code>dashboard</code></td>
       <td class="center aligned">
-        <code>string</code>
+        <code>number</code>
         <code class="ui label">551</code>
       </td>
       <td class="eight wide"><p>ID of the Dashboard in the form of an integer</p>
@@ -4332,7 +4215,7 @@ In order to access this list user first need to authenticate.</p>
       </td>
       <td><code>icon</code></td>
       <td class="center aligned">
-        <code>string</code>
+        <code>number</code>
         <code class="ui label">247155</code>
       </td>
       <td class="eight wide"><p>ID of the Icon in the form of an integer</p>
@@ -4662,7 +4545,7 @@ In order to access this list user first need to authenticate.</p>
       </td>
       <td><code>dashboard</code></td>
       <td class="center aligned">
-        <code>string</code>
+        <code>number</code>
         <code class="ui label">551</code>
       </td>
       <td class="eight wide"><p>ID of the Dashboard in the form of an integer</p>
@@ -4811,7 +4694,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return and update resource instance for the current dashboard user.</p>
+              <pre><code>Return and update resource instance for the current dashboard user.
+</code></pre>
 
             </div>
           </div>
@@ -4860,7 +4744,7 @@ In order to access this list user first need to authenticate.</p>
       </td>
       <td><code>dashboard</code></td>
       <td class="center aligned">
-        <code>string</code>
+        <code>number</code>
         <code class="ui label">551</code>
       </td>
       <td class="eight wide"><p>ID of the Dashboard in the form of an integer</p>
@@ -4873,7 +4757,7 @@ In order to access this list user first need to authenticate.</p>
       </td>
       <td><code>icon</code></td>
       <td class="center aligned">
-        <code>string</code>
+        <code>number</code>
         <code class="ui label">247155</code>
       </td>
       <td class="eight wide"><p>ID of the Icon in the form of an integer</p>
@@ -5184,7 +5068,7 @@ In order to access this list user first need to authenticate.</p>
       </td>
       <td><code>dashboard</code></td>
       <td class="center aligned">
-        <code>string</code>
+        <code>number</code>
         <code class="ui label">551</code>
       </td>
       <td class="eight wide"><p>ID of the Dashboard in the form of an integer</p>
@@ -5197,7 +5081,7 @@ In order to access this list user first need to authenticate.</p>
       </td>
       <td><code>icon</code></td>
       <td class="center aligned">
-        <code>string</code>
+        <code>number</code>
         <code class="ui label">247155</code>
       </td>
       <td class="eight wide"><p>ID of the Icon in the form of an integer</p>
@@ -5509,7 +5393,7 @@ In order to access this list user first need to authenticate.</p>
       </td>
       <td><code>dashboard</code></td>
       <td class="center aligned">
-        <code>string</code>
+        <code>number</code>
         <code class="ui label">551</code>
       </td>
       <td class="eight wide"><p>ID of the Dashboard in the form of an integer</p>
@@ -5522,7 +5406,7 @@ In order to access this list user first need to authenticate.</p>
       </td>
       <td><code>icon</code></td>
       <td class="center aligned">
-        <code>string</code>
+        <code>number</code>
         <code class="ui label">247155</code>
       </td>
       <td class="eight wide"><p>ID of the Icon in the form of an integer</p>
@@ -6645,7 +6529,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Transfer token is used to add partner to your profile.</p>
+              <pre><code>Transfer token is used to add partner to your profile.
+</code></pre>
 
             </div>
           </div>
@@ -7527,7 +7412,7 @@ In order to access this list user first need to authenticate.</p>
       </td>
       <td><code>applicationIcon</code></td>
       <td class="center aligned">
-        <code>string</code>
+        <code>number</code>
         <code class="ui label">247155</code>
       </td>
       <td class="eight wide"><p>ID of the Resource Icon in the form of an integer</p>
@@ -8029,7 +7914,7 @@ In order to access this list user first need to authenticate.</p>
       </td>
       <td><code>applicationIcon</code></td>
       <td class="center aligned">
-        <code>string</code>
+        <code>number</code>
         <code class="ui label">247155</code>
       </td>
       <td class="eight wide"><p>ID of the Resource Icon in the form of an integer</p>
@@ -9466,7 +9351,7 @@ In order to access this list user first need to authenticate.</p>
       </td>
       <td><code>application</code></td>
       <td class="center aligned">
-        <code>string</code>
+        <code>number</code>
         <code class="ui label">2</code>
       </td>
       <td class="eight wide"><p>ID of the Resource in the form of an integer</p>
@@ -9730,7 +9615,7 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Change AppsCo resource login type.</p>
+              <p>Autologin sign-in process automation switch is only available if the designated application supports both UN/PW and Item as Auth types.</p>
 
             </div>
           </div>
@@ -9779,7 +9664,7 @@ In order to access this list user first need to authenticate.</p>
       </td>
       <td><code>application</code></td>
       <td class="center aligned">
-        <code>string</code>
+        <code>number</code>
         <code class="ui label">2</code>
       </td>
       <td class="eight wide"><p>ID of the Resource in the form of an integer</p>
@@ -9942,7 +9827,7 @@ In order to access this list user first need to authenticate.</p>
       </td>
       <td><code>application</code></td>
       <td class="center aligned">
-        <code>string</code>
+        <code>number</code>
         <code class="ui label">2</code>
       </td>
       <td class="eight wide"><p>ID of the Resource in the form of an integer</p>
@@ -10157,7 +10042,7 @@ In order to access this list user first need to authenticate.</p>
       </td>
       <td><code>application</code></td>
       <td class="center aligned">
-        <code>string</code>
+        <code>number</code>
         <code class="ui label">2</code>
       </td>
       <td class="eight wide"><p>ID of the Resource in the form of an integer</p>
@@ -10336,7 +10221,7 @@ In order to access this list user first need to authenticate.</p>
       </td>
       <td><code>application</code></td>
       <td class="center aligned">
-        <code>string</code>
+        <code>number</code>
         <code class="ui label">2</code>
       </td>
       <td class="eight wide"><p>ID of the Resource in the form of an integer</p>
@@ -10926,7 +10811,7 @@ In order to access this list user first need to authenticate.</p>
       </td>
       <td><code>accountId</code></td>
       <td class="center aligned">
-        <code>string</code>
+        <code>number</code>
         <code class="ui label">41</code>
       </td>
       <td class="eight wide"><p>ID of the Account in the form of an integer</p>
@@ -11287,7 +11172,7 @@ In order to access this list user first need to authenticate.</p>
       </td>
       <td><code>accountId</code></td>
       <td class="center aligned">
-        <code>string</code>
+        <code>number</code>
         <code class="ui label">41</code>
       </td>
       <td class="eight wide"><p>ID of the Account in the form of an integer</p>
@@ -11401,7 +11286,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo companies for current user.</p>
+              <pre><code>Return AppsCo companies for current user.
+</code></pre>
 
             </div>
           </div>
@@ -11573,7 +11459,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Create AppsCo Company for current user.</p>
+              <pre><code>Create AppsCo Company for current user.
+</code></pre>
 
             </div>
           </div>
@@ -11893,7 +11780,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo Company information for currently logged in user.</p>
+              <pre><code>Return AppsCo Company information for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -12093,7 +11981,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo Company information for currently logged in user.</p>
+              <pre><code>Return AppsCo Company information for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -13727,7 +13616,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo Company domains for currently logged in user.</p>
+              <pre><code>Return AppsCo Company domains for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -14060,7 +13950,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo Company domain for currently logged in user.</p>
+              <pre><code>Return AppsCo Company domain for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -14409,7 +14300,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Verify AppsCo Company domain for currently logged in user.</p>
+              <pre><code>Verify AppsCo Company domain for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -14593,7 +14485,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo Company credit card information for currently logged in user.</p>
+              <pre><code>Return AppsCo Company credit card information for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -15116,7 +15009,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo Company public key.</p>
+              <pre><code>Return AppsCo Company public key.
+</code></pre>
 
             </div>
           </div>
@@ -15241,7 +15135,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo Company subscription information for currently logged in user.</p>
+              <pre><code>Return AppsCo Company subscription information for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -15863,7 +15758,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo Company inovoice list information for currently logged in user.</p>
+              <pre><code>Return AppsCo Company inovoice list information for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -16019,7 +15915,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo Company inovoice upcoming information for currently logged in user.</p>
+              <pre><code>Return AppsCo Company inovoice upcoming information for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -16217,7 +16114,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Send AppsCo Company inovoice.</p>
+              <pre><code>Send AppsCo Company inovoice.
+</code></pre>
 
             </div>
           </div>
@@ -16333,7 +16231,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo Company log events for currently logged in user.</p>
+              <pre><code>Return AppsCo Company log events for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -16490,7 +16389,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo Company logs for currently logged in user.</p>
+              <pre><code>Return AppsCo Company logs for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -16649,7 +16549,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo Company directory roles for currently logged in user.</p>
+              <pre><code>Return AppsCo Company directory roles for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -16974,7 +16875,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo Company directory role for currently logged in user.</p>
+              <pre><code>Return AppsCo Company directory role for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -17246,7 +17148,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo Company directory role resources for currently logged in user.</p>
+              <pre><code>Return AppsCo Company directory role resources for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -17418,7 +17321,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo Company directory role can be managed for currently logged in user.</p>
+              <pre><code>Return AppsCo Company directory role can be managed for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -17543,7 +17447,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Change password AppsCo Company directory role for currently logged in user.</p>
+              <pre><code>Change password AppsCo Company directory role for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -17668,7 +17573,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo Company directory role notifications for currently logged in user.</p>
+              <pre><code>Return AppsCo Company directory role notifications for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -17793,7 +17699,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo Company directory role two factor authentication for currently logged in user.</p>
+              <pre><code>Return AppsCo Company directory role two factor authentication for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -18091,7 +17998,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo Company directory role log for currently logged in user.</p>
+              <pre><code>Return AppsCo Company directory role log for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -18332,7 +18240,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo Company directory role log for currently logged in user.</p>
+              <pre><code>Return AppsCo Company directory role log for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -18878,7 +18787,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return available AppsCo Company directory integrations for currently logged in user.</p>
+              <pre><code>Return available AppsCo Company directory integrations for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -19058,7 +18968,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return available AppsCo Company directory integrations for currently logged in user.</p>
+              <pre><code>Return available AppsCo Company directory integrations for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -19305,7 +19216,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return active AppsCo Company directory integration for currently logged in user.</p>
+              <pre><code>Return active AppsCo Company directory integration for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -19452,7 +19364,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return active AppsCo Company directory integration for currently logged in user.</p>
+              <pre><code>Return active AppsCo Company directory integration for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -19599,7 +19512,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo Company directory mappings for currently logged in user.</p>
+              <pre><code>Return AppsCo Company directory mappings for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -19905,7 +19819,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo Company directory mapping for currently logged in user.</p>
+              <pre><code>Return AppsCo Company directory mapping for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -20258,7 +20173,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo Company invitation for currently logged in user.</p>
+              <pre><code>Return AppsCo Company invitation for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -20781,7 +20697,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Resend AppsCo Company invitation for currently logged in user.</p>
+              <pre><code>Resend AppsCo Company invitation for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -21052,7 +20969,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo Company invitation for currently logged in user.</p>
+              <pre><code>Return AppsCo Company invitation for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -21575,7 +21493,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Update AppsCo Company settings for currently logged in user.</p>
+              <pre><code>Update AppsCo Company settings for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -21770,7 +21689,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Update AppsCo Company branding for currently logged in user.</p>
+              <pre><code>Update AppsCo Company branding for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -21965,7 +21885,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Update AppsCo Company logo for currently logged in user.</p>
+              <pre><code>Update AppsCo Company logo for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -22188,7 +22109,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo Company signup for currently logged in user.</p>
+              <pre><code>Return AppsCo Company signup for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -22360,7 +22282,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo Company signup for currently logged in user.</p>
+              <pre><code>Return AppsCo Company signup for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -22686,7 +22609,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Delete AppsCo Company signup for currently logged in user.</p>
+              <pre><code>Delete AppsCo Company signup for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -22819,7 +22743,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo Company labels for currently logged in user.</p>
+              <pre><code>Return AppsCo Company labels for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -23221,7 +23146,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo Company label for currently logged in user.</p>
+              <pre><code>Return AppsCo Company label for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -23588,7 +23514,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo label company roles for currently logged in user.</p>
+              <pre><code>Return AppsCo label company roles for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -23760,7 +23687,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Detach AppsCo label company roles for currently logged in user.</p>
+              <pre><code>Detach AppsCo label company roles for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -23890,7 +23818,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo label company resources for currently logged in user.</p>
+              <pre><code>Return AppsCo label company resources for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -24062,7 +23991,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Detach AppsCo label company resource for currently logged in user.</p>
+              <pre><code>Detach AppsCo label company resource for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -24235,7 +24165,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo label company statistics for two factor.</p>
+              <pre><code>Return AppsCo label company statistics for two factor.
+</code></pre>
 
             </div>
           </div>
@@ -24364,7 +24295,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo label company statistics licences.</p>
+              <pre><code>Return AppsCo label company statistics licences.
+</code></pre>
 
             </div>
           </div>
@@ -24497,7 +24429,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo label company statistics user password scores.</p>
+              <pre><code>Return AppsCo label company statistics user password scores.
+</code></pre>
 
             </div>
           </div>
@@ -24794,7 +24727,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo Company contacts for currently logged in user.</p>
+              <pre><code>Return AppsCo Company contacts for currently logged in user.
+</code></pre>
 
             </div>
           </div>
@@ -24962,8 +24896,8 @@ In order to access this list user first need to authenticate.</p>
 </div>
 
           <div class="ui basic segment">
-            <h3 class="ui block center aligned header" id="company-contacts-create-company-contact">
-              Create company contact
+            <h3 class="ui block center aligned header" id="company-contacts-create-company-contacts">
+              Create company contacts
             </h3>
             <div class="description"></div>
 
@@ -25039,81 +24973,7 @@ In order to access this list user first need to authenticate.</p>
                         <code class="language-json">{
   &#34;alias&#34;: &#34;&#34;,
   &#34;company&#34;: &#34;&#34;,
-  &#34;account&#34;: {
-    &#34;id&#34;: 0,
-    &#34;dashboard_roles&#34;: [],
-    &#34;email&#34;: &#34;&#34;,
-    &#34;timezone&#34;: &#34;&#34;,
-    &#34;country&#34;: &#34;&#34;,
-    &#34;created_at&#34;: {
-      &#34;date&#34;: &#34;&#34;,
-      &#34;timezone_type&#34;: 0,
-      &#34;timezone&#34;: &#34;&#34;
-    },
-    &#34;name&#34;: &#34;&#34;,
-    &#34;enabled&#34;: false,
-    &#34;first_name&#34;: &#34;&#34;,
-    &#34;last_name&#34;: &#34;&#34;,
-    &#34;gender&#34;: &#34;&#34;,
-    &#34;last_login&#34;: {
-      &#34;date&#34;: &#34;&#34;,
-      &#34;timezone_type&#34;: 0,
-      &#34;timezone&#34;: &#34;&#34;
-    },
-    &#34;locale&#34;: &#34;&#34;,
-    &#34;phone&#34;: &#34;&#34;,
-    &#34;picture_url&#34;: &#34;&#34;,
-    &#34;username&#34;: &#34;&#34;,
-    &#34;roles&#34;: {
-      &#34;OWNER&#34;: &#34;&#34;,
-      &#34;ADMIN&#34;: &#34;&#34;,
-      &#34;SHARED&#34;: &#34;&#34;
-    },
-    &#34;display_name&#34;: &#34;&#34;,
-    &#34;profile_options&#34;: {
-      &#34;public&#34;: false
-    },
-    &#34;partner&#34;: false,
-    &#34;companies&#34;: {
-      &#34;company&#34;: [
-        {
-          &#34;alias&#34;: 0,
-          &#34;name&#34;: &#34;&#34;,
-          &#34;contact_email&#34;: &#34;&#34;,
-          &#34;billing_email&#34;: &#34;&#34;,
-          &#34;domain&#34;: &#34;&#34;,
-          &#34;intranet_website&#34;: &#34;&#34;,
-          &#34;remaining_trial_period&#34;: 0,
-          &#34;trial_period&#34;: 0,
-          &#34;image&#34;: &#34;&#34;,
-          &#34;primary_color&#34;: &#34;&#34;,
-          &#34;secondary_color&#34;: &#34;&#34;,
-          &#34;self&#34;: &#34;&#34;,
-          &#34;meta&#34;: {
-            &#34;applications&#34;: &#34;&#34;,
-            &#34;settings&#34;: &#34;&#34;,
-            &#34;logo&#34;: &#34;&#34;
-          }
-        }
-      ],
-      &#34;icons&#34;: &#34;&#34;,
-      &#34;company_admin&#34;: false
-    },
-    &#34;org_units&#34;: [
-      {
-        &#34;name&#34;: &#34;&#34;,
-        &#34;description&#34;: &#34;&#34;,
-        &#34;alias&#34;: 0,
-        &#34;meta&#34;: {
-          &#34;remove&#34;: &#34;&#34;
-        }
-      }
-    ],
-    &#34;meta&#34;: {
-      &#34;share&#34;: &#34;&#34;
-    },
-    &#34;self&#34;: &#34;&#34;
-  },
+  &#34;account&#34;: &#34;&#34;,
   &#34;first_name&#34;: &#34;&#34;,
   &#34;last_name&#34;: &#34;&#34;,
   &#34;display_name&#34;: &#34;&#34;,
@@ -25125,9 +24985,7 @@ In order to access this list user first need to authenticate.</p>
   },
   &#34;self&#34;: &#34;&#34;,
   &#34;meta&#34;: {
-    &#34;promote_to_user&#34;: &#34;&#34;,
-    &#34;applications&#34;: &#34;&#34;,
-    &#34;log&#34;: &#34;&#34;
+    &#34;promote_to_user&#34;: &#34;&#34;
   }
 }</code>
                       </pre>
@@ -25146,141 +25004,8 @@ In order to access this list user first need to authenticate.</p>
       &#34;description&#34;: &#34;Company url&#34;
     },
     &#34;account&#34;: {
-      &#34;type&#34;: &#34;object&#34;,
-      &#34;properties&#34;: {
-        &#34;id&#34;: {
-          &#34;type&#34;: &#34;number&#34;
-        },
-        &#34;dashboard_roles&#34;: {},
-        &#34;email&#34;: {
-          &#34;type&#34;: &#34;string&#34;
-        },
-        &#34;timezone&#34;: {
-          &#34;type&#34;: &#34;string&#34;
-        },
-        &#34;country&#34;: {
-          &#34;type&#34;: &#34;string&#34;
-        },
-        &#34;created_at&#34;: {
-          &#34;type&#34;: &#34;object&#34;,
-          &#34;properties&#34;: {
-            &#34;date&#34;: {
-              &#34;type&#34;: &#34;string&#34;,
-              &#34;description&#34;: &#34;Date time in iso&#34;
-            },
-            &#34;timezone_type&#34;: {
-              &#34;type&#34;: &#34;number&#34;
-            },
-            &#34;timezone&#34;: {
-              &#34;type&#34;: &#34;string&#34;
-            }
-          }
-        },
-        &#34;name&#34;: {
-          &#34;type&#34;: &#34;string&#34;
-        },
-        &#34;enabled&#34;: {
-          &#34;type&#34;: &#34;boolean&#34;
-        },
-        &#34;first_name&#34;: {
-          &#34;type&#34;: &#34;string&#34;
-        },
-        &#34;last_name&#34;: {
-          &#34;type&#34;: &#34;string&#34;
-        },
-        &#34;gender&#34;: {
-          &#34;type&#34;: &#34;string&#34;
-        },
-        &#34;last_login&#34;: {
-          &#34;type&#34;: &#34;object&#34;,
-          &#34;properties&#34;: {
-            &#34;date&#34;: {
-              &#34;type&#34;: &#34;string&#34;,
-              &#34;description&#34;: &#34;Date time in iso&#34;
-            },
-            &#34;timezone_type&#34;: {
-              &#34;type&#34;: &#34;number&#34;
-            },
-            &#34;timezone&#34;: {
-              &#34;type&#34;: &#34;string&#34;
-            }
-          }
-        },
-        &#34;locale&#34;: {
-          &#34;type&#34;: &#34;string&#34;
-        },
-        &#34;phone&#34;: {
-          &#34;type&#34;: &#34;string&#34;
-        },
-        &#34;picture_url&#34;: {
-          &#34;type&#34;: &#34;string&#34;
-        },
-        &#34;username&#34;: {
-          &#34;type&#34;: &#34;string&#34;
-        },
-        &#34;roles&#34;: {
-          &#34;type&#34;: &#34;object&#34;,
-          &#34;properties&#34;: {
-            &#34;OWNER&#34;: {
-              &#34;type&#34;: &#34;string&#34;
-            },
-            &#34;ADMIN&#34;: {
-              &#34;type&#34;: &#34;string&#34;
-            },
-            &#34;SHARED&#34;: {
-              &#34;type&#34;: &#34;string&#34;
-            }
-          },
-          &#34;required&#34;: [
-            &#34;OWNER&#34;,
-            &#34;ADMIN&#34;,
-            &#34;SHARED&#34;
-          ],
-          &#34;additionalProperties&#34;: false
-        },
-        &#34;display_name&#34;: {
-          &#34;type&#34;: &#34;string&#34;
-        },
-        &#34;profile_options&#34;: {
-          &#34;type&#34;: &#34;object&#34;,
-          &#34;properties&#34;: {
-            &#34;public&#34;: {
-              &#34;type&#34;: &#34;boolean&#34;
-            }
-          }
-        },
-        &#34;partner&#34;: {
-          &#34;type&#34;: &#34;boolean&#34;
-        },
-        &#34;companies&#34;: {
-          &#34;type&#34;: &#34;object&#34;,
-          &#34;properties&#34;: {
-            &#34;company&#34;: {
-              &#34;type&#34;: &#34;array&#34;
-            },
-            &#34;icons&#34;: {
-              &#34;type&#34;: &#34;string&#34;
-            },
-            &#34;company_admin&#34;: {
-              &#34;type&#34;: &#34;boolean&#34;
-            }
-          }
-        },
-        &#34;org_units&#34;: {
-          &#34;type&#34;: &#34;array&#34;
-        },
-        &#34;meta&#34;: {
-          &#34;type&#34;: &#34;object&#34;,
-          &#34;properties&#34;: {
-            &#34;share&#34;: {
-              &#34;type&#34;: &#34;string&#34;
-            }
-          }
-        },
-        &#34;self&#34;: {
-          &#34;type&#34;: &#34;string&#34;
-        }
-      }
+      &#34;type&#34;: &#34;string&#34;,
+      &#34;description&#34;: &#34;Account url&#34;
     },
     &#34;first_name&#34;: {
       &#34;type&#34;: &#34;string&#34;
@@ -25317,12 +25042,6 @@ In order to access this list user first need to authenticate.</p>
       &#34;properties&#34;: {
         &#34;promote_to_user&#34;: {
           &#34;type&#34;: &#34;string&#34;
-        },
-        &#34;applications&#34;: {
-          &#34;type&#34;: &#34;string&#34;
-        },
-        &#34;log&#34;: {
-          &#34;type&#34;: &#34;string&#34;
         }
       }
     }
@@ -25348,7 +25067,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo Company contact.</p>
+              <pre><code>Return AppsCo Company contact.
+</code></pre>
 
             </div>
           </div>
@@ -25527,8 +25247,7 @@ In order to access this list user first need to authenticate.</p>
   &#34;self&#34;: &#34;&#34;,
   &#34;meta&#34;: {
     &#34;promote_to_user&#34;: &#34;&#34;,
-    &#34;applications&#34;: &#34;&#34;,
-    &#34;log&#34;: &#34;&#34;
+    &#34;applications&#34;: &#34;&#34;
   }
 }</code>
                       </pre>
@@ -25720,9 +25439,6 @@ In order to access this list user first need to authenticate.</p>
           &#34;type&#34;: &#34;string&#34;
         },
         &#34;applications&#34;: {
-          &#34;type&#34;: &#34;string&#34;
-        },
-        &#34;log&#34;: {
           &#34;type&#34;: &#34;string&#34;
         }
       }
@@ -25909,8 +25625,7 @@ In order to access this list user first need to authenticate.</p>
   &#34;self&#34;: &#34;&#34;,
   &#34;meta&#34;: {
     &#34;promote_to_user&#34;: &#34;&#34;,
-    &#34;applications&#34;: &#34;&#34;,
-    &#34;log&#34;: &#34;&#34;
+    &#34;applications&#34;: &#34;&#34;
   }
 }</code>
                       </pre>
@@ -26103,9 +25818,6 @@ In order to access this list user first need to authenticate.</p>
         },
         &#34;applications&#34;: {
           &#34;type&#34;: &#34;string&#34;
-        },
-        &#34;log&#34;: {
-          &#34;type&#34;: &#34;string&#34;
         }
       }
     }
@@ -26131,7 +25843,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Convert AppsCo Company contact to user.</p>
+              <pre><code>Convert AppsCo Company contact to user.
+</code></pre>
 
             </div>
           </div>
@@ -26310,8 +26023,7 @@ In order to access this list user first need to authenticate.</p>
   &#34;self&#34;: &#34;&#34;,
   &#34;meta&#34;: {
     &#34;promote_to_user&#34;: &#34;&#34;,
-    &#34;applications&#34;: &#34;&#34;,
-    &#34;log&#34;: &#34;&#34;
+    &#34;applications&#34;: &#34;&#34;
   }
 }</code>
                       </pre>
@@ -26504,9 +26216,6 @@ In order to access this list user first need to authenticate.</p>
         },
         &#34;applications&#34;: {
           &#34;type&#34;: &#34;string&#34;
-        },
-        &#34;log&#34;: {
-          &#34;type&#34;: &#34;string&#34;
         }
       }
     }
@@ -26532,7 +26241,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Return AppsCo Company contact applications.</p>
+              <pre><code>Return AppsCo Company contact applications.
+</code></pre>
 
             </div>
           </div>
@@ -26547,8 +26257,8 @@ In order to access this list user first need to authenticate.</p>
 </div>
 
           <div class="ui basic segment">
-            <h3 class="ui block center aligned header" id="company-contact-applications-retrive-company-contact-applications">
-              Retrive company contact applications
+            <h3 class="ui block center aligned header" id="company-contact-applications-retrive-company-contact">
+              Retrive company contact
             </h3>
             <div class="description"></div>
 
@@ -26704,7 +26414,8 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <p>Import AppsCo Company contacts.</p>
+              <pre><code>Import AppsCo Company contacts.
+</code></pre>
 
             </div>
           </div>
@@ -26719,8 +26430,8 @@ In order to access this list user first need to authenticate.</p>
 </div>
 
           <div class="ui basic segment">
-            <h3 class="ui block center aligned header" id="import-company-contacts-import-company-contacts">
-              Import company contacts
+            <h3 class="ui block center aligned header" id="import-company-contacts-retrive-company-contact">
+              Retrive company contact
             </h3>
             <div class="description"></div>
 
@@ -26887,7 +26598,6 @@ In order to access this list user first need to authenticate.</p>
     </script>
   </body>
 </html>
-
 
 
 
