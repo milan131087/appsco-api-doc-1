@@ -2149,6 +2149,238 @@ Share AppsCo account.
     + Attributes (Contacts Import)
 
 
+
+
+# Company Groups [/api/v2/companies/{company_id}/groups]
+
+    Return AppsCo Company groups for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+
+### Retrive company groups [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes
+        + company_groups (array[])
+        + meta (Paging)
+
+### Create company group [POST]
++ Request
+    + Attributes (Setup Group)
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Company Groups)
+
+
+# Company Group [/api/v2/companies/{company_id}/group/{group}]
+
+    Return AppsCo Company contact.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + group - ID of the Company group in the form of an integer
+
+### Retrive company group [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Company Groups)
+
+### Delete company group [DELETE]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Company Groups)
+
+
+# Delete Company Group Role [/api/v2/companies/{company_id}/group/{group}/company-roles/{companyRole}]
+
+    Remove AppsCo Company group role for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + group - ID of the Company group in the form of an integer
+    + companyRole - ID of the Company group role in the form of an integer
+
+### Delete company group role [DELETE]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Company Group Role)
+
+
+# Company Groups Role [/api/v2/companies/{company_id}/group/{group}/company-roles]
+
+    Return AppsCo Company group roles for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + group - ID of the Company group in the form of an integer
+
+### Retrive company groups roles [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes
+        + company_roles (array[])
+        + meta (Paging)
+
+
+# Company Groups Contacts [/api/v2/companies/{company_id}/group/{group}/contacts]
+
+    Return AppsCo Company groups contacts for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + group - ID of the Company group in the form of an integer
+
+### Retrive company groups contacts [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes
+        + contacts (array[])
+
+
+# Company Contact [/api/v2/companies/{company_id}/group/{group}/contacts/{contact}]
+
+    Remove AppsCo Company contact.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + group - ID of the Company group in the form of an integer
+    + contact - ID of the Company contact in the form of an integer
+
+### Delete company group contact [DELETE]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Company Group Contact)
+
+# Company Groups Applications [/api/v2/companies/{company_id}/group/{group}/applications]
+
+    Return AppsCo Company groups applications for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + group - ID of the Company group in the form of an integer
+
+### Retrive company groups applications [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes
+        + applications (array[])
+        + meta (Paging)
+
+# Company Groups Applications [/api/v2/companies/{company_id}/group/{group}/applications/{application}]
+
+    Remove AppsCo Company groups application for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + group - ID of the Company group in the form of an integer
+    + application - ID of the Company application in the form of an integer
+
+### Delete company groups applications [DELETE]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Company Application)
+
+
+# Company Contact Groups  [/api/v2/companies/{company_id}/groups/contact/{contact}/groups]
+
+    Return AppsCo Company contact groups for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + contact - ID of the Company contact in the form of an integer
+
+### Retrive company contact groups [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes
+        + company_groups (array[])
+        + meta (Paging)
+
+# Company Roles Groups  [/api/v2/companies/{company_id}/groups/company-role/{companyRole}/groups]
+
+    Return AppsCo Company roles groups for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + companyRole - ID of the Company contact in the form of an integer
+
+### Retrive company roles groups [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes
+        + company_groups (array[])
+        + meta (Paging)
+
+
+# Company Applications Groups  [/api/v2/companies/{company_id}/groups/application/{application}/groups]
+
+    Return AppsCo Company application groups for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + application - ID of the Company contact in the form of an integer
+
+### Retrive company application groups [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes
+        + company_groups (array[])
+        + meta (Paging)
+
+
+
 # Data Structures
 
 ## Enabled Response (object)
@@ -2578,6 +2810,7 @@ Share AppsCo account.
 + `application_url` - Application url
 + url - Url route
 + images (array[string]) - Images
++ `added_by` (Create Company Response)
 + security (object)
     + info  (object)
         + `not_configured` (number)
@@ -2593,6 +2826,8 @@ Share AppsCo account.
     + account - Name of account user
     + date (DateTime Model)
 + `daily_usage` (number)
++ `application_url`
++ company
 + meta (Meta Company App)
 + self
 
@@ -2641,6 +2876,7 @@ Share AppsCo account.
 
 ## Create Company Response (object)
 + id (number)
++ uuid
 + `dashboard_roles` (array)
 + email
 + timezone
@@ -3128,5 +3364,86 @@ Share AppsCo account.
 + `_password`
 + `login`
 
+## Setup Group (object)
++ `company_group[name]`
+
+## Company Groups (object)
++ alias
++ createdAt (DateTime Model)
++ name
++ company
++ meta
+    + `company_roles`
+    + applications
+    + contacts
+    + self
+
+## Company Group Contact (object)
++ account (Create Company Response)
++ `first_name`
++ `last_name`
++ `display_name`
++ email
++ createdAt (DateTime Model)
++ groups (array[])
++ company
++ self
++ meta
+    + `promote_to_user`
+    + applications
+    + log
+    + groups
+
+## Company Role Account (object)
++ id (number)
++ uuid
++ `dashboard_roles` (array)
++ email
++ timezone
++ country
++ `created_at` (DateTime Model)
++ name
++ enabled (boolean)
++ `first_name`
++ `last_name`
++ gender
++ `last_login` (DateTime Model)
++ locale
++ phone
++ `picture_url`
++ username
++ roles (Dashboard Roles, fixed-type)
++ `display_name`
++ `native_company`
++ `personal_dashboard_allowed` (boolean)
++ `user_allowed_to_create_company` (boolean)
++ `profile_options` (object)
+    + public (boolean)
++ partner (boolean)
++ companies (object)
+    + company (array[Company])
+    + icons
+    + company_admin (boolean)
++ `org_units` (OrgUnits)
++ meta (object)
+    + share
++ self
+
+
+## Company Group Role (object)
++ account (Company Role Account)
++ company (Company)
++ roles (Dashboard Roles, fixed-type)
++ alias (number)
++ security
+    + `application_score` (number)
+    + `two_factor` (boolean)
++ group  (array[])
++ `org_units` (array[OrgUnits])
++ self
++ meta
+    + log
+    + applications
+    + groups
 
 ## Directory Role (object)
