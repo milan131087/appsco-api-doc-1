@@ -2214,10 +2214,17 @@
     <div class="content ">
       <div class="ui fluid secondary vertical menu">
       
-        <a class="item red" href="#company-contact-delete-company-group-contact">
+        <a class="item green" href="#company-contact-retrive-company-contact">
+          <i class="ui green empty circular label"></i>
+          
+            <span>Retrive company contact</span>
+          
+        </a>
+      
+        <a class="item red" href="#company-contact-delete-company-contact">
           <i class="ui red empty circular label"></i>
           
-            <span>Delete company group contact</span>
+            <span>Delete company contact</span>
           
         </a>
       
@@ -2417,10 +2424,17 @@
     <div class="content ">
       <div class="ui fluid secondary vertical menu">
       
-        <a class="item red" href="#company-contact-delete-company-group-contact">
+        <a class="item green" href="#company-contact-retrive-company-contact">
+          <i class="ui green empty circular label"></i>
+          
+            <span>Retrive company contact</span>
+          
+        </a>
+      
+        <a class="item red" href="#company-contact-delete-company-contact">
           <i class="ui red empty circular label"></i>
           
-            <span>Delete company group contact</span>
+            <span>Delete company contact</span>
           
         </a>
       
@@ -2600,6 +2614,27 @@
     <div class="title ">
       <i class="dropdown icon"></i>
       
+        <strong>Customer Log</strong>
+      
+    </div>
+    <div class="content ">
+      <div class="ui fluid secondary vertical menu">
+      
+        <a class="item blue" href="#customer-log-customer-log-action">
+          <i class="ui blue empty circular label"></i>
+          
+            <span>Customer log action</span>
+          
+        </a>
+      
+      </div>
+    </div>
+    
+  
+    
+    <div class="title ">
+      <i class="dropdown icon"></i>
+      
         <strong>Export Customers</strong>
       
     </div>
@@ -2698,6 +2733,34 @@
     <div class="title ">
       <i class="dropdown icon"></i>
       
+        <strong>Single Customer Partner Admin</strong>
+      
+    </div>
+    <div class="content ">
+      <div class="ui fluid secondary vertical menu">
+      
+        <a class="item green" href="#single-customer-partner-admin-retrive-customer-partner-admin">
+          <i class="ui green empty circular label"></i>
+          
+            <span>Retrive customer partner admin</span>
+          
+        </a>
+      
+        <a class="item red" href="#single-customer-partner-admin-delete-customer-partner-admins">
+          <i class="ui red empty circular label"></i>
+          
+            <span>Delete customer partner admins</span>
+          
+        </a>
+      
+      </div>
+    </div>
+    
+  
+    
+    <div class="title ">
+      <i class="dropdown icon"></i>
+      
         <strong>Customer Licences</strong>
       
     </div>
@@ -2708,6 +2771,27 @@
           <i class="ui green empty circular label"></i>
           
             <span>Retrive customer licences</span>
+          
+        </a>
+      
+      </div>
+    </div>
+    
+  
+    
+    <div class="title ">
+      <i class="dropdown icon"></i>
+      
+        <strong>Customer Exists</strong>
+      
+    </div>
+    <div class="content ">
+      <div class="ui fluid secondary vertical menu">
+      
+        <a class="item green" href="#customer-exists-check-if-customer-exists">
+          <i class="ui green empty circular label"></i>
+          
+            <span>Check if customer exists</span>
           
         </a>
       
@@ -25903,7 +25987,7 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <pre><code>Remove AppsCo Company contact.
+              <pre><code>Return AppsCo Company contact.
 </code></pre>
 
             </div>
@@ -25919,8 +26003,8 @@ In order to access this list user first need to authenticate.</p>
 </div>
 
           <div class="ui basic segment">
-            <h3 class="ui block center aligned header" id="company-contact-delete-company-group-contact">
-              Delete company group contact
+            <h3 class="ui block center aligned header" id="company-contact-retrive-company-contact">
+              Retrive company contact
             </h3>
             <div class="description"></div>
 
@@ -25930,11 +26014,11 @@ In order to access this list user first need to authenticate.</p>
               </h4>
               <div class="description"></div>
               <div class="fluid ui large labeled button">
-                <div class="ui red large button">
-                  <h3>DELETE</h3>
+                <div class="ui green large button">
+                  <h3>GET</h3>
                 </div>
-                <a class="ui basic fluid red label">
-                  <code>https://appsco.com/api/v2/companies/{company_id}/group/{group}/contacts/{contact}</code>
+                <a class="ui basic fluid green label">
+                  <code>https://appsco.com/api/v2/companies/{company_id}/contact/{contact}</code>
                 </a>
               </div>
               
@@ -25994,9 +26078,10 @@ In order to access this list user first need to authenticate.</p>
                     <div class="ui bottom attached active tab segment" data-tab="body">
                       <pre style="white-space: inherit">
                         <code class="language-json">{
+  &#34;alias&#34;: &#34;&#34;,
+  &#34;company&#34;: &#34;&#34;,
   &#34;account&#34;: {
     &#34;id&#34;: 0,
-    &#34;uuid&#34;: &#34;&#34;,
     &#34;dashboard_roles&#34;: [],
     &#34;email&#34;: &#34;&#34;,
     &#34;timezone&#34;: &#34;&#34;,
@@ -26055,10 +26140,20 @@ In order to access this list user first need to authenticate.</p>
       &#34;icons&#34;: &#34;&#34;,
       &#34;company_admin&#34;: false
     },
+    &#34;org_units&#34;: [
+      {
+        &#34;name&#34;: &#34;&#34;,
+        &#34;description&#34;: &#34;&#34;,
+        &#34;alias&#34;: 0,
+        &#34;meta&#34;: {
+          &#34;remove&#34;: &#34;&#34;
+        }
+      }
+    ],
     &#34;meta&#34;: {
-      &#34;share&#34;: &#34;&#34;,
-      &#34;self&#34;: &#34;&#34;
-    }
+      &#34;share&#34;: &#34;&#34;
+    },
+    &#34;self&#34;: &#34;&#34;
   },
   &#34;first_name&#34;: &#34;&#34;,
   &#34;last_name&#34;: &#34;&#34;,
@@ -26069,14 +26164,10 @@ In order to access this list user first need to authenticate.</p>
     &#34;timezone_type&#34;: 0,
     &#34;timezone&#34;: &#34;&#34;
   },
-  &#34;groups&#34;: [],
-  &#34;company&#34;: &#34;&#34;,
   &#34;self&#34;: &#34;&#34;,
   &#34;meta&#34;: {
     &#34;promote_to_user&#34;: &#34;&#34;,
-    &#34;applications&#34;: &#34;&#34;,
-    &#34;log&#34;: &#34;&#34;,
-    &#34;groups&#34;: &#34;&#34;
+    &#34;applications&#34;: &#34;&#34;
   }
 }</code>
                       </pre>
@@ -26087,14 +26178,18 @@ In order to access this list user first need to authenticate.</p>
   &#34;$schema&#34;: &#34;http://json-schema.org/draft-04/schema#&#34;,
   &#34;type&#34;: &#34;object&#34;,
   &#34;properties&#34;: {
+    &#34;alias&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;company&#34;: {
+      &#34;type&#34;: &#34;string&#34;,
+      &#34;description&#34;: &#34;Company url&#34;
+    },
     &#34;account&#34;: {
       &#34;type&#34;: &#34;object&#34;,
       &#34;properties&#34;: {
         &#34;id&#34;: {
           &#34;type&#34;: &#34;number&#34;
-        },
-        &#34;uuid&#34;: {
-          &#34;type&#34;: &#34;string&#34;
         },
         &#34;dashboard_roles&#34;: {},
         &#34;email&#34;: {
@@ -26211,16 +26306,19 @@ In order to access this list user first need to authenticate.</p>
             }
           }
         },
+        &#34;org_units&#34;: {
+          &#34;type&#34;: &#34;array&#34;
+        },
         &#34;meta&#34;: {
           &#34;type&#34;: &#34;object&#34;,
           &#34;properties&#34;: {
             &#34;share&#34;: {
               &#34;type&#34;: &#34;string&#34;
-            },
-            &#34;self&#34;: {
-              &#34;type&#34;: &#34;string&#34;
             }
           }
+        },
+        &#34;self&#34;: {
+          &#34;type&#34;: &#34;string&#34;
         }
       }
     },
@@ -26251,12 +26349,6 @@ In order to access this list user first need to authenticate.</p>
         }
       }
     },
-    &#34;groups&#34;: {
-      &#34;type&#34;: &#34;array&#34;
-    },
-    &#34;company&#34;: {
-      &#34;type&#34;: &#34;string&#34;
-    },
     &#34;self&#34;: {
       &#34;type&#34;: &#34;string&#34;
     },
@@ -26268,11 +26360,383 @@ In order to access this list user first need to authenticate.</p>
         },
         &#34;applications&#34;: {
           &#34;type&#34;: &#34;string&#34;
+        }
+      }
+    }
+  }
+}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        
+          
+<div class="ui grey horizontal small divider header">
+  <i class="ui grey micro circular label"></i>
+  <i class="ui pink micro circular label"></i>
+  <i class="ui grey micro circular label"></i>
+</div>
+
+          <div class="ui basic segment">
+            <h3 class="ui block center aligned header" id="company-contact-delete-company-contact">
+              Delete company contact
+            </h3>
+            <div class="description"></div>
+
+            
+              <h4 class="ui horizontal divider">
+                REQUEST
+              </h4>
+              <div class="description"></div>
+              <div class="fluid ui large labeled button">
+                <div class="ui red large button">
+                  <h3>DELETE</h3>
+                </div>
+                <a class="ui basic fluid red label">
+                  <code>https://appsco.com/api/v2/companies/{company_id}/contact/{contact}</code>
+                </a>
+              </div>
+              
+              
+                
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Authorization</td>
+      <td><code>token absdef12345</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              
+              
+
+              <h4 class="ui horizontal divider">RESPONSE</h4>
+              <div class="description"></div>
+              
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Content-Type</td>
+      <td><code>application/json</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              <div class="ui stacked blue segment">
+                <div class="ui fluid transaction accordion">
+                  <div class="title center aligned">
+                    <a class="ui blue circular label">
+                      200
+                    </a>
+                    <code>application/json</code>
+                  </div>
+                  <div class="content tabbed">
+                    <div class="ui top attached tabular menu">
+                      <a data-tab="body" class="active item">BODY</a>
+                      <a data-tab="schema" class="item">SCHEMA</a>
+                    </div>
+                    <div class="ui bottom attached active tab segment" data-tab="body">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;alias&#34;: &#34;&#34;,
+  &#34;company&#34;: &#34;&#34;,
+  &#34;account&#34;: {
+    &#34;id&#34;: 0,
+    &#34;dashboard_roles&#34;: [],
+    &#34;email&#34;: &#34;&#34;,
+    &#34;timezone&#34;: &#34;&#34;,
+    &#34;country&#34;: &#34;&#34;,
+    &#34;created_at&#34;: {
+      &#34;date&#34;: &#34;&#34;,
+      &#34;timezone_type&#34;: 0,
+      &#34;timezone&#34;: &#34;&#34;
+    },
+    &#34;name&#34;: &#34;&#34;,
+    &#34;enabled&#34;: false,
+    &#34;first_name&#34;: &#34;&#34;,
+    &#34;last_name&#34;: &#34;&#34;,
+    &#34;gender&#34;: &#34;&#34;,
+    &#34;last_login&#34;: {
+      &#34;date&#34;: &#34;&#34;,
+      &#34;timezone_type&#34;: 0,
+      &#34;timezone&#34;: &#34;&#34;
+    },
+    &#34;locale&#34;: &#34;&#34;,
+    &#34;phone&#34;: &#34;&#34;,
+    &#34;picture_url&#34;: &#34;&#34;,
+    &#34;username&#34;: &#34;&#34;,
+    &#34;roles&#34;: {
+      &#34;OWNER&#34;: &#34;&#34;,
+      &#34;ADMIN&#34;: &#34;&#34;,
+      &#34;SHARED&#34;: &#34;&#34;
+    },
+    &#34;display_name&#34;: &#34;&#34;,
+    &#34;profile_options&#34;: {
+      &#34;public&#34;: false
+    },
+    &#34;partner&#34;: false,
+    &#34;companies&#34;: {
+      &#34;company&#34;: [
+        {
+          &#34;alias&#34;: 0,
+          &#34;name&#34;: &#34;&#34;,
+          &#34;contact_email&#34;: &#34;&#34;,
+          &#34;billing_email&#34;: &#34;&#34;,
+          &#34;domain&#34;: &#34;&#34;,
+          &#34;intranet_website&#34;: &#34;&#34;,
+          &#34;remaining_trial_period&#34;: 0,
+          &#34;trial_period&#34;: 0,
+          &#34;image&#34;: &#34;&#34;,
+          &#34;primary_color&#34;: &#34;&#34;,
+          &#34;secondary_color&#34;: &#34;&#34;,
+          &#34;self&#34;: &#34;&#34;,
+          &#34;meta&#34;: {
+            &#34;applications&#34;: &#34;&#34;,
+            &#34;settings&#34;: &#34;&#34;,
+            &#34;logo&#34;: &#34;&#34;
+          }
+        }
+      ],
+      &#34;icons&#34;: &#34;&#34;,
+      &#34;company_admin&#34;: false
+    },
+    &#34;org_units&#34;: [
+      {
+        &#34;name&#34;: &#34;&#34;,
+        &#34;description&#34;: &#34;&#34;,
+        &#34;alias&#34;: 0,
+        &#34;meta&#34;: {
+          &#34;remove&#34;: &#34;&#34;
+        }
+      }
+    ],
+    &#34;meta&#34;: {
+      &#34;share&#34;: &#34;&#34;
+    },
+    &#34;self&#34;: &#34;&#34;
+  },
+  &#34;first_name&#34;: &#34;&#34;,
+  &#34;last_name&#34;: &#34;&#34;,
+  &#34;display_name&#34;: &#34;&#34;,
+  &#34;email&#34;: &#34;&#34;,
+  &#34;createdAt&#34;: {
+    &#34;date&#34;: &#34;&#34;,
+    &#34;timezone_type&#34;: 0,
+    &#34;timezone&#34;: &#34;&#34;
+  },
+  &#34;self&#34;: &#34;&#34;,
+  &#34;meta&#34;: {
+    &#34;promote_to_user&#34;: &#34;&#34;,
+    &#34;applications&#34;: &#34;&#34;
+  }
+}</code>
+                      </pre>
+                    </div>
+                    <div class="ui bottom attached tab segment" data-tab="schema">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;$schema&#34;: &#34;http://json-schema.org/draft-04/schema#&#34;,
+  &#34;type&#34;: &#34;object&#34;,
+  &#34;properties&#34;: {
+    &#34;alias&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;company&#34;: {
+      &#34;type&#34;: &#34;string&#34;,
+      &#34;description&#34;: &#34;Company url&#34;
+    },
+    &#34;account&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;id&#34;: {
+          &#34;type&#34;: &#34;number&#34;
         },
-        &#34;log&#34;: {
+        &#34;dashboard_roles&#34;: {},
+        &#34;email&#34;: {
           &#34;type&#34;: &#34;string&#34;
         },
-        &#34;groups&#34;: {
+        &#34;timezone&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;country&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;created_at&#34;: {
+          &#34;type&#34;: &#34;object&#34;,
+          &#34;properties&#34;: {
+            &#34;date&#34;: {
+              &#34;type&#34;: &#34;string&#34;,
+              &#34;description&#34;: &#34;Date time in iso&#34;
+            },
+            &#34;timezone_type&#34;: {
+              &#34;type&#34;: &#34;number&#34;
+            },
+            &#34;timezone&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            }
+          }
+        },
+        &#34;name&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;enabled&#34;: {
+          &#34;type&#34;: &#34;boolean&#34;
+        },
+        &#34;first_name&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;last_name&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;gender&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;last_login&#34;: {
+          &#34;type&#34;: &#34;object&#34;,
+          &#34;properties&#34;: {
+            &#34;date&#34;: {
+              &#34;type&#34;: &#34;string&#34;,
+              &#34;description&#34;: &#34;Date time in iso&#34;
+            },
+            &#34;timezone_type&#34;: {
+              &#34;type&#34;: &#34;number&#34;
+            },
+            &#34;timezone&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            }
+          }
+        },
+        &#34;locale&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;phone&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;picture_url&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;username&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;roles&#34;: {
+          &#34;type&#34;: &#34;object&#34;,
+          &#34;properties&#34;: {
+            &#34;OWNER&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            },
+            &#34;ADMIN&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            },
+            &#34;SHARED&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            }
+          },
+          &#34;required&#34;: [
+            &#34;OWNER&#34;,
+            &#34;ADMIN&#34;,
+            &#34;SHARED&#34;
+          ],
+          &#34;additionalProperties&#34;: false
+        },
+        &#34;display_name&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;profile_options&#34;: {
+          &#34;type&#34;: &#34;object&#34;,
+          &#34;properties&#34;: {
+            &#34;public&#34;: {
+              &#34;type&#34;: &#34;boolean&#34;
+            }
+          }
+        },
+        &#34;partner&#34;: {
+          &#34;type&#34;: &#34;boolean&#34;
+        },
+        &#34;companies&#34;: {
+          &#34;type&#34;: &#34;object&#34;,
+          &#34;properties&#34;: {
+            &#34;company&#34;: {
+              &#34;type&#34;: &#34;array&#34;
+            },
+            &#34;icons&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            },
+            &#34;company_admin&#34;: {
+              &#34;type&#34;: &#34;boolean&#34;
+            }
+          }
+        },
+        &#34;org_units&#34;: {
+          &#34;type&#34;: &#34;array&#34;
+        },
+        &#34;meta&#34;: {
+          &#34;type&#34;: &#34;object&#34;,
+          &#34;properties&#34;: {
+            &#34;share&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            }
+          }
+        },
+        &#34;self&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        }
+      }
+    },
+    &#34;first_name&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;last_name&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;display_name&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;email&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;createdAt&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;date&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Date time in iso&#34;
+        },
+        &#34;timezone_type&#34;: {
+          &#34;type&#34;: &#34;number&#34;
+        },
+        &#34;timezone&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        }
+      }
+    },
+    &#34;self&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;meta&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;promote_to_user&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;applications&#34;: {
           &#34;type&#34;: &#34;string&#34;
         }
       }
@@ -28540,7 +29004,7 @@ In order to access this list user first need to authenticate.</p>
           </div>
           <div class="ui header">
             <div class="ui sub header">
-              <pre><code>Remove AppsCo Company contact.
+              <pre><code>Return AppsCo Company contact.
 </code></pre>
 
             </div>
@@ -28556,8 +29020,8 @@ In order to access this list user first need to authenticate.</p>
 </div>
 
           <div class="ui basic segment">
-            <h3 class="ui block center aligned header" id="company-contact-delete-company-group-contact">
-              Delete company group contact
+            <h3 class="ui block center aligned header" id="company-contact-retrive-company-contact">
+              Retrive company contact
             </h3>
             <div class="description"></div>
 
@@ -28567,11 +29031,11 @@ In order to access this list user first need to authenticate.</p>
               </h4>
               <div class="description"></div>
               <div class="fluid ui large labeled button">
-                <div class="ui red large button">
-                  <h3>DELETE</h3>
+                <div class="ui green large button">
+                  <h3>GET</h3>
                 </div>
-                <a class="ui basic fluid red label">
-                  <code>https://appsco.com/api/v2/companies/{company_id}/group/{group}/contacts/{contact}</code>
+                <a class="ui basic fluid green label">
+                  <code>https://appsco.com/api/v2/companies/{company_id}/contact/{contact}</code>
                 </a>
               </div>
               
@@ -28631,9 +29095,10 @@ In order to access this list user first need to authenticate.</p>
                     <div class="ui bottom attached active tab segment" data-tab="body">
                       <pre style="white-space: inherit">
                         <code class="language-json">{
+  &#34;alias&#34;: &#34;&#34;,
+  &#34;company&#34;: &#34;&#34;,
   &#34;account&#34;: {
     &#34;id&#34;: 0,
-    &#34;uuid&#34;: &#34;&#34;,
     &#34;dashboard_roles&#34;: [],
     &#34;email&#34;: &#34;&#34;,
     &#34;timezone&#34;: &#34;&#34;,
@@ -28692,10 +29157,20 @@ In order to access this list user first need to authenticate.</p>
       &#34;icons&#34;: &#34;&#34;,
       &#34;company_admin&#34;: false
     },
+    &#34;org_units&#34;: [
+      {
+        &#34;name&#34;: &#34;&#34;,
+        &#34;description&#34;: &#34;&#34;,
+        &#34;alias&#34;: 0,
+        &#34;meta&#34;: {
+          &#34;remove&#34;: &#34;&#34;
+        }
+      }
+    ],
     &#34;meta&#34;: {
-      &#34;share&#34;: &#34;&#34;,
-      &#34;self&#34;: &#34;&#34;
-    }
+      &#34;share&#34;: &#34;&#34;
+    },
+    &#34;self&#34;: &#34;&#34;
   },
   &#34;first_name&#34;: &#34;&#34;,
   &#34;last_name&#34;: &#34;&#34;,
@@ -28706,14 +29181,10 @@ In order to access this list user first need to authenticate.</p>
     &#34;timezone_type&#34;: 0,
     &#34;timezone&#34;: &#34;&#34;
   },
-  &#34;groups&#34;: [],
-  &#34;company&#34;: &#34;&#34;,
   &#34;self&#34;: &#34;&#34;,
   &#34;meta&#34;: {
     &#34;promote_to_user&#34;: &#34;&#34;,
-    &#34;applications&#34;: &#34;&#34;,
-    &#34;log&#34;: &#34;&#34;,
-    &#34;groups&#34;: &#34;&#34;
+    &#34;applications&#34;: &#34;&#34;
   }
 }</code>
                       </pre>
@@ -28724,14 +29195,18 @@ In order to access this list user first need to authenticate.</p>
   &#34;$schema&#34;: &#34;http://json-schema.org/draft-04/schema#&#34;,
   &#34;type&#34;: &#34;object&#34;,
   &#34;properties&#34;: {
+    &#34;alias&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;company&#34;: {
+      &#34;type&#34;: &#34;string&#34;,
+      &#34;description&#34;: &#34;Company url&#34;
+    },
     &#34;account&#34;: {
       &#34;type&#34;: &#34;object&#34;,
       &#34;properties&#34;: {
         &#34;id&#34;: {
           &#34;type&#34;: &#34;number&#34;
-        },
-        &#34;uuid&#34;: {
-          &#34;type&#34;: &#34;string&#34;
         },
         &#34;dashboard_roles&#34;: {},
         &#34;email&#34;: {
@@ -28848,16 +29323,19 @@ In order to access this list user first need to authenticate.</p>
             }
           }
         },
+        &#34;org_units&#34;: {
+          &#34;type&#34;: &#34;array&#34;
+        },
         &#34;meta&#34;: {
           &#34;type&#34;: &#34;object&#34;,
           &#34;properties&#34;: {
             &#34;share&#34;: {
               &#34;type&#34;: &#34;string&#34;
-            },
-            &#34;self&#34;: {
-              &#34;type&#34;: &#34;string&#34;
             }
           }
+        },
+        &#34;self&#34;: {
+          &#34;type&#34;: &#34;string&#34;
         }
       }
     },
@@ -28888,12 +29366,6 @@ In order to access this list user first need to authenticate.</p>
         }
       }
     },
-    &#34;groups&#34;: {
-      &#34;type&#34;: &#34;array&#34;
-    },
-    &#34;company&#34;: {
-      &#34;type&#34;: &#34;string&#34;
-    },
     &#34;self&#34;: {
       &#34;type&#34;: &#34;string&#34;
     },
@@ -28905,11 +29377,383 @@ In order to access this list user first need to authenticate.</p>
         },
         &#34;applications&#34;: {
           &#34;type&#34;: &#34;string&#34;
+        }
+      }
+    }
+  }
+}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        
+          
+<div class="ui grey horizontal small divider header">
+  <i class="ui grey micro circular label"></i>
+  <i class="ui pink micro circular label"></i>
+  <i class="ui grey micro circular label"></i>
+</div>
+
+          <div class="ui basic segment">
+            <h3 class="ui block center aligned header" id="company-contact-delete-company-contact">
+              Delete company contact
+            </h3>
+            <div class="description"></div>
+
+            
+              <h4 class="ui horizontal divider">
+                REQUEST
+              </h4>
+              <div class="description"></div>
+              <div class="fluid ui large labeled button">
+                <div class="ui red large button">
+                  <h3>DELETE</h3>
+                </div>
+                <a class="ui basic fluid red label">
+                  <code>https://appsco.com/api/v2/companies/{company_id}/contact/{contact}</code>
+                </a>
+              </div>
+              
+              
+                
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Authorization</td>
+      <td><code>token absdef12345</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              
+              
+
+              <h4 class="ui horizontal divider">RESPONSE</h4>
+              <div class="description"></div>
+              
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Content-Type</td>
+      <td><code>application/json</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              <div class="ui stacked blue segment">
+                <div class="ui fluid transaction accordion">
+                  <div class="title center aligned">
+                    <a class="ui blue circular label">
+                      200
+                    </a>
+                    <code>application/json</code>
+                  </div>
+                  <div class="content tabbed">
+                    <div class="ui top attached tabular menu">
+                      <a data-tab="body" class="active item">BODY</a>
+                      <a data-tab="schema" class="item">SCHEMA</a>
+                    </div>
+                    <div class="ui bottom attached active tab segment" data-tab="body">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;alias&#34;: &#34;&#34;,
+  &#34;company&#34;: &#34;&#34;,
+  &#34;account&#34;: {
+    &#34;id&#34;: 0,
+    &#34;dashboard_roles&#34;: [],
+    &#34;email&#34;: &#34;&#34;,
+    &#34;timezone&#34;: &#34;&#34;,
+    &#34;country&#34;: &#34;&#34;,
+    &#34;created_at&#34;: {
+      &#34;date&#34;: &#34;&#34;,
+      &#34;timezone_type&#34;: 0,
+      &#34;timezone&#34;: &#34;&#34;
+    },
+    &#34;name&#34;: &#34;&#34;,
+    &#34;enabled&#34;: false,
+    &#34;first_name&#34;: &#34;&#34;,
+    &#34;last_name&#34;: &#34;&#34;,
+    &#34;gender&#34;: &#34;&#34;,
+    &#34;last_login&#34;: {
+      &#34;date&#34;: &#34;&#34;,
+      &#34;timezone_type&#34;: 0,
+      &#34;timezone&#34;: &#34;&#34;
+    },
+    &#34;locale&#34;: &#34;&#34;,
+    &#34;phone&#34;: &#34;&#34;,
+    &#34;picture_url&#34;: &#34;&#34;,
+    &#34;username&#34;: &#34;&#34;,
+    &#34;roles&#34;: {
+      &#34;OWNER&#34;: &#34;&#34;,
+      &#34;ADMIN&#34;: &#34;&#34;,
+      &#34;SHARED&#34;: &#34;&#34;
+    },
+    &#34;display_name&#34;: &#34;&#34;,
+    &#34;profile_options&#34;: {
+      &#34;public&#34;: false
+    },
+    &#34;partner&#34;: false,
+    &#34;companies&#34;: {
+      &#34;company&#34;: [
+        {
+          &#34;alias&#34;: 0,
+          &#34;name&#34;: &#34;&#34;,
+          &#34;contact_email&#34;: &#34;&#34;,
+          &#34;billing_email&#34;: &#34;&#34;,
+          &#34;domain&#34;: &#34;&#34;,
+          &#34;intranet_website&#34;: &#34;&#34;,
+          &#34;remaining_trial_period&#34;: 0,
+          &#34;trial_period&#34;: 0,
+          &#34;image&#34;: &#34;&#34;,
+          &#34;primary_color&#34;: &#34;&#34;,
+          &#34;secondary_color&#34;: &#34;&#34;,
+          &#34;self&#34;: &#34;&#34;,
+          &#34;meta&#34;: {
+            &#34;applications&#34;: &#34;&#34;,
+            &#34;settings&#34;: &#34;&#34;,
+            &#34;logo&#34;: &#34;&#34;
+          }
+        }
+      ],
+      &#34;icons&#34;: &#34;&#34;,
+      &#34;company_admin&#34;: false
+    },
+    &#34;org_units&#34;: [
+      {
+        &#34;name&#34;: &#34;&#34;,
+        &#34;description&#34;: &#34;&#34;,
+        &#34;alias&#34;: 0,
+        &#34;meta&#34;: {
+          &#34;remove&#34;: &#34;&#34;
+        }
+      }
+    ],
+    &#34;meta&#34;: {
+      &#34;share&#34;: &#34;&#34;
+    },
+    &#34;self&#34;: &#34;&#34;
+  },
+  &#34;first_name&#34;: &#34;&#34;,
+  &#34;last_name&#34;: &#34;&#34;,
+  &#34;display_name&#34;: &#34;&#34;,
+  &#34;email&#34;: &#34;&#34;,
+  &#34;createdAt&#34;: {
+    &#34;date&#34;: &#34;&#34;,
+    &#34;timezone_type&#34;: 0,
+    &#34;timezone&#34;: &#34;&#34;
+  },
+  &#34;self&#34;: &#34;&#34;,
+  &#34;meta&#34;: {
+    &#34;promote_to_user&#34;: &#34;&#34;,
+    &#34;applications&#34;: &#34;&#34;
+  }
+}</code>
+                      </pre>
+                    </div>
+                    <div class="ui bottom attached tab segment" data-tab="schema">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;$schema&#34;: &#34;http://json-schema.org/draft-04/schema#&#34;,
+  &#34;type&#34;: &#34;object&#34;,
+  &#34;properties&#34;: {
+    &#34;alias&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;company&#34;: {
+      &#34;type&#34;: &#34;string&#34;,
+      &#34;description&#34;: &#34;Company url&#34;
+    },
+    &#34;account&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;id&#34;: {
+          &#34;type&#34;: &#34;number&#34;
         },
-        &#34;log&#34;: {
+        &#34;dashboard_roles&#34;: {},
+        &#34;email&#34;: {
           &#34;type&#34;: &#34;string&#34;
         },
-        &#34;groups&#34;: {
+        &#34;timezone&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;country&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;created_at&#34;: {
+          &#34;type&#34;: &#34;object&#34;,
+          &#34;properties&#34;: {
+            &#34;date&#34;: {
+              &#34;type&#34;: &#34;string&#34;,
+              &#34;description&#34;: &#34;Date time in iso&#34;
+            },
+            &#34;timezone_type&#34;: {
+              &#34;type&#34;: &#34;number&#34;
+            },
+            &#34;timezone&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            }
+          }
+        },
+        &#34;name&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;enabled&#34;: {
+          &#34;type&#34;: &#34;boolean&#34;
+        },
+        &#34;first_name&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;last_name&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;gender&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;last_login&#34;: {
+          &#34;type&#34;: &#34;object&#34;,
+          &#34;properties&#34;: {
+            &#34;date&#34;: {
+              &#34;type&#34;: &#34;string&#34;,
+              &#34;description&#34;: &#34;Date time in iso&#34;
+            },
+            &#34;timezone_type&#34;: {
+              &#34;type&#34;: &#34;number&#34;
+            },
+            &#34;timezone&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            }
+          }
+        },
+        &#34;locale&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;phone&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;picture_url&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;username&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;roles&#34;: {
+          &#34;type&#34;: &#34;object&#34;,
+          &#34;properties&#34;: {
+            &#34;OWNER&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            },
+            &#34;ADMIN&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            },
+            &#34;SHARED&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            }
+          },
+          &#34;required&#34;: [
+            &#34;OWNER&#34;,
+            &#34;ADMIN&#34;,
+            &#34;SHARED&#34;
+          ],
+          &#34;additionalProperties&#34;: false
+        },
+        &#34;display_name&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;profile_options&#34;: {
+          &#34;type&#34;: &#34;object&#34;,
+          &#34;properties&#34;: {
+            &#34;public&#34;: {
+              &#34;type&#34;: &#34;boolean&#34;
+            }
+          }
+        },
+        &#34;partner&#34;: {
+          &#34;type&#34;: &#34;boolean&#34;
+        },
+        &#34;companies&#34;: {
+          &#34;type&#34;: &#34;object&#34;,
+          &#34;properties&#34;: {
+            &#34;company&#34;: {
+              &#34;type&#34;: &#34;array&#34;
+            },
+            &#34;icons&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            },
+            &#34;company_admin&#34;: {
+              &#34;type&#34;: &#34;boolean&#34;
+            }
+          }
+        },
+        &#34;org_units&#34;: {
+          &#34;type&#34;: &#34;array&#34;
+        },
+        &#34;meta&#34;: {
+          &#34;type&#34;: &#34;object&#34;,
+          &#34;properties&#34;: {
+            &#34;share&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            }
+          }
+        },
+        &#34;self&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        }
+      }
+    },
+    &#34;first_name&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;last_name&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;display_name&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;email&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;createdAt&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;date&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Date time in iso&#34;
+        },
+        &#34;timezone_type&#34;: {
+          &#34;type&#34;: &#34;number&#34;
+        },
+        &#34;timezone&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        }
+      }
+    },
+    &#34;self&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;meta&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;promote_to_user&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;applications&#34;: {
           &#34;type&#34;: &#34;string&#34;
         }
       }
@@ -31549,6 +32393,177 @@ In order to access this list user first need to authenticate.</p>
       <div class="ui stacked segments">
         <div class="ui basic segment resource">
           <div class="ui purple huge ribbon label">
+            Customer Log
+          </div>
+          <div class="ui header">
+            <div class="ui sub header">
+              <pre><code>Return AppsCo customers log.
+</code></pre>
+
+            </div>
+          </div>
+        </div>
+
+        
+          
+<div class="ui grey horizontal small divider header">
+  <i class="ui grey micro circular label"></i>
+  <i class="ui pink micro circular label"></i>
+  <i class="ui grey micro circular label"></i>
+</div>
+
+          <div class="ui basic segment">
+            <h3 class="ui block center aligned header" id="customer-log-customer-log-action">
+              Customer log action
+            </h3>
+            <div class="description"></div>
+
+            
+              <h4 class="ui horizontal divider">
+                REQUEST
+              </h4>
+              <div class="description"></div>
+              <div class="fluid ui large labeled button">
+                <div class="ui blue large button">
+                  <h3>POST</h3>
+                </div>
+                <a class="ui basic fluid blue label">
+                  <code>https://appsco.com/api/v2/partners/{partner}/customers/{customer}/log</code>
+                </a>
+              </div>
+              
+              
+                
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Authorization</td>
+      <td><code>token absdef12345</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              
+              
+
+              <h4 class="ui horizontal divider">RESPONSE</h4>
+              <div class="description"></div>
+              
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Content-Type</td>
+      <td><code>application/json</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              <div class="ui stacked blue segment">
+                <div class="ui fluid transaction accordion">
+                  <div class="title center aligned">
+                    <a class="ui blue circular label">
+                      200
+                    </a>
+                    <code>application/json</code>
+                  </div>
+                  <div class="content tabbed">
+                    <div class="ui top attached tabular menu">
+                      <a data-tab="body" class="active item">BODY</a>
+                      <a data-tab="schema" class="item">SCHEMA</a>
+                    </div>
+                    <div class="ui bottom attached active tab segment" data-tab="body">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;logs&#34;: [],
+  &#34;meta&#34;: {
+    &#34;total&#34;: 0,
+    &#34;page&#34;: 0,
+    &#34;first&#34;: &#34;&#34;,
+    &#34;last&#34;: &#34;&#34;,
+    &#34;pages&#34;: 0,
+    &#34;per_page&#34;: 0,
+    &#34;prev&#34;: &#34;&#34;,
+    &#34;next&#34;: &#34;&#34;
+  }
+}</code>
+                      </pre>
+                    </div>
+                    <div class="ui bottom attached tab segment" data-tab="schema">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;$schema&#34;: &#34;http://json-schema.org/draft-04/schema#&#34;,
+  &#34;type&#34;: &#34;object&#34;,
+  &#34;properties&#34;: {
+    &#34;logs&#34;: {},
+    &#34;meta&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;total&#34;: {
+          &#34;type&#34;: &#34;number&#34;,
+          &#34;description&#34;: &#34;Total number of items&#34;
+        },
+        &#34;page&#34;: {
+          &#34;type&#34;: &#34;number&#34;,
+          &#34;description&#34;: &#34;Current page&#34;
+        },
+        &#34;first&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;First page in collection&#34;
+        },
+        &#34;last&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Last page in collection&#34;
+        },
+        &#34;pages&#34;: {
+          &#34;type&#34;: &#34;number&#34;,
+          &#34;description&#34;: &#34;Number of pages&#34;
+        },
+        &#34;per_page&#34;: {
+          &#34;type&#34;: &#34;number&#34;,
+          &#34;description&#34;: &#34;Number of items per page&#34;
+        },
+        &#34;prev&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Previous page&#34;
+        },
+        &#34;next&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Next page&#34;
+        }
+      }
+    }
+  }
+}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        
+        </div>
+      <div class="ui hidden divider"></div>
+    
+  
+    
+      <div class="ui stacked segments">
+        <div class="ui basic segment resource">
+          <div class="ui purple huge ribbon label">
             Export Customers
           </div>
           <div class="ui header">
@@ -32499,6 +33514,914 @@ Content-Type: text/csv
       <div class="ui stacked segments">
         <div class="ui basic segment resource">
           <div class="ui purple huge ribbon label">
+            Single Customer Partner Admin
+          </div>
+          <div class="ui header">
+            <div class="ui sub header">
+              <pre><code>Return single AppsCo customer partner admin.
+</code></pre>
+
+            </div>
+          </div>
+        </div>
+
+        
+          
+<div class="ui grey horizontal small divider header">
+  <i class="ui grey micro circular label"></i>
+  <i class="ui pink micro circular label"></i>
+  <i class="ui grey micro circular label"></i>
+</div>
+
+          <div class="ui basic segment">
+            <h3 class="ui block center aligned header" id="single-customer-partner-admin-retrive-customer-partner-admin">
+              Retrive customer partner admin
+            </h3>
+            <div class="description"></div>
+
+            
+              <h4 class="ui horizontal divider">
+                REQUEST
+              </h4>
+              <div class="description"></div>
+              <div class="fluid ui large labeled button">
+                <div class="ui green large button">
+                  <h3>GET</h3>
+                </div>
+                <a class="ui basic fluid green label">
+                  <code>https://appsco.com/api/v2/partners/{partner}/customers/{customer}/partner-admins/{partnerAdmin}</code>
+                </a>
+              </div>
+              
+              
+                
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Authorization</td>
+      <td><code>token absdef12345</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              
+              
+
+              <h4 class="ui horizontal divider">RESPONSE</h4>
+              <div class="description"></div>
+              
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Content-Type</td>
+      <td><code>application/json</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              <div class="ui stacked blue segment">
+                <div class="ui fluid transaction accordion">
+                  <div class="title center aligned">
+                    <a class="ui blue circular label">
+                      200
+                    </a>
+                    <code>application/json</code>
+                  </div>
+                  <div class="content tabbed">
+                    <div class="ui top attached tabular menu">
+                      <a data-tab="body" class="active item">BODY</a>
+                      <a data-tab="schema" class="item">SCHEMA</a>
+                    </div>
+                    <div class="ui bottom attached active tab segment" data-tab="body">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;id&#34;: 0,
+  &#34;uuid&#34;: &#34;&#34;,
+  &#34;dashboard_roles&#34;: [],
+  &#34;email&#34;: &#34;&#34;,
+  &#34;timezone&#34;: &#34;&#34;,
+  &#34;country&#34;: &#34;&#34;,
+  &#34;created_at&#34;: {
+    &#34;date&#34;: &#34;&#34;,
+    &#34;timezone_type&#34;: 0,
+    &#34;timezone&#34;: &#34;&#34;
+  },
+  &#34;name&#34;: &#34;&#34;,
+  &#34;enabled&#34;: false,
+  &#34;first_name&#34;: &#34;&#34;,
+  &#34;last_name&#34;: &#34;&#34;,
+  &#34;gender&#34;: &#34;&#34;,
+  &#34;last_login&#34;: {
+    &#34;date&#34;: &#34;&#34;,
+    &#34;timezone_type&#34;: 0,
+    &#34;timezone&#34;: &#34;&#34;
+  },
+  &#34;locale&#34;: &#34;&#34;,
+  &#34;phone&#34;: &#34;&#34;,
+  &#34;picture_url&#34;: &#34;&#34;,
+  &#34;username&#34;: &#34;&#34;,
+  &#34;display_name&#34;: &#34;&#34;,
+  &#34;native_company&#34;: &#34;&#34;,
+  &#34;personal_dashboard_allowed&#34;: false,
+  &#34;user_allowed_to_create_company&#34;: false,
+  &#34;profile_options&#34;: {
+    &#34;public&#34;: false
+  },
+  &#34;partner&#34;: false,
+  &#34;companies&#34;: {
+    &#34;company&#34;: [
+      {
+        &#34;alias&#34;: 0,
+        &#34;name&#34;: &#34;&#34;,
+        &#34;contact_email&#34;: &#34;&#34;,
+        &#34;billing_email&#34;: &#34;&#34;,
+        &#34;domain&#34;: &#34;&#34;,
+        &#34;intranet_website&#34;: &#34;&#34;,
+        &#34;remaining_trial_period&#34;: 0,
+        &#34;trial_period&#34;: 0,
+        &#34;image&#34;: &#34;&#34;,
+        &#34;primary_color&#34;: &#34;&#34;,
+        &#34;secondary_color&#34;: &#34;&#34;,
+        &#34;self&#34;: &#34;&#34;,
+        &#34;meta&#34;: {
+          &#34;applications&#34;: &#34;&#34;,
+          &#34;settings&#34;: &#34;&#34;,
+          &#34;logo&#34;: &#34;&#34;
+        }
+      }
+    ],
+    &#34;icons&#34;: &#34;&#34;,
+    &#34;company_admin&#34;: false
+  },
+  &#34;company&#34;: {
+    &#34;alias&#34;: 0,
+    &#34;name&#34;: &#34;&#34;,
+    &#34;contact_email&#34;: &#34;&#34;,
+    &#34;billing_email&#34;: &#34;&#34;,
+    &#34;domain&#34;: &#34;&#34;,
+    &#34;intranet_website&#34;: &#34;&#34;,
+    &#34;remaining_trial_period&#34;: 0,
+    &#34;trial_period&#34;: 0,
+    &#34;primary_color&#34;: &#34;&#34;,
+    &#34;secondary_color&#34;: &#34;&#34;,
+    &#34;personal_dashboards_allowed&#34;: false,
+    &#34;user_allowed_to_create_company&#34;: false,
+    &#34;company_uid&#34;: &#34;&#34;,
+    &#34;is_partner&#34;: false,
+    &#34;image&#34;: &#34;&#34;,
+    &#34;self&#34;: &#34;&#34;,
+    &#34;meta&#34;: {
+      &#34;applications&#34;: &#34;&#34;,
+      &#34;settings&#34;: &#34;&#34;,
+      &#34;logo&#34;: &#34;&#34;,
+      &#34;domains&#34;: &#34;&#34;,
+      &#34;remove_customer&#34;: &#34;&#34;,
+      &#34;list_partner_admins&#34;: &#34;&#34;,
+      &#34;customer_log&#34;: &#34;&#34;
+    },
+    &#34;created_at&#34;: {
+      &#34;date&#34;: &#34;&#34;,
+      &#34;timezone_type&#34;: 0,
+      &#34;timezone&#34;: &#34;&#34;
+    }
+  },
+  &#34;roles&#34;: [],
+  &#34;alias&#34;: 0,
+  &#34;security&#34;: {
+    &#34;application_score&#34;: &#34;&#34;,
+    &#34;two_factor&#34;: false
+  },
+  &#34;group&#34;: [],
+  &#34;org_units&#34;: [],
+  &#34;self&#34;: &#34;&#34;,
+  &#34;meta&#34;: []
+}</code>
+                      </pre>
+                    </div>
+                    <div class="ui bottom attached tab segment" data-tab="schema">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;$schema&#34;: &#34;http://json-schema.org/draft-04/schema#&#34;,
+  &#34;type&#34;: &#34;object&#34;,
+  &#34;properties&#34;: {
+    &#34;id&#34;: {
+      &#34;type&#34;: &#34;number&#34;
+    },
+    &#34;uuid&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;dashboard_roles&#34;: {},
+    &#34;email&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;timezone&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;country&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;created_at&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;date&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Date time in iso&#34;
+        },
+        &#34;timezone_type&#34;: {
+          &#34;type&#34;: &#34;number&#34;
+        },
+        &#34;timezone&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        }
+      }
+    },
+    &#34;name&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;enabled&#34;: {
+      &#34;type&#34;: &#34;boolean&#34;
+    },
+    &#34;first_name&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;last_name&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;gender&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;last_login&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;date&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Date time in iso&#34;
+        },
+        &#34;timezone_type&#34;: {
+          &#34;type&#34;: &#34;number&#34;
+        },
+        &#34;timezone&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        }
+      }
+    },
+    &#34;locale&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;phone&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;picture_url&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;username&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;display_name&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;native_company&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;personal_dashboard_allowed&#34;: {
+      &#34;type&#34;: &#34;boolean&#34;
+    },
+    &#34;user_allowed_to_create_company&#34;: {
+      &#34;type&#34;: &#34;boolean&#34;
+    },
+    &#34;profile_options&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;public&#34;: {
+          &#34;type&#34;: &#34;boolean&#34;
+        }
+      }
+    },
+    &#34;partner&#34;: {
+      &#34;type&#34;: &#34;boolean&#34;
+    },
+    &#34;companies&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;company&#34;: {
+          &#34;type&#34;: &#34;array&#34;
+        },
+        &#34;icons&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;company_admin&#34;: {
+          &#34;type&#34;: &#34;boolean&#34;
+        }
+      }
+    },
+    &#34;company&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;alias&#34;: {
+          &#34;type&#34;: &#34;number&#34;
+        },
+        &#34;name&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Name of company&#34;
+        },
+        &#34;contact_email&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Contact email&#34;
+        },
+        &#34;billing_email&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Billing email&#34;
+        },
+        &#34;domain&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Domain of company&#34;
+        },
+        &#34;intranet_website&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Intranet website of company&#34;
+        },
+        &#34;remaining_trial_period&#34;: {
+          &#34;type&#34;: &#34;number&#34;,
+          &#34;description&#34;: &#34;Remaining trial period&#34;
+        },
+        &#34;trial_period&#34;: {
+          &#34;type&#34;: &#34;number&#34;,
+          &#34;description&#34;: &#34;Trial period&#34;
+        },
+        &#34;primary_color&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;secondary_color&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;personal_dashboards_allowed&#34;: {
+          &#34;type&#34;: &#34;boolean&#34;
+        },
+        &#34;user_allowed_to_create_company&#34;: {
+          &#34;type&#34;: &#34;boolean&#34;
+        },
+        &#34;company_uid&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;is_partner&#34;: {
+          &#34;type&#34;: &#34;boolean&#34;
+        },
+        &#34;image&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Image route&#34;
+        },
+        &#34;self&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Company route&#34;
+        },
+        &#34;meta&#34;: {
+          &#34;type&#34;: &#34;object&#34;,
+          &#34;properties&#34;: {
+            &#34;applications&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            },
+            &#34;settings&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            },
+            &#34;logo&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            },
+            &#34;domains&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            },
+            &#34;remove_customer&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            },
+            &#34;list_partner_admins&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            },
+            &#34;customer_log&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            }
+          }
+        },
+        &#34;created_at&#34;: {
+          &#34;type&#34;: &#34;object&#34;,
+          &#34;properties&#34;: {
+            &#34;date&#34;: {
+              &#34;type&#34;: &#34;string&#34;,
+              &#34;description&#34;: &#34;Date time in iso&#34;
+            },
+            &#34;timezone_type&#34;: {
+              &#34;type&#34;: &#34;number&#34;
+            },
+            &#34;timezone&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            }
+          }
+        }
+      }
+    },
+    &#34;roles&#34;: {
+      &#34;type&#34;: &#34;array&#34;
+    },
+    &#34;alias&#34;: {
+      &#34;type&#34;: &#34;number&#34;
+    },
+    &#34;security&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;application_score&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;two_factor&#34;: {
+          &#34;type&#34;: &#34;boolean&#34;
+        }
+      }
+    },
+    &#34;group&#34;: {
+      &#34;type&#34;: &#34;array&#34;
+    },
+    &#34;org_units&#34;: {
+      &#34;type&#34;: &#34;array&#34;
+    },
+    &#34;self&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;meta&#34;: {
+      &#34;type&#34;: &#34;array&#34;
+    }
+  }
+}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        
+          
+<div class="ui grey horizontal small divider header">
+  <i class="ui grey micro circular label"></i>
+  <i class="ui pink micro circular label"></i>
+  <i class="ui grey micro circular label"></i>
+</div>
+
+          <div class="ui basic segment">
+            <h3 class="ui block center aligned header" id="single-customer-partner-admin-delete-customer-partner-admins">
+              Delete customer partner admins
+            </h3>
+            <div class="description"></div>
+
+            
+              <h4 class="ui horizontal divider">
+                REQUEST
+              </h4>
+              <div class="description"></div>
+              <div class="fluid ui large labeled button">
+                <div class="ui red large button">
+                  <h3>DELETE</h3>
+                </div>
+                <a class="ui basic fluid red label">
+                  <code>https://appsco.com/api/v2/partners/{partner}/customers/{customer}/partner-admins/{partnerAdmin}</code>
+                </a>
+              </div>
+              
+              
+                
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Authorization</td>
+      <td><code>token absdef12345</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              
+              
+
+              <h4 class="ui horizontal divider">RESPONSE</h4>
+              <div class="description"></div>
+              
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Content-Type</td>
+      <td><code>application/json</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              <div class="ui stacked blue segment">
+                <div class="ui fluid transaction accordion">
+                  <div class="title center aligned">
+                    <a class="ui blue circular label">
+                      200
+                    </a>
+                    <code>application/json</code>
+                  </div>
+                  <div class="content tabbed">
+                    <div class="ui top attached tabular menu">
+                      <a data-tab="body" class="active item">BODY</a>
+                      <a data-tab="schema" class="item">SCHEMA</a>
+                    </div>
+                    <div class="ui bottom attached active tab segment" data-tab="body">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;id&#34;: 0,
+  &#34;uuid&#34;: &#34;&#34;,
+  &#34;dashboard_roles&#34;: [],
+  &#34;email&#34;: &#34;&#34;,
+  &#34;timezone&#34;: &#34;&#34;,
+  &#34;country&#34;: &#34;&#34;,
+  &#34;created_at&#34;: {
+    &#34;date&#34;: &#34;&#34;,
+    &#34;timezone_type&#34;: 0,
+    &#34;timezone&#34;: &#34;&#34;
+  },
+  &#34;name&#34;: &#34;&#34;,
+  &#34;enabled&#34;: false,
+  &#34;first_name&#34;: &#34;&#34;,
+  &#34;last_name&#34;: &#34;&#34;,
+  &#34;gender&#34;: &#34;&#34;,
+  &#34;last_login&#34;: {
+    &#34;date&#34;: &#34;&#34;,
+    &#34;timezone_type&#34;: 0,
+    &#34;timezone&#34;: &#34;&#34;
+  },
+  &#34;locale&#34;: &#34;&#34;,
+  &#34;phone&#34;: &#34;&#34;,
+  &#34;picture_url&#34;: &#34;&#34;,
+  &#34;username&#34;: &#34;&#34;,
+  &#34;display_name&#34;: &#34;&#34;,
+  &#34;native_company&#34;: &#34;&#34;,
+  &#34;personal_dashboard_allowed&#34;: false,
+  &#34;user_allowed_to_create_company&#34;: false,
+  &#34;profile_options&#34;: {
+    &#34;public&#34;: false
+  },
+  &#34;partner&#34;: false,
+  &#34;companies&#34;: {
+    &#34;company&#34;: [
+      {
+        &#34;alias&#34;: 0,
+        &#34;name&#34;: &#34;&#34;,
+        &#34;contact_email&#34;: &#34;&#34;,
+        &#34;billing_email&#34;: &#34;&#34;,
+        &#34;domain&#34;: &#34;&#34;,
+        &#34;intranet_website&#34;: &#34;&#34;,
+        &#34;remaining_trial_period&#34;: 0,
+        &#34;trial_period&#34;: 0,
+        &#34;image&#34;: &#34;&#34;,
+        &#34;primary_color&#34;: &#34;&#34;,
+        &#34;secondary_color&#34;: &#34;&#34;,
+        &#34;self&#34;: &#34;&#34;,
+        &#34;meta&#34;: {
+          &#34;applications&#34;: &#34;&#34;,
+          &#34;settings&#34;: &#34;&#34;,
+          &#34;logo&#34;: &#34;&#34;
+        }
+      }
+    ],
+    &#34;icons&#34;: &#34;&#34;,
+    &#34;company_admin&#34;: false
+  },
+  &#34;company&#34;: {
+    &#34;alias&#34;: 0,
+    &#34;name&#34;: &#34;&#34;,
+    &#34;contact_email&#34;: &#34;&#34;,
+    &#34;billing_email&#34;: &#34;&#34;,
+    &#34;domain&#34;: &#34;&#34;,
+    &#34;intranet_website&#34;: &#34;&#34;,
+    &#34;remaining_trial_period&#34;: 0,
+    &#34;trial_period&#34;: 0,
+    &#34;primary_color&#34;: &#34;&#34;,
+    &#34;secondary_color&#34;: &#34;&#34;,
+    &#34;personal_dashboards_allowed&#34;: false,
+    &#34;user_allowed_to_create_company&#34;: false,
+    &#34;company_uid&#34;: &#34;&#34;,
+    &#34;is_partner&#34;: false,
+    &#34;image&#34;: &#34;&#34;,
+    &#34;self&#34;: &#34;&#34;,
+    &#34;meta&#34;: {
+      &#34;applications&#34;: &#34;&#34;,
+      &#34;settings&#34;: &#34;&#34;,
+      &#34;logo&#34;: &#34;&#34;,
+      &#34;domains&#34;: &#34;&#34;,
+      &#34;remove_customer&#34;: &#34;&#34;,
+      &#34;list_partner_admins&#34;: &#34;&#34;,
+      &#34;customer_log&#34;: &#34;&#34;
+    },
+    &#34;created_at&#34;: {
+      &#34;date&#34;: &#34;&#34;,
+      &#34;timezone_type&#34;: 0,
+      &#34;timezone&#34;: &#34;&#34;
+    }
+  },
+  &#34;roles&#34;: [],
+  &#34;alias&#34;: 0,
+  &#34;security&#34;: {
+    &#34;application_score&#34;: &#34;&#34;,
+    &#34;two_factor&#34;: false
+  },
+  &#34;group&#34;: [],
+  &#34;org_units&#34;: [],
+  &#34;self&#34;: &#34;&#34;,
+  &#34;meta&#34;: []
+}</code>
+                      </pre>
+                    </div>
+                    <div class="ui bottom attached tab segment" data-tab="schema">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;$schema&#34;: &#34;http://json-schema.org/draft-04/schema#&#34;,
+  &#34;type&#34;: &#34;object&#34;,
+  &#34;properties&#34;: {
+    &#34;id&#34;: {
+      &#34;type&#34;: &#34;number&#34;
+    },
+    &#34;uuid&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;dashboard_roles&#34;: {},
+    &#34;email&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;timezone&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;country&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;created_at&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;date&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Date time in iso&#34;
+        },
+        &#34;timezone_type&#34;: {
+          &#34;type&#34;: &#34;number&#34;
+        },
+        &#34;timezone&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        }
+      }
+    },
+    &#34;name&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;enabled&#34;: {
+      &#34;type&#34;: &#34;boolean&#34;
+    },
+    &#34;first_name&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;last_name&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;gender&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;last_login&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;date&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Date time in iso&#34;
+        },
+        &#34;timezone_type&#34;: {
+          &#34;type&#34;: &#34;number&#34;
+        },
+        &#34;timezone&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        }
+      }
+    },
+    &#34;locale&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;phone&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;picture_url&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;username&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;display_name&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;native_company&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;personal_dashboard_allowed&#34;: {
+      &#34;type&#34;: &#34;boolean&#34;
+    },
+    &#34;user_allowed_to_create_company&#34;: {
+      &#34;type&#34;: &#34;boolean&#34;
+    },
+    &#34;profile_options&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;public&#34;: {
+          &#34;type&#34;: &#34;boolean&#34;
+        }
+      }
+    },
+    &#34;partner&#34;: {
+      &#34;type&#34;: &#34;boolean&#34;
+    },
+    &#34;companies&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;company&#34;: {
+          &#34;type&#34;: &#34;array&#34;
+        },
+        &#34;icons&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;company_admin&#34;: {
+          &#34;type&#34;: &#34;boolean&#34;
+        }
+      }
+    },
+    &#34;company&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;alias&#34;: {
+          &#34;type&#34;: &#34;number&#34;
+        },
+        &#34;name&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Name of company&#34;
+        },
+        &#34;contact_email&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Contact email&#34;
+        },
+        &#34;billing_email&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Billing email&#34;
+        },
+        &#34;domain&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Domain of company&#34;
+        },
+        &#34;intranet_website&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Intranet website of company&#34;
+        },
+        &#34;remaining_trial_period&#34;: {
+          &#34;type&#34;: &#34;number&#34;,
+          &#34;description&#34;: &#34;Remaining trial period&#34;
+        },
+        &#34;trial_period&#34;: {
+          &#34;type&#34;: &#34;number&#34;,
+          &#34;description&#34;: &#34;Trial period&#34;
+        },
+        &#34;primary_color&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;secondary_color&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;personal_dashboards_allowed&#34;: {
+          &#34;type&#34;: &#34;boolean&#34;
+        },
+        &#34;user_allowed_to_create_company&#34;: {
+          &#34;type&#34;: &#34;boolean&#34;
+        },
+        &#34;company_uid&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;is_partner&#34;: {
+          &#34;type&#34;: &#34;boolean&#34;
+        },
+        &#34;image&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Image route&#34;
+        },
+        &#34;self&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Company route&#34;
+        },
+        &#34;meta&#34;: {
+          &#34;type&#34;: &#34;object&#34;,
+          &#34;properties&#34;: {
+            &#34;applications&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            },
+            &#34;settings&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            },
+            &#34;logo&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            },
+            &#34;domains&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            },
+            &#34;remove_customer&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            },
+            &#34;list_partner_admins&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            },
+            &#34;customer_log&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            }
+          }
+        },
+        &#34;created_at&#34;: {
+          &#34;type&#34;: &#34;object&#34;,
+          &#34;properties&#34;: {
+            &#34;date&#34;: {
+              &#34;type&#34;: &#34;string&#34;,
+              &#34;description&#34;: &#34;Date time in iso&#34;
+            },
+            &#34;timezone_type&#34;: {
+              &#34;type&#34;: &#34;number&#34;
+            },
+            &#34;timezone&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            }
+          }
+        }
+      }
+    },
+    &#34;roles&#34;: {
+      &#34;type&#34;: &#34;array&#34;
+    },
+    &#34;alias&#34;: {
+      &#34;type&#34;: &#34;number&#34;
+    },
+    &#34;security&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;application_score&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;two_factor&#34;: {
+          &#34;type&#34;: &#34;boolean&#34;
+        }
+      }
+    },
+    &#34;group&#34;: {
+      &#34;type&#34;: &#34;array&#34;
+    },
+    &#34;org_units&#34;: {
+      &#34;type&#34;: &#34;array&#34;
+    },
+    &#34;self&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;meta&#34;: {
+      &#34;type&#34;: &#34;array&#34;
+    }
+  }
+}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        
+        </div>
+      <div class="ui hidden divider"></div>
+    
+  
+    
+      <div class="ui stacked segments">
+        <div class="ui basic segment resource">
+          <div class="ui purple huge ribbon label">
             Customer Licences
           </div>
           <div class="ui header">
@@ -32614,6 +34537,193 @@ Content-Type: text/csv
     },
     &#34;active_users&#34;: {
       &#34;type&#34;: &#34;number&#34;
+    }
+  }
+}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        
+        </div>
+      <div class="ui hidden divider"></div>
+    
+  
+    
+      <div class="ui stacked segments">
+        <div class="ui basic segment resource">
+          <div class="ui purple huge ribbon label">
+            Customer Exists
+          </div>
+          <div class="ui header">
+            <div class="ui sub header">
+              <pre><code>Check if AppsCo customer exist.
+</code></pre>
+
+            </div>
+          </div>
+        </div>
+
+        
+          
+<div class="ui grey horizontal small divider header">
+  <i class="ui grey micro circular label"></i>
+  <i class="ui pink micro circular label"></i>
+  <i class="ui grey micro circular label"></i>
+</div>
+
+          <div class="ui basic segment">
+            <h3 class="ui block center aligned header" id="customer-exists-check-if-customer-exists">
+              Check if customer exists
+            </h3>
+            <div class="description"></div>
+
+            
+              <h4 class="ui horizontal divider">
+                REQUEST
+              </h4>
+              <div class="description"></div>
+              <div class="fluid ui large labeled button">
+                <div class="ui green large button">
+                  <h3>GET</h3>
+                </div>
+                <a class="ui basic fluid green label">
+                  <code>https://appsco.com/api/v2/partners/{partner}/customer/exists</code>
+                </a>
+              </div>
+              
+              
+                
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Authorization</td>
+      <td><code>token absdef12345</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              
+              
+
+              <h4 class="ui horizontal divider">RESPONSE</h4>
+              <div class="description"></div>
+              
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Content-Type</td>
+      <td><code>application/json</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              <div class="ui stacked blue segment">
+                <div class="ui fluid transaction accordion">
+                  <div class="title center aligned">
+                    <a class="ui blue circular label">
+                      200
+                    </a>
+                    <code>application/json</code>
+                  </div>
+                  <div class="content tabbed">
+                    <div class="ui top attached tabular menu">
+                      <a data-tab="body" class="active item">BODY</a>
+                      <a data-tab="schema" class="item">SCHEMA</a>
+                    </div>
+                    <div class="ui bottom attached active tab segment" data-tab="body">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;alias&#34;: &#34;&#34;,
+  &#34;company&#34;: &#34;&#34;,
+  &#34;account&#34;: &#34;&#34;,
+  &#34;first_name&#34;: &#34;&#34;,
+  &#34;last_name&#34;: &#34;&#34;,
+  &#34;display_name&#34;: &#34;&#34;,
+  &#34;email&#34;: &#34;&#34;,
+  &#34;createdAt&#34;: {
+    &#34;date&#34;: &#34;&#34;,
+    &#34;timezone_type&#34;: 0,
+    &#34;timezone&#34;: &#34;&#34;
+  },
+  &#34;self&#34;: &#34;&#34;,
+  &#34;meta&#34;: {
+    &#34;promote_to_user&#34;: &#34;&#34;
+  }
+}</code>
+                      </pre>
+                    </div>
+                    <div class="ui bottom attached tab segment" data-tab="schema">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;$schema&#34;: &#34;http://json-schema.org/draft-04/schema#&#34;,
+  &#34;type&#34;: &#34;object&#34;,
+  &#34;properties&#34;: {
+    &#34;alias&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;company&#34;: {
+      &#34;type&#34;: &#34;string&#34;,
+      &#34;description&#34;: &#34;Company url&#34;
+    },
+    &#34;account&#34;: {
+      &#34;type&#34;: &#34;string&#34;,
+      &#34;description&#34;: &#34;Account url&#34;
+    },
+    &#34;first_name&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;last_name&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;display_name&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;email&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;createdAt&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;date&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Date time in iso&#34;
+        },
+        &#34;timezone_type&#34;: {
+          &#34;type&#34;: &#34;number&#34;
+        },
+        &#34;timezone&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        }
+      }
+    },
+    &#34;self&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;meta&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;promote_to_user&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        }
+      }
     }
   }
 }</code>

@@ -2446,6 +2446,22 @@ Share AppsCo account.
 + Response 200 (application/json)
     + Attributes (Customer)
 
+# Customer Log [/api/v2/partners/{partner}/customers/{customer}/log]
+
+    Return AppsCo customers log.
+
++ Parameters
+    + partner - ID of the partner in the form of an integer
+    + customer - ID of the customer in the form of an integer
+
+### Customer log action [POST]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Customer Log)
 
 
 # Export Customers [/api/v2/partners/{partner}/customers/export]
@@ -2555,6 +2571,35 @@ Share AppsCo account.
 + Response 200 (application/json)
     + Attributes (Customer)
 
+
+# Single Customer Partner Admin [/api/v2/partners/{partner}/customers/{customer}/partner-admins/{partnerAdmin}]
+
+    Return single AppsCo customer partner admin.
+
++ Parameters
+    + partner - ID of the partner in the form of an integer
+    + customer - ID of the customer in the form of an integer
+    + partnerAdmin - ID of the customer in the form of an integer
+
+### Retrive customer partner admin [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Customer Partner Admin)
+
+### Delete customer partner admins [DELETE]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Customer Partner Admin)
+
+
 # Customer Licences [/api/v2/partners/{partner}/customers/{customer}/licences]
 
     Return AppsCo customers licences.
@@ -2571,6 +2616,25 @@ Share AppsCo account.
 
 + Response 200 (application/json)
     + Attributes (Customer Licences)
+
+
+# Customer Exists [/api/v2/partners/{partner}/customer/exists]
+
+    Check if AppsCo customer exist.
+
++ Parameters
+    + partner - ID of the partner in the form of an integer
+
+### Check if customer exists [GET]
++ Request
+    + Attributes
+        + `form[name]'
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Company Contacts)
 
 
 # Data Structures
@@ -3738,5 +3802,9 @@ Share AppsCo account.
 + appscoLicences (number)
 + currentLicences (number)
 + `active_users` (number)
+
+## Customer Log (object)
++ logs (array)
++ meta (Paging)
 
 ## Directory Role (object)
