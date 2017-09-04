@@ -2380,6 +2380,262 @@ Share AppsCo account.
         + meta (Paging)
 
 
+# Customers List [/api/v2/partners/{partner}/customers]
+
+    Return AppsCo customers for partner.
+
++ Parameters
+    + partner - ID of the partner in the form of an integer
+
+### Retrive customers [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes
+        + customers (array[])
+        + meta (Paging)
+
+### Create customer [POST]
++ Request
+    + Attributes (Setup Customer)
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Customer)
+
+### Delete customer [DELETE]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes
+        + customers(array[Customer])
+
+
+
+# Customer [/api/v2/partners/{partner}/customers/{customer}]
+
+    Return AppsCo customers for partner.
+
++ Parameters
+    + partner - ID of the partner in the form of an integer
+    + customer - ID of the customer in the form of an integer
+
+### Retrive customer [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Customer)
+
+### Delete customer [DELETE]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Customer)
+
+# Customer Log [/api/v2/partners/{partner}/customers/{customer}/log]
+
+    Return AppsCo customers log.
+
++ Parameters
+    + partner - ID of the partner in the form of an integer
+    + customer - ID of the customer in the form of an integer
+
+### Customer log action [POST]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Customer Log)
+
+
+# Export Customers [/api/v2/partners/{partner}/customers/export]
+
+    Export AppsCo customers for partner.
+
++ Parameters
+    + partner - ID of the partner in the form of an integer
+
+### Export customers [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes
+
+
+# Import Customers [/api/v2/partners/{partner}/customers/import]
+
+    Import AppsCo customers for partner.
+
++ Parameters
+    + partner - ID of the partner in the form of an integer
+
+### Import customers [POST]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
+    + Body
+
+                ------WebKitFormBoundarycPBUpzvu7THL8P5X
+                Content-Disposition: form-data; name="file"; filename="example_import_customers.csv"
+                Content-Type: text/csv
+
+                ------WebKitFormBoundarycPBUpzvu7THL8P5X--
+
++ Response 200 (application/json)
+    + Attributes (Import Customers)
+
+
+# Import Resources [/api/v2/partners/{partner}/customers/import-resources]
+
+    Import AppsCo resources for partner.
+
++ Parameters
+    + partner - ID of the partner in the form of an integer
+
+### Import resources [POST]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
+    + Body
+
+            ------WebKitFormBoundaryKDWVhQoUOUVYrxBo
+            Content-Disposition: form-data; name="file"; filename="example_customer_resource_import.csv"
+            Content-Type: text/csv
+
+
+            ------WebKitFormBoundaryKDWVhQoUOUVYrxBo--
+
++ Response 200 (application/json)
+    + Attributes (Import Resources)
+
+
+# Customer Partner Admins [/api/v2/partners/{partner}/customers/{customer}/partner-admins]
+
+    Return AppsCo customers partner admins.
+
++ Parameters
+    + partner - ID of the partner in the form of an integer
+    + customer - ID of the customer in the form of an integer
+
+### Retrive customer partner admins [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes
+        + partner-admins (array[])
+        + meta (Paging)
+
+### Add customer partner admins [POST]
++ Request
+    + Attributes
+        + `company_role`
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes
+
+### Delete customer partner admin [DELETE]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Customer)
+
+
+# Single Customer Partner Admin [/api/v2/partners/{partner}/customers/{customer}/partner-admins/{partnerAdmin}]
+
+    Return single AppsCo customer partner admin.
+
++ Parameters
+    + partner - ID of the partner in the form of an integer
+    + customer - ID of the customer in the form of an integer
+    + partnerAdmin - ID of the customer in the form of an integer
+
+### Retrive customer partner admin [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Customer Partner Admin)
+
+### Delete customer partner admins [DELETE]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Customer Partner Admin)
+
+
+# Customer Licences [/api/v2/partners/{partner}/customers/{customer}/licences]
+
+    Return AppsCo customers licences.
+
++ Parameters
+    + partner - ID of the partner in the form of an integer
+    + customer - ID of the customer in the form of an integer
+
+### Retrive customer licences [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Customer Licences)
+
+
+# Customer Exists [/api/v2/partners/{partner}/customer/exists]
+
+    Check if AppsCo customer exist.
+
++ Parameters
+    + partner - ID of the partner in the form of an integer
+
+### Check if customer exists [GET]
++ Request
+    + Attributes
+        + `form[name]'
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Company Contacts)
+
 
 # Data Structures
 
@@ -3445,5 +3701,110 @@ Share AppsCo account.
     + log
     + applications
     + groups
+
+## Customer (object)
++ alias (number)
++ name (string) - Name of company
++ `contact_email` (string) - Contact email
++ `billing_email` (string) - Billing email
++ domain (string) - Domain of company
++ `intranet_website` (string) - Intranet website of company
++ `remaining_trial_period` (number) - Remaining trial period
++ `trial_period` (number) - Trial period
++ `primary_color`
++ `secondary_color`
++ `personal_dashboards_allowed` (boolean)
++ `user_allowed_to_create_company` (boolean)
++ `company_uid`
++ `is_partner` (boolean)
++ image (string) - Image route
++ self (string) - Company route
++ meta (Meta Customer)
++ `created_at` (DateTime Model)
+
+## Meta Customer (object)
++ applications
++ settings
++ logo
++ domains
++ `remove_customer`
++ `list_partner_admins`
++ `customer_log`
+
+## Meta Customer Short (object)
++ applications
++ settings
++ logo
++ domains
+
+
+## Setup Customer (object)
++ `company_customer[name]`
++ `company_customer[contactEmail]`
++ `company_customer[partnerAdmin]`
+
+## Import Customers (object)
++ total (number)
++ numberOfCreated (number)
++ numberOfFailed (number)
++ numberOfExisting (number)
+
+## Import Resources (object)
++ total (number)
++ numberOfCustomApplications (number)
++ numberOfSecureNotes (number)
++ numberOfFailed (number)
+
+
+## Customer Partner Admin (object)
++ id (number)
++ uuid
++ `dashboard_roles` (array)
++ email
++ timezone
++ country
++ `created_at` (DateTime Model)
++ name
++ enabled (boolean)
++ `first_name`
++ `last_name`
++ gender
++ `last_login` (DateTime Model)
++ locale
++ phone
++ `picture_url`
++ username
++ roles (Dashboard Roles, fixed-type)
++ `display_name`
++ `native_company`
++ `personal_dashboard_allowed` (boolean)
++ `user_allowed_to_create_company` (boolean)
++ `profile_options` (object)
+    + public (boolean)
++ partner (boolean)
++ companies (object)
+    + company (array[Company])
+    + icons
+    + company_admin (boolean)
++ company (Customer)
++ meta (Meta Customer Short)
++ roles (array[])
++ alias (number)
++ security (object)
+    + `application_score`
+    + `two_factor` (boolean)
++ group (array[])
++ `org_units` (array[])
++ self
++ meta (array[])
+
+## Customer Licences (object)
++ appscoLicences (number)
++ currentLicences (number)
++ `active_users` (number)
+
+## Customer Log (object)
++ logs (array)
++ meta (Paging)
 
 ## Directory Role (object)
