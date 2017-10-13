@@ -5,8 +5,8 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism-okaidia.min.css" />
+    <link rel="stylesheet" href="../../vendor/semantic-ui/dist/semantic.min.css">
+    <link rel="stylesheet" href="../../vendor/prism/themes/prism-okaidia.css" />
     <style>
       blockquote {
         border-left: solid 4px #eee;
@@ -74,13 +74,13 @@
         {{template "ResourceGroups" .}}
       </div>
     </div>
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/components/accordion.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/components/tab.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/components/transition.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/components/popup.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-json.min.js"></script>
+    <script type="text/javascript" src="../../vendor/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../../vendor/semantic-ui/dist/components/accordion.min.js"></script>
+    <script type="text/javascript" src="../../vendor/semantic-ui/dist/components/tab.min.js"></script>
+    <script type="text/javascript" src="../../vendor/semantic-ui/dist/components/transition.min.js"></script>
+    <script type="text/javascript" src="../../vendor/semantic-ui/dist/components/popup.min.js"></script>
+    <script type="text/javascript" src="../../vendor/prism/prism.js"></script>
+    <script type="text/javascript" src="../../vendor/prism/components/prism-json.min.js"></script>
     <script type="text/javascript">
       $(function() {
         $('.ui.accordion').accordion({ animateChildren: false, duration: 0 });
