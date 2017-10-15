@@ -1,0 +1,8 @@
+{
+  "name": "Appsco/appsco-api-doc",
+  "dependencies": {
+    "jquery": "3.0.0",
+    "prism": "1.5.1",
+    "semantic-ui": "2.2.4"
+  }
+}
