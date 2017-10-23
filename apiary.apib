@@ -1433,7 +1433,7 @@ Share AppsCo account.
     + `company_id`: 16 (number) - ID of the Company in the form of an integer
     + `companyRole`: 103 (number) - ID of the company role in the form of integer
 
-### Company directory role notifications [GET]
+### Two factor authentication [GET]
 + Request
     + Headers
 
@@ -1441,6 +1441,17 @@ Share AppsCo account.
 
 + Response 200 (application/json)
     + Attributes (Enabled Response)
+
+### Reset two factor authentication [DELETE]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Role Success Response)
+
+
 
 # Company Directory Role Import [/api/v2/companies/{company_id}/directory/roles/import]
 
@@ -2635,6 +2646,7 @@ Share AppsCo account.
 
 + Response 200 (application/json)
     + Attributes (Company Contacts)
+
 
 
 # Data Structures
