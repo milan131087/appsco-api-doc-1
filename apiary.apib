@@ -894,6 +894,23 @@ Share AppsCo account.
 + Response 200 (application/json)
     + Attributes (Company)
 
+# Company Transfer Token [/api/v2/companies/{company_id}/transfer-toke]
+
+    Get AppsCo Company transfer token.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+
+
+### Retrieve company transfer token  [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Transfer Token)
+
 
 # Company Resources [/api/v2/companies/{company_id}/applications]
 
@@ -3033,6 +3050,13 @@ Share AppsCo account.
 + `secondary_color`
 + self (string) - Company route
 + meta (Meta Company)
+
+## Transfer Token (object)
++ `transfer_token`
++ expiration (object)
+    + date
+    + `timezone_type` (number)
+    + timezone
 
 ## Meta Company (object)
 + applications - Company applications route
