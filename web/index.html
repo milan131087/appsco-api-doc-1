@@ -402,27 +402,6 @@
     <div class="title ">
       <i class="dropdown icon"></i>
       
-        <strong>Transfer Token</strong>
-      
-    </div>
-    <div class="content ">
-      <div class="ui fluid secondary vertical menu">
-      
-        <a class="item green" href="#transfer-token-retrieve-transfer-token">
-          <i class="ui green empty circular label"></i>
-          
-            <span>Retrieve transfer token</span>
-          
-        </a>
-      
-      </div>
-    </div>
-    
-  
-    
-    <div class="title ">
-      <i class="dropdown icon"></i>
-      
         <strong>Account Application instances</strong>
       
     </div>
@@ -986,6 +965,27 @@
           <i class="ui green empty circular label"></i>
           
             <span>Retrieve company</span>
+          
+        </a>
+      
+      </div>
+    </div>
+    
+  
+    
+    <div class="title ">
+      <i class="dropdown icon"></i>
+      
+        <strong>Company Transfer Token</strong>
+      
+    </div>
+    <div class="content ">
+      <div class="ui fluid secondary vertical menu">
+      
+        <a class="item green" href="#company-transfer-token-retrieve-company-transfer-token">
+          <i class="ui green empty circular label"></i>
+          
+            <span>Retrieve company transfer token</span>
           
         </a>
       
@@ -7022,152 +7022,6 @@ In order to access this list user first need to authenticate.</p>
       <div class="ui stacked segments">
         <div class="ui basic segment resource">
           <div class="ui purple huge ribbon label">
-            Transfer Token
-          </div>
-          <div class="ui header">
-            <div class="ui sub header">
-              <pre><code>Transfer token is used to add partner to your profile.
-</code></pre>
-
-            </div>
-          </div>
-        </div>
-
-        
-          
-<div class="ui grey horizontal small divider header">
-  <i class="ui grey micro circular label"></i>
-  <i class="ui pink micro circular label"></i>
-  <i class="ui grey micro circular label"></i>
-</div>
-
-          <div class="ui basic segment">
-            <h3 class="ui block center aligned header" id="transfer-token-retrieve-transfer-token">
-              Retrieve transfer token
-            </h3>
-            <div class="description"></div>
-
-            
-              <h4 class="ui horizontal divider">
-                REQUEST
-              </h4>
-              <div class="description"></div>
-              <div class="fluid ui large labeled button">
-                <div class="ui green large button">
-                  <h3>GET</h3>
-                </div>
-                <a class="ui basic fluid green label">
-                  <code>https://appsco.com/api/v2/me/transfer-token</code>
-                </a>
-              </div>
-              
-              
-                
-<table class="ui celled definition table">
-  <thead>
-    <tr>
-      <th colspan="2">Headers</th>
-    </tr>
-  </thead>
-  <tbody>
-  
-    <tr>
-      <td class="four wide">Authorization</td>
-      <td><code>token absdef12345</code></td>
-    </tr>
-  
-  </tbody>
-</table>
-
-              
-              
-
-              <h4 class="ui horizontal divider">RESPONSE</h4>
-              <div class="description"></div>
-              
-<table class="ui celled definition table">
-  <thead>
-    <tr>
-      <th colspan="2">Headers</th>
-    </tr>
-  </thead>
-  <tbody>
-  
-    <tr>
-      <td class="four wide">Content-Type</td>
-      <td><code>application/json</code></td>
-    </tr>
-  
-  </tbody>
-</table>
-
-              <div class="ui stacked blue segment">
-                <div class="ui fluid transaction accordion">
-                  <div class="title center aligned">
-                    <a class="ui blue circular label">
-                      200
-                    </a>
-                    <code>application/json</code>
-                  </div>
-                  <div class="content tabbed">
-                    <div class="ui top attached tabular menu">
-                      <a data-tab="body" class="active item">BODY</a>
-                      <a data-tab="schema" class="item">SCHEMA</a>
-                    </div>
-                    <div class="ui bottom attached active tab segment" data-tab="body">
-                      <pre style="white-space: inherit">
-                        <code class="language-json">{
-  &#34;transfer_token&#34;: &#34;&#34;,
-  &#34;expiration&#34;: {
-    &#34;date&#34;: &#34;&#34;,
-    &#34;timezone_type&#34;: 0,
-    &#34;timezone&#34;: &#34;&#34;
-  }
-}</code>
-                      </pre>
-                    </div>
-                    <div class="ui bottom attached tab segment" data-tab="schema">
-                      <pre style="white-space: inherit">
-                        <code class="language-json">{
-  &#34;$schema&#34;: &#34;http://json-schema.org/draft-04/schema#&#34;,
-  &#34;type&#34;: &#34;object&#34;,
-  &#34;properties&#34;: {
-    &#34;transfer_token&#34;: {
-      &#34;type&#34;: &#34;string&#34;
-    },
-    &#34;expiration&#34;: {
-      &#34;type&#34;: &#34;object&#34;,
-      &#34;properties&#34;: {
-        &#34;date&#34;: {
-          &#34;type&#34;: &#34;string&#34;,
-          &#34;description&#34;: &#34;Date time in iso&#34;
-        },
-        &#34;timezone_type&#34;: {
-          &#34;type&#34;: &#34;number&#34;
-        },
-        &#34;timezone&#34;: {
-          &#34;type&#34;: &#34;string&#34;
-        }
-      }
-    }
-  }
-}</code>
-                      </pre>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            
-          </div>
-        
-        </div>
-      <div class="ui hidden divider"></div>
-    
-  
-    
-      <div class="ui stacked segments">
-        <div class="ui basic segment resource">
-          <div class="ui purple huge ribbon label">
             Account Application instances
           </div>
           <div class="ui header">
@@ -12457,6 +12311,151 @@ In order to access this list user first need to authenticate.</p>
         &#34;logo&#34;: {
           &#34;type&#34;: &#34;string&#34;,
           &#34;description&#34;: &#34;Company logo route&#34;
+        }
+      }
+    }
+  }
+}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        
+        </div>
+      <div class="ui hidden divider"></div>
+    
+  
+    
+      <div class="ui stacked segments">
+        <div class="ui basic segment resource">
+          <div class="ui purple huge ribbon label">
+            Company Transfer Token
+          </div>
+          <div class="ui header">
+            <div class="ui sub header">
+              <pre><code>Get AppsCo Company transfer token.
+</code></pre>
+
+            </div>
+          </div>
+        </div>
+
+        
+          
+<div class="ui grey horizontal small divider header">
+  <i class="ui grey micro circular label"></i>
+  <i class="ui pink micro circular label"></i>
+  <i class="ui grey micro circular label"></i>
+</div>
+
+          <div class="ui basic segment">
+            <h3 class="ui block center aligned header" id="company-transfer-token-retrieve-company-transfer-token">
+              Retrieve company transfer token
+            </h3>
+            <div class="description"></div>
+
+            
+              <h4 class="ui horizontal divider">
+                REQUEST
+              </h4>
+              <div class="description"></div>
+              <div class="fluid ui large labeled button">
+                <div class="ui green large button">
+                  <h3>GET</h3>
+                </div>
+                <a class="ui basic fluid green label">
+                  <code>https://appsco.com/api/v2/companies/{company_id}/transfer-toke</code>
+                </a>
+              </div>
+              
+              
+                
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Authorization</td>
+      <td><code>token absdef12345</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              
+              
+
+              <h4 class="ui horizontal divider">RESPONSE</h4>
+              <div class="description"></div>
+              
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Content-Type</td>
+      <td><code>application/json</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              <div class="ui stacked blue segment">
+                <div class="ui fluid transaction accordion">
+                  <div class="title center aligned">
+                    <a class="ui blue circular label">
+                      200
+                    </a>
+                    <code>application/json</code>
+                  </div>
+                  <div class="content tabbed">
+                    <div class="ui top attached tabular menu">
+                      <a data-tab="body" class="active item">BODY</a>
+                      <a data-tab="schema" class="item">SCHEMA</a>
+                    </div>
+                    <div class="ui bottom attached active tab segment" data-tab="body">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;transfer_token&#34;: &#34;&#34;,
+  &#34;expiration&#34;: {
+    &#34;date&#34;: &#34;&#34;,
+    &#34;timezone_type&#34;: 0,
+    &#34;timezone&#34;: &#34;&#34;
+  }
+}</code>
+                      </pre>
+                    </div>
+                    <div class="ui bottom attached tab segment" data-tab="schema">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;$schema&#34;: &#34;http://json-schema.org/draft-04/schema#&#34;,
+  &#34;type&#34;: &#34;object&#34;,
+  &#34;properties&#34;: {
+    &#34;transfer_token&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;expiration&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;date&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;timezone_type&#34;: {
+          &#34;type&#34;: &#34;number&#34;
+        },
+        &#34;timezone&#34;: {
+          &#34;type&#34;: &#34;string&#34;
         }
       }
     }
