@@ -1516,7 +1516,7 @@ Share AppsCo account.
 
 
 
-# Company Directory Available Integrations [/api/v2/companies/{company_id}/integrations/available]
+# Available Integrations [/api/v2/companies/{company_id}/integrations/available]
 
     Return available AppsCo Company directory integrations for currently logged in user.
 
@@ -1535,9 +1535,9 @@ Share AppsCo account.
         + meta (Paging)
 
 
-# Company Directory Integration [/api/v2/companies/{company_id}/integrations/available/{integrationAvailable}]
+# Available Integration [/api/v2/companies/{company_id}/integrations/available/{integrationAvailable}]
 
-    Return available AppsCo Company directory integrations for currently logged in user.
+    Return available AppsCo Company available integrations for currently logged in user.
 
 + Parameters
     + `company_id`: 16 (number) - ID of the Company in the form of an integer
@@ -1564,9 +1564,9 @@ Share AppsCo account.
         + authorization_url
 
 
-# Company Directory Active [/api/v2/companies/{company_id}/integrations/active]
+# Active Integrations [/api/v2/companies/{company_id}/integrations/active]
 
-    Return active AppsCo Company directory integrations for currently logged in user.
+    Return active AppsCo Company active integrations for currently logged in user.
 
 + Parameters
     + `company_id`: 16 (number) - ID of the Company in the form of an integer
@@ -1583,9 +1583,9 @@ Share AppsCo account.
         + meta (Paging)
 
 
-# Company Directory Active [/api/v2/companies/{company_id}/integrations/active/{integrationActive}]
+# Single Active Integration [/api/v2/companies/{company_id}/integrations/active/{integrationActive}]
 
-    Return active AppsCo Company directory integration for currently logged in user.
+    Return active AppsCo Company active integration for currently logged in user.
 
 + Parameters
     + `company_id`: 16 (number) - ID of the Company in the form of an integer
@@ -1599,18 +1599,9 @@ Share AppsCo account.
 
 + Response 200 (application/json)
     + Attributes
-        + active_integrations (array[Directory Integrations Active])
+        + `integration_active` (Directory Integrations Active)
 
-
-# Company Directory Integration Mappings [/api/v2/companies/{company_id}/integrations/active/{integrationActive}/mappings]
-
-    Return AppsCo Company directory mappings for currently logged in user.
-
-+ Parameters
-    + `company_id`: 16 (number) - ID of the Company in the form of an integer
-    + `integrationActive`: 5 (number) - ID of the Company active integration in the form of an integer
-
-### Return company directory mappings [GET]
+### Remove active company integration [DELETE]
 + Request
     + Headers
 
@@ -1618,29 +1609,19 @@ Share AppsCo account.
 
 + Response 200 (application/json)
     + Attributes
-        + mappings (array[Directory Integrations Mappings])
-        + meta (Paging)
-
-### Fetch company directory mappings [PATCH]
-+ Request
-    + Headers
-
-            Authorization: token absdef12345
-
-+ Response 200 (application/json)
-    + Attributes (Directory Fetch Mappings)
+     + `integration_active` (Directory Integrations Active)
 
 
-# Company Directory Integration Mapping [/api/v2/companies/{company_id}/integrations/active/{integrationActive}/mappings/{integrationMapping}]
 
-    Return AppsCo Company directory mapping for currently logged in user.
+# PSO Active Integration  [/api/v2/companies/{company_id}/integrations/active/{integration}/pso]
+
+    Return active Company integration PSO for currently logged in user.
 
 + Parameters
     + `company_id`: 16 (number) - ID of the Company in the form of an integer
-    + `integrationActive`: 5 (number) - ID of the Company active integration in the form of an integer
-    + `integrationMapping`: 72 (number) - ID of the Company mapping in the form of an integer
+    + `integration`: 5 (number) - ID of the Company active integration in the form of an integer
 
-### Return company directory mapping [GET]
+### Return PSO list [GET]
 + Request
     + Headers
 
@@ -1648,26 +1629,28 @@ Share AppsCo account.
 
 + Response 200 (application/json)
     + Attributes
-        + mapping (array[Directory Integrations Mappings])
+        + `psos` (array[PSO])
 
-### Remove company directory mapping [DELETE]
+
+# PSO Appsco Active Integration  [/api/v2/companies/{company_id}/integrations/active/{integration}/pso/appsco]
+
+    Return active AppsCo Company active integration PSO for currently logged in user.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + `integration`: 5 (number) - ID of the Company active integration in the form of an integer
+
+### Return PSO appsco [GET]
 + Request
     + Headers
 
             Authorization: token absdef12345
 
 + Response 200 (application/json)
-    + Attributes (Role Success Response)
+    + Attributes
+        + `psos` (array[PSO])
 
-### Create company directory mapping [POST]
-+ Request
-    + Attributes (Setup mapping)
-    + Headers
 
-            Authorization: token absdef12345
-
-+ Response 200 (application/json)
-    + Attributes (Role Success Response)
 
 # Company Directory Invitation [/api/v2/companies/{company_id}/invitation]
 
@@ -2651,6 +2634,11 @@ Share AppsCo account.
 
 
 
+
+
+
+
+
 # Data Structures
 
 ## Enabled Response (object)
@@ -3449,6 +3437,10 @@ Share AppsCo account.
 + kind
 + meta (object)
     + mappings
+    + recipes
+    + webHooks
+    + registerWatcher
+    + watcher
 
 ## Directory Integrations Mappings (object)
 + self
@@ -3462,6 +3454,7 @@ Share AppsCo account.
 + local
 + meta (object)
     + create
+    + upgrade
 
 ## Directory Fetch Mappings (object)
 + success (boolean)
@@ -3829,3 +3822,9 @@ Share AppsCo account.
 + meta (Paging)
 
 ## Directory Role (object)
+
+## PSO (object)
++ key
++ value
++ conditions (array[])
++ params (array[])
