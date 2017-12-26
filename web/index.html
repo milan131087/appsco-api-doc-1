@@ -1710,6 +1710,13 @@
           
         </a>
       
+        <a class="item teal" href="#single-active-integration-update-active-company-integration">
+          <i class="ui teal empty circular label"></i>
+          
+            <span>Update active company integration</span>
+          
+        </a>
+      
         <a class="item red" href="#single-active-integration-remove-active-company-integration">
           <i class="ui red empty circular label"></i>
           
@@ -1756,6 +1763,132 @@
           <i class="ui green empty circular label"></i>
           
             <span>Return PSO appsco</span>
+          
+        </a>
+      
+      </div>
+    </div>
+    
+  
+    
+    <div class="title ">
+      <i class="dropdown icon"></i>
+      
+        <strong>Active Integration Recipes</strong>
+      
+    </div>
+    <div class="content ">
+      <div class="ui fluid secondary vertical menu">
+      
+        <a class="item green" href="#active-integration-recipes-return-integration-recipes">
+          <i class="ui green empty circular label"></i>
+          
+            <span>Return integration recipes</span>
+          
+        </a>
+      
+        <a class="item blue" href="#active-integration-recipes-create-integration-recipe">
+          <i class="ui blue empty circular label"></i>
+          
+            <span>Create integration recipe</span>
+          
+        </a>
+      
+        <a class="item violet" href="#active-integration-recipes-update-integration-recipe">
+          <i class="ui violet empty circular label"></i>
+          
+            <span>Update integration recipe</span>
+          
+        </a>
+      
+        <a class="item red" href="#active-integration-recipes-remove-integration-recipe">
+          <i class="ui red empty circular label"></i>
+          
+            <span>Remove integration recipe</span>
+          
+        </a>
+      
+      </div>
+    </div>
+    
+  
+    
+    <div class="title ">
+      <i class="dropdown icon"></i>
+      
+        <strong>Single Active Integration Recipe</strong>
+      
+    </div>
+    <div class="content ">
+      <div class="ui fluid secondary vertical menu">
+      
+        <a class="item green" href="#single-active-integration-recipe-return-single-integration-recipe">
+          <i class="ui green empty circular label"></i>
+          
+            <span>Return single integration recipe</span>
+          
+        </a>
+      
+      </div>
+    </div>
+    
+  
+    
+    <div class="title ">
+      <i class="dropdown icon"></i>
+      
+        <strong>Single Active Integration Recipe Run</strong>
+      
+    </div>
+    <div class="content ">
+      <div class="ui fluid secondary vertical menu">
+      
+        <a class="item blue" href="#single-active-integration-recipe-run-run-single-integration-recipe">
+          <i class="ui blue empty circular label"></i>
+          
+            <span>Run single integration recipe</span>
+          
+        </a>
+      
+      </div>
+    </div>
+    
+  
+    
+    <div class="title ">
+      <i class="dropdown icon"></i>
+      
+        <strong>Active Integration Web Hooks</strong>
+      
+    </div>
+    <div class="content ">
+      <div class="ui fluid secondary vertical menu">
+      
+        <a class="item green" href="#active-integration-web-hooks-retrive-integration-web-hooks">
+          <i class="ui green empty circular label"></i>
+          
+            <span>Retrive integration web hooks</span>
+          
+        </a>
+      
+      </div>
+    </div>
+    
+  
+    
+    <div class="title ">
+      <i class="dropdown icon"></i>
+      
+        <strong>Single Active Integration Web Hook</strong>
+      
+    </div>
+    <div class="content ">
+      <div class="ui fluid secondary vertical menu">
+      
+        <a class="item green" href="#single-active-integration-web-hook-retrive-integration-web-hooks">
+          <i class="ui green empty circular label"></i>
+          
+            <span>Retrive integration web hooks</span>
           
         </a>
       
@@ -2805,9 +2938,9 @@
 <div class="description">
   <p>AppsCo helps you securely manage all your private applications access and digital confidential information from any device.</p>
 
-<h2 id="how-to-use-appsco-api">How to use AppsCo api</h2>
+<h2 id="how-to-use-appsco-api">How to use AppsCo API</h2>
 
-<p>Appsco API supports <a href="https://oauth.net/2/">OAuth protocol</a>.
+<p>AppsCo API supports <a href="https://oauth.net/2/">OAuth protocol</a>.
 OAuth Request code in order to retrieve token for loggedin user.
 Use client id and scope in order to request equivalent token.
 Redirect uri can be used for redirect response.
@@ -20646,6 +20779,203 @@ In order to access this list user first need to authenticate.</p>
 </div>
 
           <div class="ui basic segment">
+            <h3 class="ui block center aligned header" id="single-active-integration-update-active-company-integration">
+              Update active company integration
+            </h3>
+            <div class="description"></div>
+
+            
+              <h4 class="ui horizontal divider">
+                REQUEST
+              </h4>
+              <div class="description"></div>
+              <div class="fluid ui large labeled button">
+                <div class="ui teal large button">
+                  <h3>PUT</h3>
+                </div>
+                <a class="ui basic fluid teal label">
+                  <code>https://appsco.com/api/v2/companies/{company_id}/integrations/active/{integrationActive}</code>
+                </a>
+              </div>
+              
+              
+                
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Authorization</td>
+      <td><code>token absdef12345</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              
+              
+
+              <h4 class="ui horizontal divider">RESPONSE</h4>
+              <div class="description"></div>
+              
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Content-Type</td>
+      <td><code>application/json</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              <div class="ui stacked blue segment">
+                <div class="ui fluid transaction accordion">
+                  <div class="title center aligned">
+                    <a class="ui blue circular label">
+                      200
+                    </a>
+                    <code>application/json</code>
+                  </div>
+                  <div class="content tabbed">
+                    <div class="ui top attached tabular menu">
+                      <a data-tab="body" class="active item">BODY</a>
+                      <a data-tab="schema" class="item">SCHEMA</a>
+                    </div>
+                    <div class="ui bottom attached active tab segment" data-tab="body">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;integration_active&#34;: {
+    &#34;self&#34;: &#34;&#34;,
+    &#34;integration&#34;: {
+      &#34;title&#34;: &#34;&#34;,
+      &#34;image&#34;: &#34;&#34;,
+      &#34;website&#34;: &#34;&#34;,
+      &#34;self&#34;: &#34;&#34;,
+      &#34;alias&#34;: 0
+    },
+    &#34;domains&#34;: {
+      &#34;companyName&#34;: {
+        &#34;name&#34;: &#34;&#34;,
+        &#34;primary&#34;: false,
+        &#34;synced&#34;: false
+      }
+    },
+    &#34;kind&#34;: &#34;&#34;,
+    &#34;meta&#34;: {
+      &#34;mappings&#34;: &#34;&#34;,
+      &#34;recipes&#34;: &#34;&#34;,
+      &#34;webHooks&#34;: &#34;&#34;,
+      &#34;registerWatcher&#34;: &#34;&#34;,
+      &#34;watcher&#34;: &#34;&#34;
+    }
+  }
+}</code>
+                      </pre>
+                    </div>
+                    <div class="ui bottom attached tab segment" data-tab="schema">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;$schema&#34;: &#34;http://json-schema.org/draft-04/schema#&#34;,
+  &#34;type&#34;: &#34;object&#34;,
+  &#34;properties&#34;: {
+    &#34;integration_active&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;self&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;integration&#34;: {
+          &#34;type&#34;: &#34;object&#34;,
+          &#34;properties&#34;: {
+            &#34;title&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            },
+            &#34;image&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            },
+            &#34;website&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            },
+            &#34;self&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            },
+            &#34;alias&#34;: {
+              &#34;type&#34;: &#34;number&#34;
+            }
+          }
+        },
+        &#34;domains&#34;: {
+          &#34;type&#34;: &#34;object&#34;,
+          &#34;properties&#34;: {
+            &#34;companyName&#34;: {
+              &#34;type&#34;: &#34;object&#34;,
+              &#34;properties&#34;: {
+                &#34;name&#34;: {
+                  &#34;type&#34;: &#34;string&#34;
+                },
+                &#34;primary&#34;: {
+                  &#34;type&#34;: &#34;boolean&#34;
+                },
+                &#34;synced&#34;: {
+                  &#34;type&#34;: &#34;boolean&#34;
+                }
+              }
+            }
+          }
+        },
+        &#34;kind&#34;: {
+          &#34;type&#34;: &#34;string&#34;
+        },
+        &#34;meta&#34;: {
+          &#34;type&#34;: &#34;object&#34;,
+          &#34;properties&#34;: {
+            &#34;mappings&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            },
+            &#34;recipes&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            },
+            &#34;webHooks&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            },
+            &#34;registerWatcher&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            },
+            &#34;watcher&#34;: {
+              &#34;type&#34;: &#34;string&#34;
+            }
+          }
+        }
+      }
+    }
+  }
+}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        
+          
+<div class="ui grey horizontal small divider header">
+  <i class="ui grey micro circular label"></i>
+  <i class="ui pink micro circular label"></i>
+  <i class="ui grey micro circular label"></i>
+</div>
+
+          <div class="ui basic segment">
             <h3 class="ui block center aligned header" id="single-active-integration-remove-active-company-integration">
               Remove active company integration
             </h3>
@@ -21090,6 +21420,1208 @@ In order to access this list user first need to authenticate.</p>
   &#34;properties&#34;: {
     &#34;psos&#34;: {
       &#34;type&#34;: &#34;array&#34;
+    }
+  }
+}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        
+        </div>
+      <div class="ui hidden divider"></div>
+    
+  
+    
+      <div class="ui stacked segments">
+        <div class="ui basic segment resource">
+          <div class="ui purple huge ribbon label">
+            Active Integration Recipes
+          </div>
+          <div class="ui header">
+            <div class="ui sub header">
+              <pre><code>Return active integration recipes for currently logged in user.
+</code></pre>
+
+            </div>
+          </div>
+        </div>
+
+        
+          
+<div class="ui grey horizontal small divider header">
+  <i class="ui grey micro circular label"></i>
+  <i class="ui pink micro circular label"></i>
+  <i class="ui grey micro circular label"></i>
+</div>
+
+          <div class="ui basic segment">
+            <h3 class="ui block center aligned header" id="active-integration-recipes-return-integration-recipes">
+              Return integration recipes
+            </h3>
+            <div class="description"></div>
+
+            
+              <h4 class="ui horizontal divider">
+                REQUEST
+              </h4>
+              <div class="description"></div>
+              <div class="fluid ui large labeled button">
+                <div class="ui green large button">
+                  <h3>GET</h3>
+                </div>
+                <a class="ui basic fluid green label">
+                  <code>https://appsco.com/api/v2/companies/{company_id}/integration/{integration}/integration-recipes</code>
+                </a>
+              </div>
+              
+              
+                
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Authorization</td>
+      <td><code>token absdef12345</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              
+              
+
+              <h4 class="ui horizontal divider">RESPONSE</h4>
+              <div class="description"></div>
+              
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Content-Type</td>
+      <td><code>application/json</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              <div class="ui stacked blue segment">
+                <div class="ui fluid transaction accordion">
+                  <div class="title center aligned">
+                    <a class="ui blue circular label">
+                      200
+                    </a>
+                    <code>application/json</code>
+                  </div>
+                  <div class="content tabbed">
+                    <div class="ui top attached tabular menu">
+                      <a data-tab="body" class="active item">BODY</a>
+                      <a data-tab="schema" class="item">SCHEMA</a>
+                    </div>
+                    <div class="ui bottom attached active tab segment" data-tab="body">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;integration-recipes&#34;: [],
+  &#34;meta&#34;: {
+    &#34;total&#34;: 0,
+    &#34;page&#34;: 0,
+    &#34;first&#34;: &#34;&#34;,
+    &#34;last&#34;: &#34;&#34;,
+    &#34;pages&#34;: 0,
+    &#34;per_page&#34;: 0,
+    &#34;prev&#34;: &#34;&#34;,
+    &#34;next&#34;: &#34;&#34;
+  }
+}</code>
+                      </pre>
+                    </div>
+                    <div class="ui bottom attached tab segment" data-tab="schema">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;$schema&#34;: &#34;http://json-schema.org/draft-04/schema#&#34;,
+  &#34;type&#34;: &#34;object&#34;,
+  &#34;properties&#34;: {
+    &#34;integration-recipes&#34;: {
+      &#34;type&#34;: &#34;array&#34;
+    },
+    &#34;meta&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;total&#34;: {
+          &#34;type&#34;: &#34;number&#34;,
+          &#34;description&#34;: &#34;Total number of items&#34;
+        },
+        &#34;page&#34;: {
+          &#34;type&#34;: &#34;number&#34;,
+          &#34;description&#34;: &#34;Current page&#34;
+        },
+        &#34;first&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;First page in collection&#34;
+        },
+        &#34;last&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Last page in collection&#34;
+        },
+        &#34;pages&#34;: {
+          &#34;type&#34;: &#34;number&#34;,
+          &#34;description&#34;: &#34;Number of pages&#34;
+        },
+        &#34;per_page&#34;: {
+          &#34;type&#34;: &#34;number&#34;,
+          &#34;description&#34;: &#34;Number of items per page&#34;
+        },
+        &#34;prev&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Previous page&#34;
+        },
+        &#34;next&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Next page&#34;
+        }
+      }
+    }
+  }
+}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        
+          
+<div class="ui grey horizontal small divider header">
+  <i class="ui grey micro circular label"></i>
+  <i class="ui pink micro circular label"></i>
+  <i class="ui grey micro circular label"></i>
+</div>
+
+          <div class="ui basic segment">
+            <h3 class="ui block center aligned header" id="active-integration-recipes-create-integration-recipe">
+              Create integration recipe
+            </h3>
+            <div class="description"></div>
+
+            
+              <h4 class="ui horizontal divider">
+                REQUEST
+              </h4>
+              <div class="description"></div>
+              <div class="fluid ui large labeled button">
+                <div class="ui blue large button">
+                  <h3>POST</h3>
+                </div>
+                <a class="ui basic fluid blue label">
+                  <code>https://appsco.com/api/v2/companies/{company_id}/integration/{integration}/integration-recipes</code>
+                </a>
+              </div>
+              
+              
+                
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Authorization</td>
+      <td><code>token absdef12345</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              
+              
+
+              <h4 class="ui horizontal divider">RESPONSE</h4>
+              <div class="description"></div>
+              
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Content-Type</td>
+      <td><code>application/json</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              <div class="ui stacked blue segment">
+                <div class="ui fluid transaction accordion">
+                  <div class="title center aligned">
+                    <a class="ui blue circular label">
+                      200
+                    </a>
+                    <code>application/json</code>
+                  </div>
+                  <div class="content tabbed">
+                    <div class="ui top attached tabular menu">
+                      <a data-tab="body" class="active item">BODY</a>
+                      <a data-tab="schema" class="item">SCHEMA</a>
+                    </div>
+                    <div class="ui bottom attached active tab segment" data-tab="body">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;name&#34;: &#34;&#34;,
+  &#34;fromMethod&#34;: &#34;&#34;,
+  &#34;fromPSO&#34;: &#34;&#34;,
+  &#34;fromCondition&#34;: [],
+  &#34;toMethod&#34;: &#34;&#34;,
+  &#34;toPSO&#34;: &#34;&#34;,
+  &#34;toField&#34;: [],
+  &#34;active&#34;: false,
+  &#34;integration&#34;: &#34;&#34;,
+  &#34;self&#34;: &#34;&#34;
+}</code>
+                      </pre>
+                    </div>
+                    <div class="ui bottom attached tab segment" data-tab="schema">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;$schema&#34;: &#34;http://json-schema.org/draft-04/schema#&#34;,
+  &#34;type&#34;: &#34;object&#34;,
+  &#34;properties&#34;: {
+    &#34;name&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;fromMethod&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;fromPSO&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;fromCondition&#34;: {
+      &#34;type&#34;: &#34;array&#34;
+    },
+    &#34;toMethod&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;toPSO&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;toField&#34;: {
+      &#34;type&#34;: &#34;array&#34;
+    },
+    &#34;active&#34;: {
+      &#34;type&#34;: &#34;boolean&#34;
+    },
+    &#34;integration&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;self&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    }
+  }
+}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        
+          
+<div class="ui grey horizontal small divider header">
+  <i class="ui grey micro circular label"></i>
+  <i class="ui pink micro circular label"></i>
+  <i class="ui grey micro circular label"></i>
+</div>
+
+          <div class="ui basic segment">
+            <h3 class="ui block center aligned header" id="active-integration-recipes-update-integration-recipe">
+              Update integration recipe
+            </h3>
+            <div class="description"></div>
+
+            
+              <h4 class="ui horizontal divider">
+                REQUEST
+              </h4>
+              <div class="description"></div>
+              <div class="fluid ui large labeled button">
+                <div class="ui violet large button">
+                  <h3>PATCH</h3>
+                </div>
+                <a class="ui basic fluid violet label">
+                  <code>https://appsco.com/api/v2/companies/{company_id}/integration/{integration}/integration-recipes</code>
+                </a>
+              </div>
+              
+              
+                
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Authorization</td>
+      <td><code>token absdef12345</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              
+              
+
+              <h4 class="ui horizontal divider">RESPONSE</h4>
+              <div class="description"></div>
+              
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Content-Type</td>
+      <td><code>application/json</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              <div class="ui stacked blue segment">
+                <div class="ui fluid transaction accordion">
+                  <div class="title center aligned">
+                    <a class="ui blue circular label">
+                      200
+                    </a>
+                    <code>application/json</code>
+                  </div>
+                  <div class="content tabbed">
+                    <div class="ui top attached tabular menu">
+                      <a data-tab="body" class="active item">BODY</a>
+                      <a data-tab="schema" class="item">SCHEMA</a>
+                    </div>
+                    <div class="ui bottom attached active tab segment" data-tab="body">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;name&#34;: &#34;&#34;,
+  &#34;fromMethod&#34;: &#34;&#34;,
+  &#34;fromPSO&#34;: &#34;&#34;,
+  &#34;fromCondition&#34;: [],
+  &#34;toMethod&#34;: &#34;&#34;,
+  &#34;toPSO&#34;: &#34;&#34;,
+  &#34;toField&#34;: [],
+  &#34;active&#34;: false,
+  &#34;integration&#34;: &#34;&#34;,
+  &#34;self&#34;: &#34;&#34;
+}</code>
+                      </pre>
+                    </div>
+                    <div class="ui bottom attached tab segment" data-tab="schema">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;$schema&#34;: &#34;http://json-schema.org/draft-04/schema#&#34;,
+  &#34;type&#34;: &#34;object&#34;,
+  &#34;properties&#34;: {
+    &#34;name&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;fromMethod&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;fromPSO&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;fromCondition&#34;: {
+      &#34;type&#34;: &#34;array&#34;
+    },
+    &#34;toMethod&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;toPSO&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;toField&#34;: {
+      &#34;type&#34;: &#34;array&#34;
+    },
+    &#34;active&#34;: {
+      &#34;type&#34;: &#34;boolean&#34;
+    },
+    &#34;integration&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;self&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    }
+  }
+}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        
+          
+<div class="ui grey horizontal small divider header">
+  <i class="ui grey micro circular label"></i>
+  <i class="ui pink micro circular label"></i>
+  <i class="ui grey micro circular label"></i>
+</div>
+
+          <div class="ui basic segment">
+            <h3 class="ui block center aligned header" id="active-integration-recipes-remove-integration-recipe">
+              Remove integration recipe
+            </h3>
+            <div class="description"></div>
+
+            
+              <h4 class="ui horizontal divider">
+                REQUEST
+              </h4>
+              <div class="description"></div>
+              <div class="fluid ui large labeled button">
+                <div class="ui red large button">
+                  <h3>DELETE</h3>
+                </div>
+                <a class="ui basic fluid red label">
+                  <code>https://appsco.com/api/v2/companies/{company_id}/integration/{integration}/integration-recipes</code>
+                </a>
+              </div>
+              
+              
+                
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Authorization</td>
+      <td><code>token absdef12345</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              
+              
+
+              <h4 class="ui horizontal divider">RESPONSE</h4>
+              <div class="description"></div>
+              
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Content-Type</td>
+      <td><code>application/json</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              <div class="ui stacked blue segment">
+                <div class="ui fluid transaction accordion">
+                  <div class="title center aligned">
+                    <a class="ui blue circular label">
+                      200
+                    </a>
+                    <code>application/json</code>
+                  </div>
+                  <div class="content tabbed">
+                    <div class="ui top attached tabular menu">
+                      <a data-tab="body" class="active item">BODY</a>
+                      <a data-tab="schema" class="item">SCHEMA</a>
+                    </div>
+                    <div class="ui bottom attached active tab segment" data-tab="body">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;name&#34;: &#34;&#34;,
+  &#34;fromMethod&#34;: &#34;&#34;,
+  &#34;fromPSO&#34;: &#34;&#34;,
+  &#34;fromCondition&#34;: [],
+  &#34;toMethod&#34;: &#34;&#34;,
+  &#34;toPSO&#34;: &#34;&#34;,
+  &#34;toField&#34;: [],
+  &#34;active&#34;: false,
+  &#34;integration&#34;: &#34;&#34;,
+  &#34;self&#34;: &#34;&#34;
+}</code>
+                      </pre>
+                    </div>
+                    <div class="ui bottom attached tab segment" data-tab="schema">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;$schema&#34;: &#34;http://json-schema.org/draft-04/schema#&#34;,
+  &#34;type&#34;: &#34;object&#34;,
+  &#34;properties&#34;: {
+    &#34;name&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;fromMethod&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;fromPSO&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;fromCondition&#34;: {
+      &#34;type&#34;: &#34;array&#34;
+    },
+    &#34;toMethod&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;toPSO&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;toField&#34;: {
+      &#34;type&#34;: &#34;array&#34;
+    },
+    &#34;active&#34;: {
+      &#34;type&#34;: &#34;boolean&#34;
+    },
+    &#34;integration&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;self&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    }
+  }
+}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        
+        </div>
+      <div class="ui hidden divider"></div>
+    
+  
+    
+      <div class="ui stacked segments">
+        <div class="ui basic segment resource">
+          <div class="ui purple huge ribbon label">
+            Single Active Integration Recipe
+          </div>
+          <div class="ui header">
+            <div class="ui sub header">
+              <pre><code>Return active integration recipes for currently logged in user.
+</code></pre>
+
+            </div>
+          </div>
+        </div>
+
+        
+          
+<div class="ui grey horizontal small divider header">
+  <i class="ui grey micro circular label"></i>
+  <i class="ui pink micro circular label"></i>
+  <i class="ui grey micro circular label"></i>
+</div>
+
+          <div class="ui basic segment">
+            <h3 class="ui block center aligned header" id="single-active-integration-recipe-return-single-integration-recipe">
+              Return single integration recipe
+            </h3>
+            <div class="description"></div>
+
+            
+              <h4 class="ui horizontal divider">
+                REQUEST
+              </h4>
+              <div class="description"></div>
+              <div class="fluid ui large labeled button">
+                <div class="ui green large button">
+                  <h3>GET</h3>
+                </div>
+                <a class="ui basic fluid green label">
+                  <code>https://appsco.com/api/v2/companies/{company_id}/integration/{integration}/integration-recipes/{recipe}</code>
+                </a>
+              </div>
+              
+              
+                
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Authorization</td>
+      <td><code>token absdef12345</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              
+              
+
+              <h4 class="ui horizontal divider">RESPONSE</h4>
+              <div class="description"></div>
+              
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Content-Type</td>
+      <td><code>application/json</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              <div class="ui stacked blue segment">
+                <div class="ui fluid transaction accordion">
+                  <div class="title center aligned">
+                    <a class="ui blue circular label">
+                      200
+                    </a>
+                    <code>application/json</code>
+                  </div>
+                  <div class="content tabbed">
+                    <div class="ui top attached tabular menu">
+                      <a data-tab="body" class="active item">BODY</a>
+                      <a data-tab="schema" class="item">SCHEMA</a>
+                    </div>
+                    <div class="ui bottom attached active tab segment" data-tab="body">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;name&#34;: &#34;&#34;,
+  &#34;fromMethod&#34;: &#34;&#34;,
+  &#34;fromPSO&#34;: &#34;&#34;,
+  &#34;fromCondition&#34;: [],
+  &#34;toMethod&#34;: &#34;&#34;,
+  &#34;toPSO&#34;: &#34;&#34;,
+  &#34;toField&#34;: [],
+  &#34;active&#34;: false,
+  &#34;integration&#34;: &#34;&#34;,
+  &#34;self&#34;: &#34;&#34;
+}</code>
+                      </pre>
+                    </div>
+                    <div class="ui bottom attached tab segment" data-tab="schema">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;$schema&#34;: &#34;http://json-schema.org/draft-04/schema#&#34;,
+  &#34;type&#34;: &#34;object&#34;,
+  &#34;properties&#34;: {
+    &#34;name&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;fromMethod&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;fromPSO&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;fromCondition&#34;: {
+      &#34;type&#34;: &#34;array&#34;
+    },
+    &#34;toMethod&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;toPSO&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;toField&#34;: {
+      &#34;type&#34;: &#34;array&#34;
+    },
+    &#34;active&#34;: {
+      &#34;type&#34;: &#34;boolean&#34;
+    },
+    &#34;integration&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;self&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    }
+  }
+}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        
+        </div>
+      <div class="ui hidden divider"></div>
+    
+  
+    
+      <div class="ui stacked segments">
+        <div class="ui basic segment resource">
+          <div class="ui purple huge ribbon label">
+            Single Active Integration Recipe Run
+          </div>
+          <div class="ui header">
+            <div class="ui sub header">
+              <pre><code>Return active integration recipes run for currently logged in user.
+</code></pre>
+
+            </div>
+          </div>
+        </div>
+
+        
+          
+<div class="ui grey horizontal small divider header">
+  <i class="ui grey micro circular label"></i>
+  <i class="ui pink micro circular label"></i>
+  <i class="ui grey micro circular label"></i>
+</div>
+
+          <div class="ui basic segment">
+            <h3 class="ui block center aligned header" id="single-active-integration-recipe-run-run-single-integration-recipe">
+              Run single integration recipe
+            </h3>
+            <div class="description"></div>
+
+            
+              <h4 class="ui horizontal divider">
+                REQUEST
+              </h4>
+              <div class="description"></div>
+              <div class="fluid ui large labeled button">
+                <div class="ui blue large button">
+                  <h3>POST</h3>
+                </div>
+                <a class="ui basic fluid blue label">
+                  <code>https://appsco.com/api/v2/companies/{company_id}/integration/{integration}/integration-recipes/{recipe}/run</code>
+                </a>
+              </div>
+              
+              
+                
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Authorization</td>
+      <td><code>token absdef12345</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              
+              
+
+              <h4 class="ui horizontal divider">RESPONSE</h4>
+              <div class="description"></div>
+              
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Content-Type</td>
+      <td><code>application/json</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              <div class="ui stacked blue segment">
+                <div class="ui fluid transaction accordion">
+                  <div class="title center aligned">
+                    <a class="ui blue circular label">
+                      200
+                    </a>
+                    <code>application/json</code>
+                  </div>
+                  <div class="content tabbed">
+                    <div class="ui top attached tabular menu">
+                      <a data-tab="body" class="active item">BODY</a>
+                      <a data-tab="schema" class="item">SCHEMA</a>
+                    </div>
+                    <div class="ui bottom attached active tab segment" data-tab="body">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;array[Company Role Account]&#34;: &#34;&#34;
+}</code>
+                      </pre>
+                    </div>
+                    <div class="ui bottom attached tab segment" data-tab="schema">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;$schema&#34;: &#34;http://json-schema.org/draft-04/schema#&#34;,
+  &#34;type&#34;: &#34;object&#34;,
+  &#34;properties&#34;: {
+    &#34;array[Company Role Account]&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    }
+  }
+}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        
+        </div>
+      <div class="ui hidden divider"></div>
+    
+  
+    
+      <div class="ui stacked segments">
+        <div class="ui basic segment resource">
+          <div class="ui purple huge ribbon label">
+            Active Integration Web Hooks
+          </div>
+          <div class="ui header">
+            <div class="ui sub header">
+              <pre><code>Return active integration web hooks for currently logged in user.
+</code></pre>
+
+            </div>
+          </div>
+        </div>
+
+        
+          
+<div class="ui grey horizontal small divider header">
+  <i class="ui grey micro circular label"></i>
+  <i class="ui pink micro circular label"></i>
+  <i class="ui grey micro circular label"></i>
+</div>
+
+          <div class="ui basic segment">
+            <h3 class="ui block center aligned header" id="active-integration-web-hooks-retrive-integration-web-hooks">
+              Retrive integration web hooks
+            </h3>
+            <div class="description"></div>
+
+            
+              <h4 class="ui horizontal divider">
+                REQUEST
+              </h4>
+              <div class="description"></div>
+              <div class="fluid ui large labeled button">
+                <div class="ui green large button">
+                  <h3>GET</h3>
+                </div>
+                <a class="ui basic fluid green label">
+                  <code>https://appsco.com/api/v2/companies/{company_id}/integration/{integration}/web-hooks</code>
+                </a>
+              </div>
+              
+              
+                
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Authorization</td>
+      <td><code>token absdef12345</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              
+              
+
+              <h4 class="ui horizontal divider">RESPONSE</h4>
+              <div class="description"></div>
+              
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Content-Type</td>
+      <td><code>application/json</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              <div class="ui stacked blue segment">
+                <div class="ui fluid transaction accordion">
+                  <div class="title center aligned">
+                    <a class="ui blue circular label">
+                      200
+                    </a>
+                    <code>application/json</code>
+                  </div>
+                  <div class="content tabbed">
+                    <div class="ui top attached tabular menu">
+                      <a data-tab="body" class="active item">BODY</a>
+                      <a data-tab="schema" class="item">SCHEMA</a>
+                    </div>
+                    <div class="ui bottom attached active tab segment" data-tab="body">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;web_hooks&#34;: [],
+  &#34;meta&#34;: {
+    &#34;total&#34;: 0,
+    &#34;page&#34;: 0,
+    &#34;first&#34;: &#34;&#34;,
+    &#34;last&#34;: &#34;&#34;,
+    &#34;pages&#34;: 0,
+    &#34;per_page&#34;: 0,
+    &#34;prev&#34;: &#34;&#34;,
+    &#34;next&#34;: &#34;&#34;
+  }
+}</code>
+                      </pre>
+                    </div>
+                    <div class="ui bottom attached tab segment" data-tab="schema">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;$schema&#34;: &#34;http://json-schema.org/draft-04/schema#&#34;,
+  &#34;type&#34;: &#34;object&#34;,
+  &#34;properties&#34;: {
+    &#34;web_hooks&#34;: {
+      &#34;type&#34;: &#34;array&#34;
+    },
+    &#34;meta&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;properties&#34;: {
+        &#34;total&#34;: {
+          &#34;type&#34;: &#34;number&#34;,
+          &#34;description&#34;: &#34;Total number of items&#34;
+        },
+        &#34;page&#34;: {
+          &#34;type&#34;: &#34;number&#34;,
+          &#34;description&#34;: &#34;Current page&#34;
+        },
+        &#34;first&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;First page in collection&#34;
+        },
+        &#34;last&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Last page in collection&#34;
+        },
+        &#34;pages&#34;: {
+          &#34;type&#34;: &#34;number&#34;,
+          &#34;description&#34;: &#34;Number of pages&#34;
+        },
+        &#34;per_page&#34;: {
+          &#34;type&#34;: &#34;number&#34;,
+          &#34;description&#34;: &#34;Number of items per page&#34;
+        },
+        &#34;prev&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Previous page&#34;
+        },
+        &#34;next&#34;: {
+          &#34;type&#34;: &#34;string&#34;,
+          &#34;description&#34;: &#34;Next page&#34;
+        }
+      }
+    }
+  }
+}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        
+        </div>
+      <div class="ui hidden divider"></div>
+    
+  
+    
+      <div class="ui stacked segments">
+        <div class="ui basic segment resource">
+          <div class="ui purple huge ribbon label">
+            Single Active Integration Web Hook
+          </div>
+          <div class="ui header">
+            <div class="ui sub header">
+              <pre><code>Return active integration web hooks for currently logged in user.
+</code></pre>
+
+            </div>
+          </div>
+        </div>
+
+        
+          
+<div class="ui grey horizontal small divider header">
+  <i class="ui grey micro circular label"></i>
+  <i class="ui pink micro circular label"></i>
+  <i class="ui grey micro circular label"></i>
+</div>
+
+          <div class="ui basic segment">
+            <h3 class="ui block center aligned header" id="single-active-integration-web-hook-retrive-integration-web-hooks">
+              Retrive integration web hooks
+            </h3>
+            <div class="description"></div>
+
+            
+              <h4 class="ui horizontal divider">
+                REQUEST
+              </h4>
+              <div class="description"></div>
+              <div class="fluid ui large labeled button">
+                <div class="ui green large button">
+                  <h3>GET</h3>
+                </div>
+                <a class="ui basic fluid green label">
+                  <code>https://appsco.com/api/v2/companies/{company_id}/integration/{integration}/web-hooks/{webHook}</code>
+                </a>
+              </div>
+              
+              
+                
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Authorization</td>
+      <td><code>token absdef12345</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              
+              
+
+              <h4 class="ui horizontal divider">RESPONSE</h4>
+              <div class="description"></div>
+              
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Content-Type</td>
+      <td><code>application/json</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              <div class="ui stacked blue segment">
+                <div class="ui fluid transaction accordion">
+                  <div class="title center aligned">
+                    <a class="ui blue circular label">
+                      200
+                    </a>
+                    <code>application/json</code>
+                  </div>
+                  <div class="content tabbed">
+                    <div class="ui top attached tabular menu">
+                      <a data-tab="body" class="active item">BODY</a>
+                      <a data-tab="schema" class="item">SCHEMA</a>
+                    </div>
+                    <div class="ui bottom attached active tab segment" data-tab="body">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;title&#34;: &#34;&#34;,
+  &#34;action&#34;: &#34;&#34;,
+  &#34;alias&#34;: &#34;&#34;,
+  &#34;fromMethod&#34;: &#34;&#34;,
+  &#34;self&#34;: &#34;&#34;
+}</code>
+                      </pre>
+                    </div>
+                    <div class="ui bottom attached tab segment" data-tab="schema">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">{
+  &#34;$schema&#34;: &#34;http://json-schema.org/draft-04/schema#&#34;,
+  &#34;type&#34;: &#34;object&#34;,
+  &#34;properties&#34;: {
+    &#34;title&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;action&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;alias&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;fromMethod&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;self&#34;: {
+      &#34;type&#34;: &#34;string&#34;
     }
   }
 }</code>
