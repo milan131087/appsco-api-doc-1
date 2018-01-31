@@ -5,9 +5,9 @@ HOST: https://appsco.com/
 
 AppsCo helps you securely manage all your private applications access and digital confidential information from any device.
 
-## How to use AppsCo API
+## How to use AppsCo api
 
-AppsCo API supports [OAuth protocol](https://oauth.net/2/).
+Appsco API supports [OAuth protocol](https://oauth.net/2/).
 OAuth Request code in order to retrieve token for loggedin user.
 Use client id and scope in order to request equivalent token.
 Redirect uri can be used for redirect response.
@@ -2509,6 +2509,102 @@ Share AppsCo account.
         + meta (Paging)
 
 
+
+# Company Oauth Applications [/api/v2/companies/{company_id}/ouath/applications]
+
+    Return AppsCo Company oauth applications.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+
+### Retrive company oauth applications [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes
+        + applications (array[])
+        + meta (Paging)
+
+### Add company oauth application [POST]
++ Request
+    + Attributes (Setup Oauth)
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Oauth Model)
+
+
+# Single Oauth Application [/api/v2/companies/{company_id}/ouath/applications/{application}]
+
+    Return AppsCo single company oauth applications.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + `application`: 16 (number) - ID of the Company oauth application in the form of an integer
+
+### Retrive oauth application [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Oauth Model)
+
+### Remove oauth application [DELETE]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Oauth Model)
+
+
+# Oauth Application Certificate [/api/v2/companies/{company_id}/ouath/applications/{application}/certificate]
+
+    Return AppsCo Company oauth application certificate.
+
++ Parameters
+    + `company_id`: 16 (number) - ID of the Company in the form of an integer
+    + `application`: 16 (number) - ID of the Company oauth application in the form of an integer
+
+### Add oauth application certificate [POST]
++ Request
+    + Attributes (Setup Certificate)
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Certificate Model)
+
+### Retrive oauth application certificate [GET]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes
+        + certificates (array[])
+        + meta (Paging)
+
+### Remove oauth application certificate [DELETE]
++ Request
+    + Headers
+
+            Authorization: token absdef12345
+
++ Response 200 (application/json)
+    + Attributes (Certificate Model)
+
+
 # Customers List [/api/v2/partners/{partner}/customers]
 
     Return AppsCo customers for partner.
@@ -3995,4 +4091,61 @@ Share AppsCo account.
 + action
 + alias
 + fromMethod
++ self
+
+## Setup Oauth (object)
++ `oauth_application[title]`
++ `oauth_application[redirect_url]`
++ `oauth_application[website_url]`
++ `oauth_application[icon_url]`
++ `oauth_application[description]`
+
+## Oauth Model (object)
++ alias (number)
++ owner (Owner Model)
++ status (boolean)
++ title
++ `website_url`
++ `redirect_url`
++ `icon_url`
++ decsription
++ `client_id`
++ `client_secret`
++ meta (object)
+    + remove
++ self
+
+## Owner Model (object)
++ alias (number)
++ name
++ `contact_email`
++ `billing_email`
++ domain
++ `intranet_website`
++ `remaining_trial_period` (number)
++ `trial_period` (boolean)
++ `primary_color`
++ `secondary_color`
++ `personal_dashboards_allowed` (boolean)
++ `user_allowed_to_create_company` (boolean)
++ `company_uuid`
++ `is_partner` (boolean)
++ `enforced_2fa` (boolean)
++ `ip_whitelist`
++ `block_tor` (boolean)
++ `subscription_paid_externally` (boolean)
++ image
++ self
++ meta (Meta Customer Short )
+
+## Setup Certificate (object)
++ `oauth_certificate[csr]`
+
+## Certificate Model (object)
++ alias (number)
++ `valid_from` (DateTime Model)
++ `valid_to` (DateTime Model)
++ fingerprint
++ certificate
++ `o_auth_application` (Oauth Model)
 + self
